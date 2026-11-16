@@ -2,6 +2,112 @@
   "channel": "Game Hay Nên Chơi",
   "weeks": [
     {
+      "week_number": 2,
+      "week_theme": "Tuần của những bí mật, thiên nhiên khắc nghiệt và ván bài không muốn dừng",
+      "updated_at": "16/11/2026",
+      "games": [
+        {
+          "title": "Return of the Obra Dinn",
+          "genre": "Trinh thám suy luận",
+          "platform": "PC (Steam)",
+          "platform_group": "pc",
+          "description": "Bạn là điều tra viên lên con tàu mất tích, dùng chiếc đồng hồ đặc biệt để chứng kiến khoảnh khắc cuối của thủy thủ đoàn. Từng danh tính và nguyên nhân tử vong đều phải được suy luận từ chi tiết nhỏ.",
+          "day_label": "Thứ 2",
+          "topic": "Game PC Ngách Độc Lạ / Hack Não",
+          "unlock_date": "2026-11-16",
+          "url": "https://store.steampowered.com/app/653530/"
+        },
+        {
+          "title": "The Case of the Golden Idol",
+          "genre": "Trinh thám giải đố",
+          "platform": "PC (Steam)",
+          "platform_group": "pc",
+          "description": "Qua những cảnh án mạng tĩnh như tranh, bạn tự điền tên người, hành động và động cơ để dựng lại sự thật. Càng ghép đúng, câu chuyện về một món cổ vật nguyền rủa càng mở ra nhiều cú lật khó ngờ.",
+          "day_label": "Thứ 2",
+          "topic": "Game PC Ngách Độc Lạ / Hack Não",
+          "unlock_date": "2026-11-16",
+          "url": "https://store.steampowered.com/app/1677770/"
+        },
+        {
+          "title": "Her Story",
+          "genre": "Trinh thám tương tác",
+          "platform": "PC (Steam)",
+          "platform_group": "pc",
+          "description": "Một kho dữ liệu phỏng vấn, một vụ mất tích và chẳng ai đưa sẵn đáp án. Tìm từ khóa để xem từng đoạn video, nối lời khai theo cách của bạn rồi tự quyết định điều gì đã thật sự xảy ra.",
+          "day_label": "Thứ 2",
+          "topic": "Game PC Ngách Độc Lạ / Hack Não",
+          "unlock_date": "2026-11-16",
+          "url": "https://store.steampowered.com/app/368370/"
+        },
+        {
+          "title": "The Long Dark",
+          "genre": "Sinh tồn thế giới mở",
+          "platform": "PC (Steam)",
+          "platform_group": "pc",
+          "description": "Sau thảm họa địa từ, bạn mắc kẹt giữa vùng hoang dã Canada lạnh buốt. Tìm thức ăn, giữ ấm và cân nhắc từng chuyến đi; ở đây, thời tiết và sự thiếu thốn mới là đối thủ đáng sợ nhất.",
+          "day_label": "Thứ 4",
+          "topic": "Game PC Mô Phỏng / Quản Lý / Sinh Tồn",
+          "unlock_date": "2026-11-18",
+          "url": "https://store.steampowered.com/app/305620/"
+        },
+        {
+          "title": "Subnautica",
+          "genre": "Sinh tồn khám phá biển sâu",
+          "platform": "PC (Steam)",
+          "platform_group": "pc",
+          "description": "Rơi xuống một hành tinh phủ đại dương, bạn phải lặn tìm vật liệu, chế tạo thiết bị và mở rộng căn cứ dưới nước. Những rạn san hô tuyệt đẹp dẫn lối xuống vùng sâu vừa bí ẩn vừa đầy hiểm nguy.",
+          "day_label": "Thứ 4",
+          "topic": "Game PC Mô Phỏng / Quản Lý / Sinh Tồn",
+          "unlock_date": "2026-11-18",
+          "url": "https://store.steampowered.com/app/264710/"
+        },
+        {
+          "title": "The Forest",
+          "genre": "Sinh tồn kinh dị",
+          "platform": "PC (Steam)",
+          "platform_group": "pc",
+          "description": "Sau tai nạn máy bay, bạn tìm con trai mất tích trên một bán đảo rừng rậm. Chặt cây dựng nơi trú, kiếm thức ăn và khám phá hang động; nhưng càng tìm hiểu cư dân nơi đây, chuyến đi càng bất an.",
+          "day_label": "Thứ 4",
+          "topic": "Game PC Mô Phỏng / Quản Lý / Sinh Tồn",
+          "unlock_date": "2026-11-18",
+          "url": "https://store.steampowered.com/app/242760/"
+        },
+        {
+          "title": "Balatro",
+          "genre": "Poker roguelike",
+          "platform": "iOS / Android",
+          "platform_group": "mobile",
+          "description": "Dùng những tay bài poker quen thuộc để vượt màn, rồi kết hợp Joker tạo hiệu ứng cộng dồn bất ngờ. Mỗi lượt chạy mở ra hướng build khác nhau, luật dễ nắm nhưng tối ưu điểm số thì khó dứt.",
+          "day_label": "Thứ 6",
+          "topic": "Game Mobile Chiến Thuật / Indie Gọn Nhẹ",
+          "unlock_date": "2026-11-20",
+          "url": "https://play.google.com/store/search?q=Balatro&c=apps"
+        },
+        {
+          "title": "Dawncaster: Deckbuilding RPG",
+          "genre": "Roguelike xây bộ bài",
+          "platform": "iOS / Android",
+          "platform_group": "mobile",
+          "description": "Chọn nhân vật, nhặt kỹ năng và xây bộ bài riêng trên hành trình fantasy nhiều ngã rẽ. Các trận đánh theo lượt khuyến khích thử chiến thuật mới; game hỗ trợ chơi offline, hợp để mở nhanh một chuyến phiêu lưu.",
+          "day_label": "Thứ 6",
+          "topic": "Game Mobile Chiến Thuật / Indie Gọn Nhẹ",
+          "unlock_date": "2026-11-20",
+          "url": "https://play.google.com/store/search?q=Dawncaster%3A%20Deckbuilding%20RPG&c=apps"
+        },
+        {
+          "title": "Night of the Full Moon",
+          "genre": "Thẻ bài roguelike",
+          "platform": "iOS / Android",
+          "platform_group": "mobile",
+          "description": "Theo chân cô bé Mũ Đỏ trong những chương truyện cổ tích u tối, chọn lớp nhân vật rồi đấu bài với từng đối thủ. Bộ bài và hướng đi thay đổi trải nghiệm; có thể chơi offline, không cần kết nối liên tục.",
+          "day_label": "Thứ 6",
+          "topic": "Game Mobile Chiến Thuật / Indie Gọn Nhẹ",
+          "unlock_date": "2026-11-20",
+          "url": "https://play.google.com/store/search?q=Night%20of%20the%20Full%20Moon&c=apps"
+        }
+      ]
+    },
+    {
       "week_number": 1,
       "week_theme": "Ba cách chơi khác thường: bẻ luật, vận hành thành phố và đấu trí trên bàn cờ bỏ túi",
       "updated_at": "16/11/2026",
