@@ -451,29 +451,32 @@
       color: var(--text-secondary);
     }
     .play-footer {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
       padding-top: 4px;
     }
-    .play-platform-text {
-      font-size: 12px;
-      font-weight: 600;
-      color: var(--text-secondary);
-    }
-    .btn-play {
+    .btn-play, .btn-appstore {
       text-decoration: none;
-      padding: 9px 22px;
+      text-align: center;
+      padding: 9px 14px;
       border-radius: 8px;
-      background: var(--play-green);
       color: #ffffff;
       font-size: 13.5px;
       font-weight: 700;
       transition: background-color 0.15s ease;
     }
+    .btn-play {
+      background: var(--play-green);
+    }
     .btn-play:hover {
       background: var(--play-green-hover);
+    }
+    .btn-appstore {
+      background: #0071e3;
+    }
+    .btn-appstore:hover {
+      background: #005bb5;
     }
 
     .empty-state, .no-results {
@@ -696,7 +699,7 @@
                         <div class="play-head-info">
                           <div class="play-meta-line">
                             <span class="play-day-tag">Thứ 6</span>
-                            <span class="play-store-label">CH Play / App Store</span>
+                            <span class="play-store-label">CH Play &amp; App Store</span>
                           </div>
                           <h3 class="play-title">Kingdom Rush</h3>
                           <div class="play-genre">Tower Defense</div>
@@ -704,8 +707,8 @@
                       </div>
                       <p class="play-desc">Bố trí tháp trên những điểm chiến lược, gọi anh hùng ra tuyến đầu và ngăn từng đợt quái tràn qua. Màn chơi gọn, dễ nắm bắt nhưng chọn sai vị trí nâng cấp có thể khiến cả phòng tuyến sụp đổ.</p>
                       <div class="play-footer">
-                        <span class="play-platform-text">iOS / Android</span>
-                        <a class="btn-play" href="https://play.google.com/store/search?q=Kingdom%20Rush&amp;c=apps" target="_blank" rel="noopener noreferrer">Tải trên Store</a>
+                        <a class="btn-play" href="https://play.google.com/store/search?q=Kingdom%20Rush&amp;c=apps" target="_blank" rel="noopener noreferrer">CH Play</a>
+                        <a class="btn-appstore" href="https://apps.apple.com/us/app/kingdom-rush-tower-defense-td/id516378985?uo=4" target="_blank" rel="noopener noreferrer">App Store</a>
                       </div>
                     </article><article class="game-card card-play" data-platform="mobile" data-search="bloons td 6 tower defense chiến thuật ios / android thứ 6">
                       <div class="play-header">
@@ -713,7 +716,7 @@
                         <div class="play-head-info">
                           <div class="play-meta-line">
                             <span class="play-day-tag">Thứ 6</span>
-                            <span class="play-store-label">CH Play / App Store</span>
+                            <span class="play-store-label">CH Play &amp; App Store</span>
                           </div>
                           <h3 class="play-title">Bloons TD 6</h3>
                           <div class="play-genre">Tower Defense chiến thuật</div>
@@ -721,8 +724,8 @@
                       </div>
                       <p class="play-desc">Dùng các loại tháp khỉ với vai trò và nhánh nâng cấp riêng để đối phó những đợt bóng bay ngày càng khó. Thử nghiệm đội hình, chọn thời điểm nâng cấp và tìm cách giữ tuyến phòng thủ đứng vững.</p>
                       <div class="play-footer">
-                        <span class="play-platform-text">iOS / Android</span>
-                        <a class="btn-play" href="https://play.google.com/store/search?q=Bloons%20TD%206&amp;c=apps" target="_blank" rel="noopener noreferrer">Tải trên Store</a>
+                        <a class="btn-play" href="https://play.google.com/store/search?q=Bloons%20TD%206&amp;c=apps" target="_blank" rel="noopener noreferrer">CH Play</a>
+                        <a class="btn-appstore" href="https://apps.apple.com/us/app/bloons-td-6/id1118115766?uo=4" target="_blank" rel="noopener noreferrer">App Store</a>
                       </div>
                     </article><article class="game-card card-play" data-platform="mobile" data-search="mindustry thủ thành / xây dựng căn cứ ios / android thứ 6">
                       <div class="play-header">
@@ -730,7 +733,7 @@
                         <div class="play-head-info">
                           <div class="play-meta-line">
                             <span class="play-day-tag">Thứ 6</span>
-                            <span class="play-store-label">CH Play / App Store</span>
+                            <span class="play-store-label">CH Play &amp; App Store</span>
                           </div>
                           <h3 class="play-title">Mindustry</h3>
                           <div class="play-genre">Thủ thành / xây dựng căn cứ</div>
@@ -738,8 +741,8 @@
                       </div>
                       <p class="play-desc">Không chỉ đặt tháp chặn kẻ địch: bạn còn khai thác tài nguyên, nối băng chuyền và xây nhà máy để tiếp tế cho căn cứ. Mạng lưới vận hành càng hiệu quả, bạn càng có cơ hội chống đỡ những đợt tấn công dồn dập.</p>
                       <div class="play-footer">
-                        <span class="play-platform-text">iOS / Android</span>
-                        <a class="btn-play" href="https://play.google.com/store/search?q=Mindustry&amp;c=apps" target="_blank" rel="noopener noreferrer">Tải trên Store</a>
+                        <a class="btn-play" href="https://play.google.com/store/search?q=Mindustry&amp;c=apps" target="_blank" rel="noopener noreferrer">CH Play</a>
+                        <a class="btn-appstore" href="https://apps.apple.com/us/app/mindustry/id1385258906?uo=4" target="_blank" rel="noopener noreferrer">App Store</a>
                       </div>
                     </article>
               </div>
@@ -868,7 +871,7 @@
                         <div class="play-head-info">
                           <div class="play-meta-line">
                             <span class="play-day-tag">Thứ 6</span>
-                            <span class="play-store-label">CH Play / App Store</span>
+                            <span class="play-store-label">CH Play &amp; App Store</span>
                           </div>
                           <h3 class="play-title">Balatro</h3>
                           <div class="play-genre">Poker roguelike</div>
@@ -876,8 +879,8 @@
                       </div>
                       <p class="play-desc">Dùng những tay bài poker quen thuộc để vượt màn, rồi kết hợp Joker tạo hiệu ứng cộng dồn bất ngờ. Mỗi lượt chạy mở ra hướng build khác nhau, luật dễ nắm nhưng tối ưu điểm số thì khó dứt.</p>
                       <div class="play-footer">
-                        <span class="play-platform-text">iOS / Android</span>
-                        <a class="btn-play" href="https://play.google.com/store/search?q=Balatro&amp;c=apps" target="_blank" rel="noopener noreferrer">Tải trên Store</a>
+                        <a class="btn-play" href="https://play.google.com/store/search?q=Balatro&amp;c=apps" target="_blank" rel="noopener noreferrer">CH Play</a>
+                        <a class="btn-appstore" href="https://apps.apple.com/us/app/balatro/id6502453075?uo=4" target="_blank" rel="noopener noreferrer">App Store</a>
                       </div>
                     </article><article class="game-card card-play" data-platform="mobile" data-search="dawncaster: deckbuilding rpg roguelike xây bộ bài ios / android thứ 6">
                       <div class="play-header">
@@ -885,7 +888,7 @@
                         <div class="play-head-info">
                           <div class="play-meta-line">
                             <span class="play-day-tag">Thứ 6</span>
-                            <span class="play-store-label">CH Play / App Store</span>
+                            <span class="play-store-label">CH Play &amp; App Store</span>
                           </div>
                           <h3 class="play-title">Dawncaster: Deckbuilding RPG</h3>
                           <div class="play-genre">Roguelike xây bộ bài</div>
@@ -893,8 +896,8 @@
                       </div>
                       <p class="play-desc">Chọn nhân vật, nhặt kỹ năng và xây bộ bài riêng trên hành trình fantasy nhiều ngã rẽ. Các trận đánh theo lượt khuyến khích thử chiến thuật mới; game hỗ trợ chơi offline, hợp để mở nhanh một chuyến phiêu lưu.</p>
                       <div class="play-footer">
-                        <span class="play-platform-text">iOS / Android</span>
-                        <a class="btn-play" href="https://play.google.com/store/search?q=Dawncaster%3A%20Deckbuilding%20RPG&amp;c=apps" target="_blank" rel="noopener noreferrer">Tải trên Store</a>
+                        <a class="btn-play" href="https://play.google.com/store/search?q=Dawncaster%3A%20Deckbuilding%20RPG&amp;c=apps" target="_blank" rel="noopener noreferrer">CH Play</a>
+                        <a class="btn-appstore" href="https://apps.apple.com/us/app/dawncaster-deckbuilding-rpg/id1555459868?uo=4" target="_blank" rel="noopener noreferrer">App Store</a>
                       </div>
                     </article><article class="game-card card-play" data-platform="mobile" data-search="night of the full moon thẻ bài roguelike ios / android thứ 6">
                       <div class="play-header">
@@ -902,7 +905,7 @@
                         <div class="play-head-info">
                           <div class="play-meta-line">
                             <span class="play-day-tag">Thứ 6</span>
-                            <span class="play-store-label">CH Play / App Store</span>
+                            <span class="play-store-label">CH Play &amp; App Store</span>
                           </div>
                           <h3 class="play-title">Night of the Full Moon</h3>
                           <div class="play-genre">Thẻ bài roguelike</div>
@@ -910,8 +913,8 @@
                       </div>
                       <p class="play-desc">Theo chân cô bé Mũ Đỏ trong những chương truyện cổ tích u tối, chọn lớp nhân vật rồi đấu bài với từng đối thủ. Bộ bài và hướng đi thay đổi trải nghiệm; có thể chơi offline, không cần kết nối liên tục.</p>
                       <div class="play-footer">
-                        <span class="play-platform-text">iOS / Android</span>
-                        <a class="btn-play" href="https://play.google.com/store/search?q=Night%20of%20the%20Full%20Moon&amp;c=apps" target="_blank" rel="noopener noreferrer">Tải trên Store</a>
+                        <a class="btn-play" href="https://play.google.com/store/search?q=Night%20of%20the%20Full%20Moon&amp;c=apps" target="_blank" rel="noopener noreferrer">CH Play</a>
+                        <a class="btn-appstore" href="https://apps.apple.com/us/app/night-of-the-full-moon/id1278845241?uo=4" target="_blank" rel="noopener noreferrer">App Store</a>
                       </div>
                     </article>
               </div>
@@ -1040,7 +1043,7 @@
                         <div class="play-head-info">
                           <div class="play-meta-line">
                             <span class="play-day-tag">Thứ 6</span>
-                            <span class="play-store-label">CH Play / App Store</span>
+                            <span class="play-store-label">CH Play &amp; App Store</span>
                           </div>
                           <h3 class="play-title">Into the Breach</h3>
                           <div class="play-genre">Chiến thuật theo lượt</div>
@@ -1048,8 +1051,8 @@
                       </div>
                       <p class="play-desc">Trên bản đồ ô vuông gọn gàng, bạn thấy trước kẻ địch sắp đánh đâu rồi chọn cách đẩy, chặn hoặc hạ chúng. Mỗi lượt là một bài toán bảo vệ dân thường bằng đội mech ít ỏi.</p>
                       <div class="play-footer">
-                        <span class="play-platform-text">iOS / Android</span>
-                        <a class="btn-play" href="https://play.google.com/store/search?q=Into%20the%20Breach&amp;c=apps" target="_blank" rel="noopener noreferrer">Tải trên Store</a>
+                        <a class="btn-play" href="https://play.google.com/store/search?q=Into%20the%20Breach&amp;c=apps" target="_blank" rel="noopener noreferrer">CH Play</a>
+                        <a class="btn-appstore" href="https://apps.apple.com/us/app/into-the-breach/id1616542180?uo=4" target="_blank" rel="noopener noreferrer">App Store</a>
                       </div>
                     </article><article class="game-card card-play" data-platform="mobile" data-search="the battle of polytopia chiến thuật 4x theo lượt ios / android thứ 6">
                       <div class="play-header">
@@ -1057,7 +1060,7 @@
                         <div class="play-head-info">
                           <div class="play-meta-line">
                             <span class="play-day-tag">Thứ 6</span>
-                            <span class="play-store-label">CH Play / App Store</span>
+                            <span class="play-store-label">CH Play &amp; App Store</span>
                           </div>
                           <h3 class="play-title">The Battle of Polytopia</h3>
                           <div class="play-genre">Chiến thuật 4X theo lượt</div>
@@ -1065,8 +1068,8 @@
                       </div>
                       <p class="play-desc">Chọn một bộ tộc, khám phá bản đồ, nghiên cứu công nghệ và tranh quyền kiểm soát theo lượt. Trận đấu gọn, luật dễ tiếp cận nhưng mỗi quyết định mở rộng hay phòng thủ đều ảnh hưởng đến đường phát triển.</p>
                       <div class="play-footer">
-                        <span class="play-platform-text">iOS / Android</span>
-                        <a class="btn-play" href="https://play.google.com/store/apps/details?id=air.com.midjiwan.polytopia" target="_blank" rel="noopener noreferrer">Tải trên Store</a>
+                        <a class="btn-play" href="https://play.google.com/store/apps/details?id=air.com.midjiwan.polytopia" target="_blank" rel="noopener noreferrer">CH Play</a>
+                        <a class="btn-appstore" href="https://apps.apple.com/us/app/the-battle-of-polytopia/id1006393168?uo=4" target="_blank" rel="noopener noreferrer">App Store</a>
                       </div>
                     </article><article class="game-card card-play" data-platform="mobile" data-search="slice &amp; dice chiến thuật theo lượt roguelike ios / android thứ 6">
                       <div class="play-header">
@@ -1074,7 +1077,7 @@
                         <div class="play-head-info">
                           <div class="play-meta-line">
                             <span class="play-day-tag">Thứ 6</span>
-                            <span class="play-store-label">CH Play / App Store</span>
+                            <span class="play-store-label">CH Play &amp; App Store</span>
                           </div>
                           <h3 class="play-title">Slice &amp; Dice</h3>
                           <div class="play-genre">Chiến thuật theo lượt roguelike</div>
@@ -1082,8 +1085,8 @@
                       </div>
                       <p class="play-desc">Đội hình của bạn là những viên xúc xắc, mỗi mặt tương ứng một hành động khác nhau. Tung xúc xắc, phân bổ đòn đánh và phòng thủ để vượt chuỗi giao tranh; một lượt xử lý khéo có thể cứu cả đội.</p>
                       <div class="play-footer">
-                        <span class="play-platform-text">iOS / Android</span>
-                        <a class="btn-play" href="https://play.google.com/store/apps/details?id=com.com.tann.dice" target="_blank" rel="noopener noreferrer">Tải trên Store</a>
+                        <a class="btn-play" href="https://play.google.com/store/apps/details?id=com.com.tann.dice" target="_blank" rel="noopener noreferrer">CH Play</a>
+                        <a class="btn-appstore" href="https://apps.apple.com/us/app/slice-dice/id6449848963?uo=4" target="_blank" rel="noopener noreferrer">App Store</a>
                       </div>
                     </article>
               </div>
