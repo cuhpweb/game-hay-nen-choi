@@ -2,6 +2,112 @@
   "channel": "Game Hay Nên Chơi",
   "weeks": [
     {
+      "week_number": 3,
+      "week_theme": "Game chạy nhẹ, ý tưởng nặng đô: deckbuilder dị biệt, kinh doanh cuốn tay và thủ thành sáng tạo",
+      "updated_at": "16/11/2026",
+      "games": [
+        {
+          "title": "Inscryption",
+          "genre": "Roguelike deckbuilder kinh dị",
+          "platform": "PC (Steam)",
+          "platform_group": "pc",
+          "description": "Bắt đầu bằng những ván bài căng thẳng trong căn phòng bí ẩn, rồi khám phá một trò chơi liên tục bẻ cong chính luật của nó. Mỗi lá bài mới đều có thể mở ra hướng đi khác.",
+          "day_label": "Thứ 2",
+          "topic": "PC ngách độc lạ",
+          "unlock_date": "2026-11-16",
+          "url": "https://store.steampowered.com/app/1092790/"
+        },
+        {
+          "title": "Griftlands",
+          "genre": "Roguelike deckbuilder nhập vai",
+          "platform": "PC (Steam)",
+          "platform_group": "pc",
+          "description": "Ở đây, bộ bài không chỉ dùng để đánh nhau: bạn còn đấu trí qua những cuộc mặc cả và tranh luận. Mỗi lựa chọn tác động đến quan hệ, nhiệm vụ và cơ hội sống sót trong chuyến phiêu lưu.",
+          "day_label": "Thứ 2",
+          "topic": "PC ngách độc lạ",
+          "unlock_date": "2026-11-16",
+          "url": "https://store.steampowered.com/app/601840/"
+        },
+        {
+          "title": "Nowhere Prophet",
+          "genre": "Deckbuilder roguelike sinh tồn",
+          "platform": "PC (Steam)",
+          "platform_group": "pc",
+          "description": "Bạn là người dẫn đường cho một đoàn người băng qua vùng đất khắc nghiệt. Xây bộ bài từ những người đồng hành, giữ họ sống sót và cân nhắc kỹ mỗi trận vì tổn thất có thể theo bạn rất lâu.",
+          "day_label": "Thứ 2",
+          "topic": "PC ngách độc lạ",
+          "unlock_date": "2026-11-16",
+          "url": "https://store.steampowered.com/app/681730/"
+        },
+        {
+          "title": "Supermarket Simulator",
+          "genre": "Mô phỏng quản lý siêu thị",
+          "platform": "PC (Steam)",
+          "platform_group": "pc",
+          "description": "Nhập hàng, xếp kệ, đặt giá rồi đứng quầy tính tiền trong siêu thị của riêng bạn. Khi khách ngày càng đông, mỗi quyết định về hàng hóa và cách bố trí đều ảnh hưởng nhịp kinh doanh.",
+          "day_label": "Thứ 4",
+          "topic": "PC mô phỏng / quản lý / kinh doanh",
+          "unlock_date": "2026-11-18",
+          "url": "https://store.steampowered.com/app/2670630/"
+        },
+        {
+          "title": "PlateUp!",
+          "genre": "Quản lý nhà hàng roguelite",
+          "platform": "PC (Steam)",
+          "platform_group": "pc",
+          "description": "Tự thiết kế nhà hàng, chia khu bếp và phối hợp phục vụ giữa giờ cao điểm. Mỗi ngày kinh doanh là một bài toán tốc độ; nâng cấp đúng chỗ giúp quán chạy mượt hơn, nhưng thực đơn cũng khiến áp lực tăng.",
+          "day_label": "Thứ 4",
+          "topic": "PC mô phỏng / quản lý / kinh doanh",
+          "unlock_date": "2026-11-18",
+          "url": "https://store.steampowered.com/app/1599600/"
+        },
+        {
+          "title": "Winkeltje: The Little Shop",
+          "genre": "Mô phỏng quản lý cửa hàng",
+          "platform": "PC (Steam)",
+          "platform_group": "pc",
+          "description": "Từ nhập nguyên liệu, chế tác món hàng đến trưng bày và định giá, mọi việc đều nằm trong tay bạn. Phát triển cửa tiệm qua từng mùa, cân đối kho hàng và biến góc phố nhỏ thành nơi khách muốn ghé.",
+          "day_label": "Thứ 4",
+          "topic": "PC mô phỏng / quản lý / kinh doanh",
+          "unlock_date": "2026-11-18",
+          "url": "https://store.steampowered.com/app/949290/"
+        },
+        {
+          "title": "Kingdom Rush",
+          "genre": "Tower Defense",
+          "platform": "iOS / Android",
+          "platform_group": "mobile",
+          "description": "Bố trí tháp trên những điểm chiến lược, gọi anh hùng ra tuyến đầu và ngăn từng đợt quái tràn qua. Màn chơi gọn, dễ nắm bắt nhưng chọn sai vị trí nâng cấp có thể khiến cả phòng tuyến sụp đổ.",
+          "day_label": "Thứ 6",
+          "topic": "Mobile chiến thuật / indie gọn nhẹ",
+          "unlock_date": "2026-11-20",
+          "url": "https://play.google.com/store/search?q=Kingdom%20Rush&c=apps"
+        },
+        {
+          "title": "Bloons TD 6",
+          "genre": "Tower Defense chiến thuật",
+          "platform": "iOS / Android",
+          "platform_group": "mobile",
+          "description": "Dùng các loại tháp khỉ với vai trò và nhánh nâng cấp riêng để đối phó những đợt bóng bay ngày càng khó. Thử nghiệm đội hình, chọn thời điểm nâng cấp và tìm cách giữ tuyến phòng thủ đứng vững.",
+          "day_label": "Thứ 6",
+          "topic": "Mobile chiến thuật / indie gọn nhẹ",
+          "unlock_date": "2026-11-20",
+          "url": "https://play.google.com/store/search?q=Bloons%20TD%206&c=apps"
+        },
+        {
+          "title": "Mindustry",
+          "genre": "Thủ thành / xây dựng căn cứ",
+          "platform": "iOS / Android",
+          "platform_group": "mobile",
+          "description": "Không chỉ đặt tháp chặn kẻ địch: bạn còn khai thác tài nguyên, nối băng chuyền và xây nhà máy để tiếp tế cho căn cứ. Mạng lưới vận hành càng hiệu quả, bạn càng có cơ hội chống đỡ những đợt tấn công dồn dập.",
+          "day_label": "Thứ 6",
+          "topic": "Mobile chiến thuật / indie gọn nhẹ",
+          "unlock_date": "2026-11-20",
+          "url": "https://play.google.com/store/search?q=Mindustry&c=apps"
+        }
+      ]
+    },
+    {
       "week_number": 2,
       "week_theme": "Tuần của những bí mật, thiên nhiên khắc nghiệt và ván bài không muốn dừng",
       "updated_at": "16/11/2026",
