@@ -3,41 +3,107 @@
   "weeks": [
     {
       "week_number": 1,
-      "week_theme": "Ba ngày, chín game: giải mã bí ẩn, xây dựng thế giới và đấu trí mọi lúc",
+      "week_theme": "Ba cách chơi khác thường: bẻ luật, vận hành thành phố và đấu trí trên bàn cờ bỏ túi",
       "updated_at": "16/11/2026",
       "games": [
         {
-          "title": "The Case of the Golden Idol",
-          "genre": "Trinh thám giải đố",
-          "platform": "PC (Steam)",
-          "platform_group": "pc",
-          "description": "Từ hiện trường tĩnh lặng, bạn ghép tên người, hành động và động cơ để tái dựng những cái chết bí ẩn. Không cầm tay chỉ việc, game thưởng cho sự quan sát kỹ và khiến mỗi kết luận đều đáng nhớ.",
-          "day_label": "Thứ 2",
-          "topic": "Game PC Ngách Độc Lạ / Hack Não",
-          "unlock_date": "2026-11-16",
-          "url": "https://store.steampowered.com/app/1677770/"
-        },
-        {
-          "title": "The Witness",
-          "genre": "Giải đố góc nhìn thứ nhất",
-          "platform": "PC (Steam)",
-          "platform_group": "pc",
-          "description": "Một hòn đảo rực rỡ, hàng trăm mê cung và gần như không lời giải thích. Bạn học quy tắc qua quan sát rồi nhận ra môi trường xung quanh cũng là câu đố; càng đi sâu, cách nhìn của bạn càng đổi khác.",
-          "day_label": "Thứ 2",
-          "topic": "Game PC Ngách Độc Lạ / Hack Não",
-          "unlock_date": "2026-11-16",
-          "url": "https://store.steampowered.com/app/210970/"
-        },
-        {
           "title": "Baba Is You",
-          "genre": "Giải đố thay đổi luật",
+          "genre": "Giải đố thao tác luật",
           "platform": "PC (Steam)",
           "platform_group": "pc",
-          "description": "Ở đây, những dòng chữ trên màn hình chính là luật vận hành thế giới. Đẩy, đổi chỗ và sắp xếp chúng để biến vật thể thành chiến thắng; mỗi màn là một cú bẻ tư duy nhỏ gọn mà cực kỳ đã.",
+          "description": "Mỗi màn là một câu đố bằng những khối từ có thể đẩy và sắp xếp lại. Đổi “WALL IS STOP” thành luật khác, bạn biến chính vật cản thành lối đi và viết lại cách màn chơi vận hành.",
           "day_label": "Thứ 2",
           "topic": "Game PC Ngách Độc Lạ / Hack Não",
           "unlock_date": "2026-11-16",
           "url": "https://store.steampowered.com/app/736260/"
+        },
+        {
+          "title": "Patrick's Parabox",
+          "genre": "Giải đố đệ quy",
+          "platform": "PC (Steam)",
+          "platform_group": "pc",
+          "description": "Đẩy một chiếc hộp vào bên trong chính nó nghe vô lý, nhưng lại là chìa khóa của trò chơi. Các mê cung đệ quy liên tục đổi góc nhìn, khiến mỗi bước đi vừa mở đường vừa tạo thêm câu hỏi.",
+          "day_label": "Thứ 2",
+          "topic": "Game PC Ngách Độc Lạ / Hack Não",
+          "unlock_date": "2026-11-16",
+          "url": "https://store.steampowered.com/app/1260520/"
+        },
+        {
+          "title": "Chants of Sennaar",
+          "genre": "Phiêu lưu giải mã ngôn ngữ",
+          "platform": "PC (Steam)",
+          "platform_group": "pc",
+          "description": "Bạn bước vào một thế giới nơi các cộng đồng không hiểu tiếng nói của nhau. Quan sát biểu tượng, hành vi và bối cảnh để tự giải mã từng ngôn ngữ, rồi dùng hiểu biết ấy mở lối giao tiếp.",
+          "day_label": "Thứ 2",
+          "topic": "Game PC Ngách Độc Lạ / Hack Não",
+          "unlock_date": "2026-11-16",
+          "url": "https://store.steampowered.com/app/1931770/"
+        },
+        {
+          "title": "Against the Storm",
+          "genre": "Xây dựng thành phố sinh tồn",
+          "platform": "PC (Steam)",
+          "platform_group": "pc",
+          "description": "Dựng những khu định cư giữa vùng hoang dã, nơi thời tiết và nhu cầu cư dân liên tục đổi thay. Quản lý nguyên liệu, phân công chủng tộc và hoàn thành mục tiêu trước khi cơn bão buộc bạn rời đi.",
+          "day_label": "Thứ 4",
+          "topic": "Game PC Mô Phỏng / Quản Lý / Sinh Tồn",
+          "unlock_date": "2026-11-18",
+          "url": "https://store.steampowered.com/app/1336490/"
+        },
+        {
+          "title": "Workers & Resources: Soviet Republic",
+          "genre": "Mô phỏng xây dựng và quản lý",
+          "platform": "PC (Steam)",
+          "platform_group": "pc",
+          "description": "Không chỉ đặt nhà máy: bạn còn phải nối đường sắt, xe buýt, điện, sưởi và nguồn hàng để cả nền kinh tế vận hành. Một mắt xích tắc nghẽn có thể khiến toàn bộ thành phố thiếu thốn.",
+          "day_label": "Thứ 4",
+          "topic": "Game PC Mô Phỏng / Quản Lý / Sinh Tồn",
+          "unlock_date": "2026-11-18",
+          "url": "https://store.steampowered.com/app/784150/"
+        },
+        {
+          "title": "Captain of Industry",
+          "genre": "Xây dựng nhà máy và quản lý tài nguyên",
+          "platform": "PC (Steam)",
+          "platform_group": "pc",
+          "description": "Khởi đầu trên một hòn đảo hoang, bạn khai thác, nông nghiệp, nghiên cứu rồi nối các dây chuyền để tạo ra sản phẩm phức tạp. Tính cả logistics, chất thải và nhu cầu cư dân để công nghiệp phát triển bền vững.",
+          "day_label": "Thứ 4",
+          "topic": "Game PC Mô Phỏng / Quản Lý / Sinh Tồn",
+          "unlock_date": "2026-11-18",
+          "url": "https://store.steampowered.com/app/1594320/"
+        },
+        {
+          "title": "Into the Breach",
+          "genre": "Chiến thuật theo lượt",
+          "platform": "iOS / Android",
+          "platform_group": "mobile",
+          "description": "Trên bản đồ ô vuông gọn gàng, bạn thấy trước kẻ địch sắp đánh đâu rồi chọn cách đẩy, chặn hoặc hạ chúng. Mỗi lượt là một bài toán bảo vệ dân thường bằng đội mech ít ỏi.",
+          "day_label": "Thứ 6",
+          "topic": "Game Mobile Chiến Thuật / Indie Gọn Nhẹ",
+          "unlock_date": "2026-11-20",
+          "url": "https://play.google.com/store/search?q=Into%20the%20Breach&c=apps"
+        },
+        {
+          "title": "The Battle of Polytopia",
+          "genre": "Chiến thuật 4X theo lượt",
+          "platform": "iOS / Android",
+          "platform_group": "mobile",
+          "description": "Chọn một bộ tộc, khám phá bản đồ, nghiên cứu công nghệ và tranh quyền kiểm soát theo lượt. Trận đấu gọn, luật dễ tiếp cận nhưng mỗi quyết định mở rộng hay phòng thủ đều ảnh hưởng đến đường phát triển.",
+          "day_label": "Thứ 6",
+          "topic": "Game Mobile Chiến Thuật / Indie Gọn Nhẹ",
+          "unlock_date": "2026-11-20",
+          "url": "https://play.google.com/store/apps/details?id=air.com.midjiwan.polytopia"
+        },
+        {
+          "title": "Slice & Dice",
+          "genre": "Chiến thuật theo lượt roguelike",
+          "platform": "iOS / Android",
+          "platform_group": "mobile",
+          "description": "Đội hình của bạn là những viên xúc xắc, mỗi mặt tương ứng một hành động khác nhau. Tung xúc xắc, phân bổ đòn đánh và phòng thủ để vượt chuỗi giao tranh; một lượt xử lý khéo có thể cứu cả đội.",
+          "day_label": "Thứ 6",
+          "topic": "Game Mobile Chiến Thuật / Indie Gọn Nhẹ",
+          "unlock_date": "2026-11-20",
+          "url": "https://play.google.com/store/apps/details?id=com.com.tann.dice"
         }
       ]
     }
