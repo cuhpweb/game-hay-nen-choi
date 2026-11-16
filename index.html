@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; object-src 'none'; base-uri 'self'; form-action 'none';" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://shared.akamai.steamstatic.com; object-src 'none'; base-uri 'self'; form-action 'none';" />
   <meta name="referrer" content="no-referrer" />
   <title>Game Hay Nên Chơi — Link tải game chọn lọc</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -11,30 +11,36 @@
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg: #f6f5f1;
+      --bg: #f8f9fa;
       --surface: #ffffff;
-      --surface-subtle: #efede7;
-      --border: #e2dfd7;
-      --text: #161615;
-      --text-secondary: #5c5b57;
-      --accent: #d92d48;
-      --accent-hover: #be1e38;
-      --accent-fg: #ffffff;
-      --focus-ring: #d92d48;
-      --shadow-card: 0 1px 2px rgba(22, 22, 21, 0.05);
+      --surface-subtle: #f1f3f4;
+      --border: #dadce0;
+      --text: #202124;
+      --text-secondary: #5f6368;
+      --play-green: #01875f;
+      --play-green-hover: #016e4d;
+      --play-tint: #e6f4ea;
+      --steam-bg: #1b2838;
+      --steam-surface: #16202d;
+      --steam-border: #2a475e;
+      --steam-blue: #66c0f4;
+      --steam-green: #6fa720;
+      --steam-green-hover: #83c228;
+      --focus-ring: #01875f;
+      --shadow-card: 0 1px 3px rgba(60, 64, 67, 0.12);
     }
     html[data-theme="dark"] {
-      --bg: #0e1013;
-      --surface: #171a20;
-      --surface-subtle: #20242c;
-      --border: #2a2f3a;
-      --text: #f3f4f6;
-      --text-secondary: #9ca3af;
-      --accent: #e11d48;
-      --accent-hover: #f43f5e;
-      --accent-fg: #ffffff;
-      --focus-ring: #fb7185;
-      --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.3);
+      --bg: #12151a;
+      --surface: #1b1f26;
+      --surface-subtle: #252a34;
+      --border: #303642;
+      --text: #e8eaed;
+      --text-secondary: #9aa0a6;
+      --play-green: #00a173;
+      --play-green-hover: #00b884;
+      --play-tint: rgba(0, 161, 115, 0.16);
+      --focus-ring: #66c0f4;
+      --shadow-card: 0 2px 6px rgba(0, 0, 0, 0.35);
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -44,18 +50,18 @@
       min-height: 100vh;
       line-height: 1.5;
       -webkit-font-smoothing: antialiased;
-      padding: 20px 16px 56px;
+      padding: 18px 14px 56px;
       transition: background-color 0.2s ease, color 0.2s ease;
     }
     .container {
-      max-width: 640px;
+      max-width: 660px;
       margin: 0 auto;
     }
     .topbar {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
     }
     .brand {
       display: flex;
@@ -65,9 +71,10 @@
     .brand-mark {
       width: 44px;
       height: 44px;
-      border-radius: 10px;
-      background: var(--text);
-      color: var(--bg);
+      border-radius: 12px;
+      background: var(--steam-bg);
+      color: var(--steam-blue);
+      border: 1px solid var(--steam-border);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -102,7 +109,8 @@
     }
     .theme-btn:focus-visible,
     .filter-btn:focus-visible,
-    .cta-link:focus-visible,
+    .btn-steam:focus-visible,
+    .btn-play:focus-visible,
     .search-input:focus-visible,
     .reset-btn:focus-visible,
     .week-header:focus-visible {
@@ -115,19 +123,19 @@
       justify-content: space-between;
       font-size: 13px;
       color: var(--text-secondary);
-      padding-bottom: 14px;
+      padding-bottom: 12px;
       margin-bottom: 14px;
       border-bottom: 1px solid var(--border);
     }
     .controls {
       position: sticky;
-      top: 10px;
+      top: 8px;
       z-index: 20;
       background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: 12px;
+      border-radius: 14px;
       padding: 12px;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
       box-shadow: var(--shadow-card);
     }
     .search-wrap {
@@ -144,9 +152,9 @@
     .search-input {
       width: 100%;
       padding: 10px 12px 10px 38px;
-      border-radius: 8px;
+      border-radius: 24px;
       border: 1px solid var(--border);
-      background: var(--bg);
+      background: var(--surface-subtle);
       color: var(--text);
       font-size: 14px;
       font-family: inherit;
@@ -157,14 +165,14 @@
     .filters {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 6px;
+      gap: 8px;
       margin-top: 10px;
     }
     .filter-btn {
       padding: 8px 10px;
-      border-radius: 8px;
-      border: 1px solid transparent;
-      background: var(--surface-subtle);
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      background: var(--surface);
       color: var(--text-secondary);
       font-size: 13px;
       font-weight: 600;
@@ -172,12 +180,13 @@
       cursor: pointer;
     }
     .filter-btn.active {
-      background: var(--text);
-      color: var(--bg);
+      background: var(--play-tint);
+      border-color: var(--play-green);
+      color: var(--play-green);
     }
     .week-section {
       margin-bottom: 18px;
-      border-radius: 12px;
+      border-radius: 14px;
       background: var(--surface);
       border: 1px solid var(--border);
       box-shadow: var(--shadow-card);
@@ -186,7 +195,7 @@
     .week-header {
       list-style: none;
       cursor: pointer;
-      padding: 16px;
+      padding: 15px 16px;
       display: flex;
       align-items: flex-start;
       justify-content: space-between;
@@ -206,15 +215,14 @@
     .week-label {
       font-size: 17px;
       font-weight: 800;
-      letter-spacing: -0.01em;
     }
     .week-tag {
       font-size: 11px;
       font-weight: 700;
       padding: 2px 8px;
-      border-radius: 4px;
-      background: var(--accent);
-      color: var(--accent-fg);
+      border-radius: 6px;
+      background: var(--play-green);
+      color: #ffffff;
     }
     .week-count {
       font-size: 12px;
@@ -222,14 +230,14 @@
       color: var(--text-secondary);
     }
     .week-theme {
-      font-size: 14px;
+      font-size: 13.5px;
       color: var(--text-secondary);
       margin-top: 4px;
     }
     .week-date {
       font-size: 12px;
       color: var(--text-secondary);
-      margin-top: 4px;
+      margin-top: 3px;
     }
     .chevron {
       color: var(--text-secondary);
@@ -243,76 +251,230 @@
     .cards-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 12px;
-      padding: 0 16px 16px;
+      gap: 14px;
+      padding: 14px 16px 16px;
       border-top: 1px solid var(--border);
-      padding-top: 14px;
-    }
-    .game-card {
-      background: var(--bg);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 16px;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
     }
     .game-card.hidden {
       display: none;
     }
-    .card-meta {
+
+    /* === STEAM STORE CARD (PC) === */
+    .card-steam {
+      background: var(--steam-bg);
+      border: 1px solid var(--steam-border);
+      border-radius: 8px;
+      overflow: hidden;
+      color: #c7d5e0;
+    }
+    .steam-banner {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 460 / 215;
+      background: var(--steam-surface);
+      overflow: hidden;
+    }
+    .steam-banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .steam-day-tag {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      padding: 3px 9px;
+      border-radius: 4px;
+      background: rgba(23, 26, 33, 0.88);
+      color: var(--steam-blue);
+      font-size: 11px;
+      font-weight: 700;
+      border: 1px solid rgba(102, 192, 244, 0.35);
+    }
+    .steam-top-row {
+      padding: 12px 14px 0;
+    }
+    .steam-day-tag-inline {
+      display: inline-block;
+      padding: 3px 9px;
+      border-radius: 4px;
+      background: var(--steam-surface);
+      color: var(--steam-blue);
+      font-size: 11px;
+      font-weight: 700;
+    }
+    .steam-body {
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .steam-title-row {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .steam-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.25;
+    }
+    .steam-win-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 3px 8px;
+      border-radius: 4px;
+      background: var(--steam-surface);
+      color: #c7d5e0;
+      font-size: 11px;
+      font-weight: 600;
+      flex-shrink: 0;
+    }
+    .steam-genre {
+      display: inline-block;
+      align-self: flex-start;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--steam-blue);
+      background: rgba(102, 192, 244, 0.14);
+      padding: 2px 8px;
+      border-radius: 3px;
+    }
+    .steam-desc {
+      font-size: 13.5px;
+      line-height: 1.5;
+      color: #acb2b8;
+      margin: 4px 0 6px;
+    }
+    .steam-footer {
       display: flex;
       align-items: center;
-      gap: 6px;
+      justify-content: space-between;
+      gap: 12px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .steam-platform-text {
+      font-size: 12px;
+      color: #8f98a0;
+      font-weight: 600;
+    }
+    .btn-steam {
+      text-decoration: none;
+      padding: 9px 18px;
+      border-radius: 3px;
+      background: linear-gradient(90deg, #75b022 0%, #588a1b 100%);
+      color: #d2efa9;
+      font-size: 13.5px;
+      font-weight: 700;
+      transition: filter 0.15s ease;
+    }
+    .btn-steam:hover {
+      filter: brightness(1.12);
+      color: #ffffff;
+    }
+
+    /* === GOOGLE PLAY / CH PLAY CARD (MOBILE) === */
+    .card-play {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .play-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+    .play-app-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      background: var(--play-tint);
+      color: var(--play-green);
+      border: 1px solid rgba(1, 135, 95, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: 800;
+      flex-shrink: 0;
+      letter-spacing: -0.02em;
+    }
+    .play-head-info {
+      flex: 1;
+      min-width: 0;
+    }
+    .play-meta-line {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11.5px;
+      margin-bottom: 2px;
+    }
+    .play-day-tag {
+      font-weight: 700;
+      color: var(--play-green);
+    }
+    .play-store-label {
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+    .play-title {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.25;
+    }
+    .play-genre {
+      font-size: 13px;
+      color: var(--text-secondary);
+      margin-top: 2px;
+    }
+    .play-desc {
+      font-size: 13.5px;
+      line-height: 1.5;
+      color: var(--text-secondary);
+    }
+    .play-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding-top: 4px;
+    }
+    .play-platform-text {
       font-size: 12px;
       font-weight: 600;
       color: var(--text-secondary);
     }
-    .meta-sep {
-      opacity: 0.5;
-    }
-    .game-title {
-      font-size: 18px;
-      font-weight: 800;
-      letter-spacing: -0.01em;
-      color: var(--text);
-      margin-top: 2px;
-    }
-    .game-genre {
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--text-secondary);
-    }
-    .game-desc {
-      font-size: 14px;
-      line-height: 1.55;
-      color: var(--text);
-      margin: 4px 0 8px;
-    }
-    .cta-link {
-      display: block;
-      text-align: center;
+    .btn-play {
       text-decoration: none;
-      padding: 11px 16px;
+      padding: 9px 22px;
       border-radius: 8px;
-      background: var(--accent);
-      color: var(--accent-fg);
+      background: var(--play-green);
+      color: #ffffff;
+      font-size: 13.5px;
       font-weight: 700;
-      font-size: 14px;
-      transition: background-color 0.15s ease, transform 0.1s ease;
+      transition: background-color 0.15s ease;
     }
-    .cta-link:hover {
-      background: var(--accent-hover);
+    .btn-play:hover {
+      background: var(--play-green-hover);
     }
-    .cta-link:active {
-      transform: scale(0.99);
-    }
+
     .empty-state, .no-results {
       text-align: center;
       padding: 36px 20px;
       background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: 12px;
+      border-radius: 14px;
       color: var(--text-secondary);
       font-size: 14px;
     }
@@ -326,7 +488,7 @@
     .reset-btn {
       margin-top: 12px;
       padding: 8px 16px;
-      border-radius: 8px;
+      border-radius: 20px;
       border: 1px solid var(--border);
       background: var(--surface-subtle);
       color: var(--text);
@@ -419,97 +581,160 @@
                 </svg>
               </summary>
               <div class="cards-grid">
-                <article class="game-card" data-platform="pc" data-search="return of the obra dinn trinh thám suy luận pc (steam) thứ 2">
-                  <div class="card-meta">
-                    <span class="meta-day">Thứ 2</span>
-                    <span class="meta-sep" aria-hidden="true">/</span>
-                    <span class="meta-platform">PC (Steam)</span>
-                  </div>
-                  <h3 class="game-title">Return of the Obra Dinn</h3>
-                  <div class="game-genre">Trinh thám suy luận</div>
-                  <p class="game-desc">Bạn là điều tra viên lên con tàu mất tích, dùng chiếc đồng hồ đặc biệt để chứng kiến khoảnh khắc cuối của thủy thủ đoàn. Từng danh tính và nguyên nhân tử vong đều phải được suy luận từ chi tiết nhỏ.</p>
-                  <a class="cta-link" href="https://store.steampowered.com/app/653530/" target="_blank" rel="noopener noreferrer">Mở trên Steam</a>
-                </article><article class="game-card" data-platform="pc" data-search="the case of the golden idol trinh thám giải đố pc (steam) thứ 2">
-                  <div class="card-meta">
-                    <span class="meta-day">Thứ 2</span>
-                    <span class="meta-sep" aria-hidden="true">/</span>
-                    <span class="meta-platform">PC (Steam)</span>
-                  </div>
-                  <h3 class="game-title">The Case of the Golden Idol</h3>
-                  <div class="game-genre">Trinh thám giải đố</div>
-                  <p class="game-desc">Qua những cảnh án mạng tĩnh như tranh, bạn tự điền tên người, hành động và động cơ để dựng lại sự thật. Càng ghép đúng, câu chuyện về một món cổ vật nguyền rủa càng mở ra nhiều cú lật khó ngờ.</p>
-                  <a class="cta-link" href="https://store.steampowered.com/app/1677770/" target="_blank" rel="noopener noreferrer">Mở trên Steam</a>
-                </article><article class="game-card" data-platform="pc" data-search="her story trinh thám tương tác pc (steam) thứ 2">
-                  <div class="card-meta">
-                    <span class="meta-day">Thứ 2</span>
-                    <span class="meta-sep" aria-hidden="true">/</span>
-                    <span class="meta-platform">PC (Steam)</span>
-                  </div>
-                  <h3 class="game-title">Her Story</h3>
-                  <div class="game-genre">Trinh thám tương tác</div>
-                  <p class="game-desc">Một kho dữ liệu phỏng vấn, một vụ mất tích và chẳng ai đưa sẵn đáp án. Tìm từ khóa để xem từng đoạn video, nối lời khai theo cách của bạn rồi tự quyết định điều gì đã thật sự xảy ra.</p>
-                  <a class="cta-link" href="https://store.steampowered.com/app/368370/" target="_blank" rel="noopener noreferrer">Mở trên Steam</a>
-                </article><article class="game-card" data-platform="pc" data-search="the long dark sinh tồn thế giới mở pc (steam) thứ 4">
-                  <div class="card-meta">
-                    <span class="meta-day">Thứ 4</span>
-                    <span class="meta-sep" aria-hidden="true">/</span>
-                    <span class="meta-platform">PC (Steam)</span>
-                  </div>
-                  <h3 class="game-title">The Long Dark</h3>
-                  <div class="game-genre">Sinh tồn thế giới mở</div>
-                  <p class="game-desc">Sau thảm họa địa từ, bạn mắc kẹt giữa vùng hoang dã Canada lạnh buốt. Tìm thức ăn, giữ ấm và cân nhắc từng chuyến đi; ở đây, thời tiết và sự thiếu thốn mới là đối thủ đáng sợ nhất.</p>
-                  <a class="cta-link" href="https://store.steampowered.com/app/305620/" target="_blank" rel="noopener noreferrer">Mở trên Steam</a>
-                </article><article class="game-card" data-platform="pc" data-search="subnautica sinh tồn khám phá biển sâu pc (steam) thứ 4">
-                  <div class="card-meta">
-                    <span class="meta-day">Thứ 4</span>
-                    <span class="meta-sep" aria-hidden="true">/</span>
-                    <span class="meta-platform">PC (Steam)</span>
-                  </div>
-                  <h3 class="game-title">Subnautica</h3>
-                  <div class="game-genre">Sinh tồn khám phá biển sâu</div>
-                  <p class="game-desc">Rơi xuống một hành tinh phủ đại dương, bạn phải lặn tìm vật liệu, chế tạo thiết bị và mở rộng căn cứ dưới nước. Những rạn san hô tuyệt đẹp dẫn lối xuống vùng sâu vừa bí ẩn vừa đầy hiểm nguy.</p>
-                  <a class="cta-link" href="https://store.steampowered.com/app/264710/" target="_blank" rel="noopener noreferrer">Mở trên Steam</a>
-                </article><article class="game-card" data-platform="pc" data-search="the forest sinh tồn kinh dị pc (steam) thứ 4">
-                  <div class="card-meta">
-                    <span class="meta-day">Thứ 4</span>
-                    <span class="meta-sep" aria-hidden="true">/</span>
-                    <span class="meta-platform">PC (Steam)</span>
-                  </div>
-                  <h3 class="game-title">The Forest</h3>
-                  <div class="game-genre">Sinh tồn kinh dị</div>
-                  <p class="game-desc">Sau tai nạn máy bay, bạn tìm con trai mất tích trên một bán đảo rừng rậm. Chặt cây dựng nơi trú, kiếm thức ăn và khám phá hang động; nhưng càng tìm hiểu cư dân nơi đây, chuyến đi càng bất an.</p>
-                  <a class="cta-link" href="https://store.steampowered.com/app/242760/" target="_blank" rel="noopener noreferrer">Mở trên Steam</a>
-                </article><article class="game-card" data-platform="mobile" data-search="balatro poker roguelike ios / android thứ 6">
-                  <div class="card-meta">
-                    <span class="meta-day">Thứ 6</span>
-                    <span class="meta-sep" aria-hidden="true">/</span>
-                    <span class="meta-platform">iOS / Android</span>
-                  </div>
-                  <h3 class="game-title">Balatro</h3>
-                  <div class="game-genre">Poker roguelike</div>
-                  <p class="game-desc">Dùng những tay bài poker quen thuộc để vượt màn, rồi kết hợp Joker tạo hiệu ứng cộng dồn bất ngờ. Mỗi lượt chạy mở ra hướng build khác nhau, luật dễ nắm nhưng tối ưu điểm số thì khó dứt.</p>
-                  <a class="cta-link" href="https://play.google.com/store/search?q=Balatro&amp;c=apps" target="_blank" rel="noopener noreferrer">Mở trên Store</a>
-                </article><article class="game-card" data-platform="mobile" data-search="dawncaster: deckbuilding rpg roguelike xây bộ bài ios / android thứ 6">
-                  <div class="card-meta">
-                    <span class="meta-day">Thứ 6</span>
-                    <span class="meta-sep" aria-hidden="true">/</span>
-                    <span class="meta-platform">iOS / Android</span>
-                  </div>
-                  <h3 class="game-title">Dawncaster: Deckbuilding RPG</h3>
-                  <div class="game-genre">Roguelike xây bộ bài</div>
-                  <p class="game-desc">Chọn nhân vật, nhặt kỹ năng và xây bộ bài riêng trên hành trình fantasy nhiều ngã rẽ. Các trận đánh theo lượt khuyến khích thử chiến thuật mới; game hỗ trợ chơi offline, hợp để mở nhanh một chuyến phiêu lưu.</p>
-                  <a class="cta-link" href="https://play.google.com/store/search?q=Dawncaster%3A%20Deckbuilding%20RPG&amp;c=apps" target="_blank" rel="noopener noreferrer">Mở trên Store</a>
-                </article><article class="game-card" data-platform="mobile" data-search="night of the full moon thẻ bài roguelike ios / android thứ 6">
-                  <div class="card-meta">
-                    <span class="meta-day">Thứ 6</span>
-                    <span class="meta-sep" aria-hidden="true">/</span>
-                    <span class="meta-platform">iOS / Android</span>
-                  </div>
-                  <h3 class="game-title">Night of the Full Moon</h3>
-                  <div class="game-genre">Thẻ bài roguelike</div>
-                  <p class="game-desc">Theo chân cô bé Mũ Đỏ trong những chương truyện cổ tích u tối, chọn lớp nhân vật rồi đấu bài với từng đối thủ. Bộ bài và hướng đi thay đổi trải nghiệm; có thể chơi offline, không cần kết nối liên tục.</p>
-                  <a class="cta-link" href="https://play.google.com/store/search?q=Night%20of%20the%20Full%20Moon&amp;c=apps" target="_blank" rel="noopener noreferrer">Mở trên Store</a>
-                </article>
+                <article class="game-card card-steam" data-platform="pc" data-search="return of the obra dinn trinh thám suy luận pc (steam) thứ 2">
+                      <div class="steam-banner"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/653530/header.jpg" alt="Return of the Obra Dinn" loading="lazy" referrerpolicy="no-referrer" /><span class="steam-day-tag">Thứ 2</span></div>
+                      <div class="steam-body">
+                        <div class="steam-title-row">
+                          <h3 class="steam-title">Return of the Obra Dinn</h3>
+                          <span class="steam-win-badge" title="PC / Steam" aria-label="PC Steam">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>
+                            <span>Steam</span>
+                          </span>
+                        </div>
+                        <div class="steam-genre">Trinh thám suy luận</div>
+                        <p class="steam-desc">Bạn là điều tra viên lên con tàu mất tích, dùng chiếc đồng hồ đặc biệt để chứng kiến khoảnh khắc cuối của thủy thủ đoàn. Từng danh tính và nguyên nhân tử vong đều phải được suy luận từ chi tiết nhỏ.</p>
+                        <div class="steam-footer">
+                          <span class="steam-platform-text">PC (Steam)</span>
+                          <a class="btn-steam" href="https://store.steampowered.com/app/653530/" target="_blank" rel="noopener noreferrer">Mở trên Steam</a>
+                        </div>
+                      </div>
+                    </article><article class="game-card card-steam" data-platform="pc" data-search="the case of the golden idol trinh thám giải đố pc (steam) thứ 2">
+                      <div class="steam-banner"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1677770/header.jpg" alt="The Case of the Golden Idol" loading="lazy" referrerpolicy="no-referrer" /><span class="steam-day-tag">Thứ 2</span></div>
+                      <div class="steam-body">
+                        <div class="steam-title-row">
+                          <h3 class="steam-title">The Case of the Golden Idol</h3>
+                          <span class="steam-win-badge" title="PC / Steam" aria-label="PC Steam">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>
+                            <span>Steam</span>
+                          </span>
+                        </div>
+                        <div class="steam-genre">Trinh thám giải đố</div>
+                        <p class="steam-desc">Qua những cảnh án mạng tĩnh như tranh, bạn tự điền tên người, hành động và động cơ để dựng lại sự thật. Càng ghép đúng, câu chuyện về một món cổ vật nguyền rủa càng mở ra nhiều cú lật khó ngờ.</p>
+                        <div class="steam-footer">
+                          <span class="steam-platform-text">PC (Steam)</span>
+                          <a class="btn-steam" href="https://store.steampowered.com/app/1677770/" target="_blank" rel="noopener noreferrer">Mở trên Steam</a>
+                        </div>
+                      </div>
+                    </article><article class="game-card card-steam" data-platform="pc" data-search="her story trinh thám tương tác pc (steam) thứ 2">
+                      <div class="steam-banner"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/368370/header.jpg" alt="Her Story" loading="lazy" referrerpolicy="no-referrer" /><span class="steam-day-tag">Thứ 2</span></div>
+                      <div class="steam-body">
+                        <div class="steam-title-row">
+                          <h3 class="steam-title">Her Story</h3>
+                          <span class="steam-win-badge" title="PC / Steam" aria-label="PC Steam">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>
+                            <span>Steam</span>
+                          </span>
+                        </div>
+                        <div class="steam-genre">Trinh thám tương tác</div>
+                        <p class="steam-desc">Một kho dữ liệu phỏng vấn, một vụ mất tích và chẳng ai đưa sẵn đáp án. Tìm từ khóa để xem từng đoạn video, nối lời khai theo cách của bạn rồi tự quyết định điều gì đã thật sự xảy ra.</p>
+                        <div class="steam-footer">
+                          <span class="steam-platform-text">PC (Steam)</span>
+                          <a class="btn-steam" href="https://store.steampowered.com/app/368370/" target="_blank" rel="noopener noreferrer">Mở trên Steam</a>
+                        </div>
+                      </div>
+                    </article><article class="game-card card-steam" data-platform="pc" data-search="the long dark sinh tồn thế giới mở pc (steam) thứ 4">
+                      <div class="steam-banner"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/305620/header.jpg" alt="The Long Dark" loading="lazy" referrerpolicy="no-referrer" /><span class="steam-day-tag">Thứ 4</span></div>
+                      <div class="steam-body">
+                        <div class="steam-title-row">
+                          <h3 class="steam-title">The Long Dark</h3>
+                          <span class="steam-win-badge" title="PC / Steam" aria-label="PC Steam">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>
+                            <span>Steam</span>
+                          </span>
+                        </div>
+                        <div class="steam-genre">Sinh tồn thế giới mở</div>
+                        <p class="steam-desc">Sau thảm họa địa từ, bạn mắc kẹt giữa vùng hoang dã Canada lạnh buốt. Tìm thức ăn, giữ ấm và cân nhắc từng chuyến đi; ở đây, thời tiết và sự thiếu thốn mới là đối thủ đáng sợ nhất.</p>
+                        <div class="steam-footer">
+                          <span class="steam-platform-text">PC (Steam)</span>
+                          <a class="btn-steam" href="https://store.steampowered.com/app/305620/" target="_blank" rel="noopener noreferrer">Mở trên Steam</a>
+                        </div>
+                      </div>
+                    </article><article class="game-card card-steam" data-platform="pc" data-search="subnautica sinh tồn khám phá biển sâu pc (steam) thứ 4">
+                      <div class="steam-banner"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/264710/header.jpg" alt="Subnautica" loading="lazy" referrerpolicy="no-referrer" /><span class="steam-day-tag">Thứ 4</span></div>
+                      <div class="steam-body">
+                        <div class="steam-title-row">
+                          <h3 class="steam-title">Subnautica</h3>
+                          <span class="steam-win-badge" title="PC / Steam" aria-label="PC Steam">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>
+                            <span>Steam</span>
+                          </span>
+                        </div>
+                        <div class="steam-genre">Sinh tồn khám phá biển sâu</div>
+                        <p class="steam-desc">Rơi xuống một hành tinh phủ đại dương, bạn phải lặn tìm vật liệu, chế tạo thiết bị và mở rộng căn cứ dưới nước. Những rạn san hô tuyệt đẹp dẫn lối xuống vùng sâu vừa bí ẩn vừa đầy hiểm nguy.</p>
+                        <div class="steam-footer">
+                          <span class="steam-platform-text">PC (Steam)</span>
+                          <a class="btn-steam" href="https://store.steampowered.com/app/264710/" target="_blank" rel="noopener noreferrer">Mở trên Steam</a>
+                        </div>
+                      </div>
+                    </article><article class="game-card card-steam" data-platform="pc" data-search="the forest sinh tồn kinh dị pc (steam) thứ 4">
+                      <div class="steam-banner"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/242760/header.jpg" alt="The Forest" loading="lazy" referrerpolicy="no-referrer" /><span class="steam-day-tag">Thứ 4</span></div>
+                      <div class="steam-body">
+                        <div class="steam-title-row">
+                          <h3 class="steam-title">The Forest</h3>
+                          <span class="steam-win-badge" title="PC / Steam" aria-label="PC Steam">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>
+                            <span>Steam</span>
+                          </span>
+                        </div>
+                        <div class="steam-genre">Sinh tồn kinh dị</div>
+                        <p class="steam-desc">Sau tai nạn máy bay, bạn tìm con trai mất tích trên một bán đảo rừng rậm. Chặt cây dựng nơi trú, kiếm thức ăn và khám phá hang động; nhưng càng tìm hiểu cư dân nơi đây, chuyến đi càng bất an.</p>
+                        <div class="steam-footer">
+                          <span class="steam-platform-text">PC (Steam)</span>
+                          <a class="btn-steam" href="https://store.steampowered.com/app/242760/" target="_blank" rel="noopener noreferrer">Mở trên Steam</a>
+                        </div>
+                      </div>
+                    </article><article class="game-card card-play" data-platform="mobile" data-search="balatro poker roguelike ios / android thứ 6">
+                      <div class="play-header">
+                        <div class="play-app-icon" aria-hidden="true">B</div>
+                        <div class="play-head-info">
+                          <div class="play-meta-line">
+                            <span class="play-day-tag">Thứ 6</span>
+                            <span class="play-store-label">CH Play / App Store</span>
+                          </div>
+                          <h3 class="play-title">Balatro</h3>
+                          <div class="play-genre">Poker roguelike</div>
+                        </div>
+                      </div>
+                      <p class="play-desc">Dùng những tay bài poker quen thuộc để vượt màn, rồi kết hợp Joker tạo hiệu ứng cộng dồn bất ngờ. Mỗi lượt chạy mở ra hướng build khác nhau, luật dễ nắm nhưng tối ưu điểm số thì khó dứt.</p>
+                      <div class="play-footer">
+                        <span class="play-platform-text">iOS / Android</span>
+                        <a class="btn-play" href="https://play.google.com/store/search?q=Balatro&amp;c=apps" target="_blank" rel="noopener noreferrer">Tải trên Store</a>
+                      </div>
+                    </article><article class="game-card card-play" data-platform="mobile" data-search="dawncaster: deckbuilding rpg roguelike xây bộ bài ios / android thứ 6">
+                      <div class="play-header">
+                        <div class="play-app-icon" aria-hidden="true">DD</div>
+                        <div class="play-head-info">
+                          <div class="play-meta-line">
+                            <span class="play-day-tag">Thứ 6</span>
+                            <span class="play-store-label">CH Play / App Store</span>
+                          </div>
+                          <h3 class="play-title">Dawncaster: Deckbuilding RPG</h3>
+                          <div class="play-genre">Roguelike xây bộ bài</div>
+                        </div>
+                      </div>
+                      <p class="play-desc">Chọn nhân vật, nhặt kỹ năng và xây bộ bài riêng trên hành trình fantasy nhiều ngã rẽ. Các trận đánh theo lượt khuyến khích thử chiến thuật mới; game hỗ trợ chơi offline, hợp để mở nhanh một chuyến phiêu lưu.</p>
+                      <div class="play-footer">
+                        <span class="play-platform-text">iOS / Android</span>
+                        <a class="btn-play" href="https://play.google.com/store/search?q=Dawncaster%3A%20Deckbuilding%20RPG&amp;c=apps" target="_blank" rel="noopener noreferrer">Tải trên Store</a>
+                      </div>
+                    </article><article class="game-card card-play" data-platform="mobile" data-search="night of the full moon thẻ bài roguelike ios / android thứ 6">
+                      <div class="play-header">
+                        <div class="play-app-icon" aria-hidden="true">NO</div>
+                        <div class="play-head-info">
+                          <div class="play-meta-line">
+                            <span class="play-day-tag">Thứ 6</span>
+                            <span class="play-store-label">CH Play / App Store</span>
+                          </div>
+                          <h3 class="play-title">Night of the Full Moon</h3>
+                          <div class="play-genre">Thẻ bài roguelike</div>
+                        </div>
+                      </div>
+                      <p class="play-desc">Theo chân cô bé Mũ Đỏ trong những chương truyện cổ tích u tối, chọn lớp nhân vật rồi đấu bài với từng đối thủ. Bộ bài và hướng đi thay đổi trải nghiệm; có thể chơi offline, không cần kết nối liên tục.</p>
+                      <div class="play-footer">
+                        <span class="play-platform-text">iOS / Android</span>
+                        <a class="btn-play" href="https://play.google.com/store/search?q=Night%20of%20the%20Full%20Moon&amp;c=apps" target="_blank" rel="noopener noreferrer">Tải trên Store</a>
+                      </div>
+                    </article>
               </div>
             </details>
 <details class="week-section">
@@ -528,97 +753,160 @@
                 </svg>
               </summary>
               <div class="cards-grid">
-                <article class="game-card" data-platform="pc" data-search="baba is you giải đố thao tác luật pc (steam) thứ 2">
-                  <div class="card-meta">
-                    <span class="meta-day">Thứ 2</span>
-                    <span class="meta-sep" aria-hidden="true">/</span>
-                    <span class="meta-platform">PC (Steam)</span>
-                  </div>
-                  <h3 class="game-title">Baba Is You</h3>
-                  <div class="game-genre">Giải đố thao tác luật</div>
-                  <p class="game-desc">Mỗi màn là một câu đố bằng những khối từ có thể đẩy và sắp xếp lại. Đổi “WALL IS STOP” thành luật khác, bạn biến chính vật cản thành lối đi và viết lại cách màn chơi vận hành.</p>
-                  <a class="cta-link" href="https://store.steampowered.com/app/736260/" target="_blank" rel="noopener noreferrer">Mở trên Steam</a>
-                </article><article class="game-card" data-platform="pc" data-search="patrick&#x27;s parabox giải đố đệ quy pc (steam) thứ 2">
-                  <div class="card-meta">
-                    <span class="meta-day">Thứ 2</span>
-                    <span class="meta-sep" aria-hidden="true">/</span>
-                    <span class="meta-platform">PC (Steam)</span>
-                  </div>
-                  <h3 class="game-title">Patrick&#x27;s Parabox</h3>
-                  <div class="game-genre">Giải đố đệ quy</div>
-                  <p class="game-desc">Đẩy một chiếc hộp vào bên trong chính nó nghe vô lý, nhưng lại là chìa khóa của trò chơi. Các mê cung đệ quy liên tục đổi góc nhìn, khiến mỗi bước đi vừa mở đường vừa tạo thêm câu hỏi.</p>
-                  <a class="cta-link" href="https://store.steampowered.com/app/1260520/" target="_blank" rel="noopener noreferrer">Mở trên Steam</a>
-                </article><article class="game-card" data-platform="pc" data-search="chants of sennaar phiêu lưu giải mã ngôn ngữ pc (steam) thứ 2">
-                  <div class="card-meta">
-                    <span class="meta-day">Thứ 2</span>
-                    <span class="meta-sep" aria-hidden="true">/</span>
-                    <span class="meta-platform">PC (Steam)</span>
-                  </div>
-                  <h3 class="game-title">Chants of Sennaar</h3>
-                  <div class="game-genre">Phiêu lưu giải mã ngôn ngữ</div>
-                  <p class="game-desc">Bạn bước vào một thế giới nơi các cộng đồng không hiểu tiếng nói của nhau. Quan sát biểu tượng, hành vi và bối cảnh để tự giải mã từng ngôn ngữ, rồi dùng hiểu biết ấy mở lối giao tiếp.</p>
-                  <a class="cta-link" href="https://store.steampowered.com/app/1931770/" target="_blank" rel="noopener noreferrer">Mở trên Steam</a>
-                </article><article class="game-card" data-platform="pc" data-search="against the storm xây dựng thành phố sinh tồn pc (steam) thứ 4">
-                  <div class="card-meta">
-                    <span class="meta-day">Thứ 4</span>
-                    <span class="meta-sep" aria-hidden="true">/</span>
-                    <span class="meta-platform">PC (Steam)</span>
-                  </div>
-                  <h3 class="game-title">Against the Storm</h3>
-                  <div class="game-genre">Xây dựng thành phố sinh tồn</div>
-                  <p class="game-desc">Dựng những khu định cư giữa vùng hoang dã, nơi thời tiết và nhu cầu cư dân liên tục đổi thay. Quản lý nguyên liệu, phân công chủng tộc và hoàn thành mục tiêu trước khi cơn bão buộc bạn rời đi.</p>
-                  <a class="cta-link" href="https://store.steampowered.com/app/1336490/" target="_blank" rel="noopener noreferrer">Mở trên Steam</a>
-                </article><article class="game-card" data-platform="pc" data-search="workers &amp; resources: soviet republic mô phỏng xây dựng và quản lý pc (steam) thứ 4">
-                  <div class="card-meta">
-                    <span class="meta-day">Thứ 4</span>
-                    <span class="meta-sep" aria-hidden="true">/</span>
-                    <span class="meta-platform">PC (Steam)</span>
-                  </div>
-                  <h3 class="game-title">Workers &amp; Resources: Soviet Republic</h3>
-                  <div class="game-genre">Mô phỏng xây dựng và quản lý</div>
-                  <p class="game-desc">Không chỉ đặt nhà máy: bạn còn phải nối đường sắt, xe buýt, điện, sưởi và nguồn hàng để cả nền kinh tế vận hành. Một mắt xích tắc nghẽn có thể khiến toàn bộ thành phố thiếu thốn.</p>
-                  <a class="cta-link" href="https://store.steampowered.com/app/784150/" target="_blank" rel="noopener noreferrer">Mở trên Steam</a>
-                </article><article class="game-card" data-platform="pc" data-search="captain of industry xây dựng nhà máy và quản lý tài nguyên pc (steam) thứ 4">
-                  <div class="card-meta">
-                    <span class="meta-day">Thứ 4</span>
-                    <span class="meta-sep" aria-hidden="true">/</span>
-                    <span class="meta-platform">PC (Steam)</span>
-                  </div>
-                  <h3 class="game-title">Captain of Industry</h3>
-                  <div class="game-genre">Xây dựng nhà máy và quản lý tài nguyên</div>
-                  <p class="game-desc">Khởi đầu trên một hòn đảo hoang, bạn khai thác, nông nghiệp, nghiên cứu rồi nối các dây chuyền để tạo ra sản phẩm phức tạp. Tính cả logistics, chất thải và nhu cầu cư dân để công nghiệp phát triển bền vững.</p>
-                  <a class="cta-link" href="https://store.steampowered.com/app/1594320/" target="_blank" rel="noopener noreferrer">Mở trên Steam</a>
-                </article><article class="game-card" data-platform="mobile" data-search="into the breach chiến thuật theo lượt ios / android thứ 6">
-                  <div class="card-meta">
-                    <span class="meta-day">Thứ 6</span>
-                    <span class="meta-sep" aria-hidden="true">/</span>
-                    <span class="meta-platform">iOS / Android</span>
-                  </div>
-                  <h3 class="game-title">Into the Breach</h3>
-                  <div class="game-genre">Chiến thuật theo lượt</div>
-                  <p class="game-desc">Trên bản đồ ô vuông gọn gàng, bạn thấy trước kẻ địch sắp đánh đâu rồi chọn cách đẩy, chặn hoặc hạ chúng. Mỗi lượt là một bài toán bảo vệ dân thường bằng đội mech ít ỏi.</p>
-                  <a class="cta-link" href="https://play.google.com/store/search?q=Into%20the%20Breach&amp;c=apps" target="_blank" rel="noopener noreferrer">Mở trên Store</a>
-                </article><article class="game-card" data-platform="mobile" data-search="the battle of polytopia chiến thuật 4x theo lượt ios / android thứ 6">
-                  <div class="card-meta">
-                    <span class="meta-day">Thứ 6</span>
-                    <span class="meta-sep" aria-hidden="true">/</span>
-                    <span class="meta-platform">iOS / Android</span>
-                  </div>
-                  <h3 class="game-title">The Battle of Polytopia</h3>
-                  <div class="game-genre">Chiến thuật 4X theo lượt</div>
-                  <p class="game-desc">Chọn một bộ tộc, khám phá bản đồ, nghiên cứu công nghệ và tranh quyền kiểm soát theo lượt. Trận đấu gọn, luật dễ tiếp cận nhưng mỗi quyết định mở rộng hay phòng thủ đều ảnh hưởng đến đường phát triển.</p>
-                  <a class="cta-link" href="https://play.google.com/store/apps/details?id=air.com.midjiwan.polytopia" target="_blank" rel="noopener noreferrer">Mở trên Store</a>
-                </article><article class="game-card" data-platform="mobile" data-search="slice &amp; dice chiến thuật theo lượt roguelike ios / android thứ 6">
-                  <div class="card-meta">
-                    <span class="meta-day">Thứ 6</span>
-                    <span class="meta-sep" aria-hidden="true">/</span>
-                    <span class="meta-platform">iOS / Android</span>
-                  </div>
-                  <h3 class="game-title">Slice &amp; Dice</h3>
-                  <div class="game-genre">Chiến thuật theo lượt roguelike</div>
-                  <p class="game-desc">Đội hình của bạn là những viên xúc xắc, mỗi mặt tương ứng một hành động khác nhau. Tung xúc xắc, phân bổ đòn đánh và phòng thủ để vượt chuỗi giao tranh; một lượt xử lý khéo có thể cứu cả đội.</p>
-                  <a class="cta-link" href="https://play.google.com/store/apps/details?id=com.com.tann.dice" target="_blank" rel="noopener noreferrer">Mở trên Store</a>
-                </article>
+                <article class="game-card card-steam" data-platform="pc" data-search="baba is you giải đố thao tác luật pc (steam) thứ 2">
+                      <div class="steam-banner"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/736260/header.jpg" alt="Baba Is You" loading="lazy" referrerpolicy="no-referrer" /><span class="steam-day-tag">Thứ 2</span></div>
+                      <div class="steam-body">
+                        <div class="steam-title-row">
+                          <h3 class="steam-title">Baba Is You</h3>
+                          <span class="steam-win-badge" title="PC / Steam" aria-label="PC Steam">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>
+                            <span>Steam</span>
+                          </span>
+                        </div>
+                        <div class="steam-genre">Giải đố thao tác luật</div>
+                        <p class="steam-desc">Mỗi màn là một câu đố bằng những khối từ có thể đẩy và sắp xếp lại. Đổi “WALL IS STOP” thành luật khác, bạn biến chính vật cản thành lối đi và viết lại cách màn chơi vận hành.</p>
+                        <div class="steam-footer">
+                          <span class="steam-platform-text">PC (Steam)</span>
+                          <a class="btn-steam" href="https://store.steampowered.com/app/736260/" target="_blank" rel="noopener noreferrer">Mở trên Steam</a>
+                        </div>
+                      </div>
+                    </article><article class="game-card card-steam" data-platform="pc" data-search="patrick&#x27;s parabox giải đố đệ quy pc (steam) thứ 2">
+                      <div class="steam-banner"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1260520/header.jpg" alt="Patrick&#x27;s Parabox" loading="lazy" referrerpolicy="no-referrer" /><span class="steam-day-tag">Thứ 2</span></div>
+                      <div class="steam-body">
+                        <div class="steam-title-row">
+                          <h3 class="steam-title">Patrick&#x27;s Parabox</h3>
+                          <span class="steam-win-badge" title="PC / Steam" aria-label="PC Steam">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>
+                            <span>Steam</span>
+                          </span>
+                        </div>
+                        <div class="steam-genre">Giải đố đệ quy</div>
+                        <p class="steam-desc">Đẩy một chiếc hộp vào bên trong chính nó nghe vô lý, nhưng lại là chìa khóa của trò chơi. Các mê cung đệ quy liên tục đổi góc nhìn, khiến mỗi bước đi vừa mở đường vừa tạo thêm câu hỏi.</p>
+                        <div class="steam-footer">
+                          <span class="steam-platform-text">PC (Steam)</span>
+                          <a class="btn-steam" href="https://store.steampowered.com/app/1260520/" target="_blank" rel="noopener noreferrer">Mở trên Steam</a>
+                        </div>
+                      </div>
+                    </article><article class="game-card card-steam" data-platform="pc" data-search="chants of sennaar phiêu lưu giải mã ngôn ngữ pc (steam) thứ 2">
+                      <div class="steam-banner"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1931770/header.jpg" alt="Chants of Sennaar" loading="lazy" referrerpolicy="no-referrer" /><span class="steam-day-tag">Thứ 2</span></div>
+                      <div class="steam-body">
+                        <div class="steam-title-row">
+                          <h3 class="steam-title">Chants of Sennaar</h3>
+                          <span class="steam-win-badge" title="PC / Steam" aria-label="PC Steam">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>
+                            <span>Steam</span>
+                          </span>
+                        </div>
+                        <div class="steam-genre">Phiêu lưu giải mã ngôn ngữ</div>
+                        <p class="steam-desc">Bạn bước vào một thế giới nơi các cộng đồng không hiểu tiếng nói của nhau. Quan sát biểu tượng, hành vi và bối cảnh để tự giải mã từng ngôn ngữ, rồi dùng hiểu biết ấy mở lối giao tiếp.</p>
+                        <div class="steam-footer">
+                          <span class="steam-platform-text">PC (Steam)</span>
+                          <a class="btn-steam" href="https://store.steampowered.com/app/1931770/" target="_blank" rel="noopener noreferrer">Mở trên Steam</a>
+                        </div>
+                      </div>
+                    </article><article class="game-card card-steam" data-platform="pc" data-search="against the storm xây dựng thành phố sinh tồn pc (steam) thứ 4">
+                      <div class="steam-banner"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1336490/header.jpg" alt="Against the Storm" loading="lazy" referrerpolicy="no-referrer" /><span class="steam-day-tag">Thứ 4</span></div>
+                      <div class="steam-body">
+                        <div class="steam-title-row">
+                          <h3 class="steam-title">Against the Storm</h3>
+                          <span class="steam-win-badge" title="PC / Steam" aria-label="PC Steam">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>
+                            <span>Steam</span>
+                          </span>
+                        </div>
+                        <div class="steam-genre">Xây dựng thành phố sinh tồn</div>
+                        <p class="steam-desc">Dựng những khu định cư giữa vùng hoang dã, nơi thời tiết và nhu cầu cư dân liên tục đổi thay. Quản lý nguyên liệu, phân công chủng tộc và hoàn thành mục tiêu trước khi cơn bão buộc bạn rời đi.</p>
+                        <div class="steam-footer">
+                          <span class="steam-platform-text">PC (Steam)</span>
+                          <a class="btn-steam" href="https://store.steampowered.com/app/1336490/" target="_blank" rel="noopener noreferrer">Mở trên Steam</a>
+                        </div>
+                      </div>
+                    </article><article class="game-card card-steam" data-platform="pc" data-search="workers &amp; resources: soviet republic mô phỏng xây dựng và quản lý pc (steam) thứ 4">
+                      <div class="steam-banner"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/784150/header.jpg" alt="Workers &amp; Resources: Soviet Republic" loading="lazy" referrerpolicy="no-referrer" /><span class="steam-day-tag">Thứ 4</span></div>
+                      <div class="steam-body">
+                        <div class="steam-title-row">
+                          <h3 class="steam-title">Workers &amp; Resources: Soviet Republic</h3>
+                          <span class="steam-win-badge" title="PC / Steam" aria-label="PC Steam">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>
+                            <span>Steam</span>
+                          </span>
+                        </div>
+                        <div class="steam-genre">Mô phỏng xây dựng và quản lý</div>
+                        <p class="steam-desc">Không chỉ đặt nhà máy: bạn còn phải nối đường sắt, xe buýt, điện, sưởi và nguồn hàng để cả nền kinh tế vận hành. Một mắt xích tắc nghẽn có thể khiến toàn bộ thành phố thiếu thốn.</p>
+                        <div class="steam-footer">
+                          <span class="steam-platform-text">PC (Steam)</span>
+                          <a class="btn-steam" href="https://store.steampowered.com/app/784150/" target="_blank" rel="noopener noreferrer">Mở trên Steam</a>
+                        </div>
+                      </div>
+                    </article><article class="game-card card-steam" data-platform="pc" data-search="captain of industry xây dựng nhà máy và quản lý tài nguyên pc (steam) thứ 4">
+                      <div class="steam-banner"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1594320/header.jpg" alt="Captain of Industry" loading="lazy" referrerpolicy="no-referrer" /><span class="steam-day-tag">Thứ 4</span></div>
+                      <div class="steam-body">
+                        <div class="steam-title-row">
+                          <h3 class="steam-title">Captain of Industry</h3>
+                          <span class="steam-win-badge" title="PC / Steam" aria-label="PC Steam">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>
+                            <span>Steam</span>
+                          </span>
+                        </div>
+                        <div class="steam-genre">Xây dựng nhà máy và quản lý tài nguyên</div>
+                        <p class="steam-desc">Khởi đầu trên một hòn đảo hoang, bạn khai thác, nông nghiệp, nghiên cứu rồi nối các dây chuyền để tạo ra sản phẩm phức tạp. Tính cả logistics, chất thải và nhu cầu cư dân để công nghiệp phát triển bền vững.</p>
+                        <div class="steam-footer">
+                          <span class="steam-platform-text">PC (Steam)</span>
+                          <a class="btn-steam" href="https://store.steampowered.com/app/1594320/" target="_blank" rel="noopener noreferrer">Mở trên Steam</a>
+                        </div>
+                      </div>
+                    </article><article class="game-card card-play" data-platform="mobile" data-search="into the breach chiến thuật theo lượt ios / android thứ 6">
+                      <div class="play-header">
+                        <div class="play-app-icon" aria-hidden="true">IT</div>
+                        <div class="play-head-info">
+                          <div class="play-meta-line">
+                            <span class="play-day-tag">Thứ 6</span>
+                            <span class="play-store-label">CH Play / App Store</span>
+                          </div>
+                          <h3 class="play-title">Into the Breach</h3>
+                          <div class="play-genre">Chiến thuật theo lượt</div>
+                        </div>
+                      </div>
+                      <p class="play-desc">Trên bản đồ ô vuông gọn gàng, bạn thấy trước kẻ địch sắp đánh đâu rồi chọn cách đẩy, chặn hoặc hạ chúng. Mỗi lượt là một bài toán bảo vệ dân thường bằng đội mech ít ỏi.</p>
+                      <div class="play-footer">
+                        <span class="play-platform-text">iOS / Android</span>
+                        <a class="btn-play" href="https://play.google.com/store/search?q=Into%20the%20Breach&amp;c=apps" target="_blank" rel="noopener noreferrer">Tải trên Store</a>
+                      </div>
+                    </article><article class="game-card card-play" data-platform="mobile" data-search="the battle of polytopia chiến thuật 4x theo lượt ios / android thứ 6">
+                      <div class="play-header">
+                        <div class="play-app-icon" aria-hidden="true">TB</div>
+                        <div class="play-head-info">
+                          <div class="play-meta-line">
+                            <span class="play-day-tag">Thứ 6</span>
+                            <span class="play-store-label">CH Play / App Store</span>
+                          </div>
+                          <h3 class="play-title">The Battle of Polytopia</h3>
+                          <div class="play-genre">Chiến thuật 4X theo lượt</div>
+                        </div>
+                      </div>
+                      <p class="play-desc">Chọn một bộ tộc, khám phá bản đồ, nghiên cứu công nghệ và tranh quyền kiểm soát theo lượt. Trận đấu gọn, luật dễ tiếp cận nhưng mỗi quyết định mở rộng hay phòng thủ đều ảnh hưởng đến đường phát triển.</p>
+                      <div class="play-footer">
+                        <span class="play-platform-text">iOS / Android</span>
+                        <a class="btn-play" href="https://play.google.com/store/apps/details?id=air.com.midjiwan.polytopia" target="_blank" rel="noopener noreferrer">Tải trên Store</a>
+                      </div>
+                    </article><article class="game-card card-play" data-platform="mobile" data-search="slice &amp; dice chiến thuật theo lượt roguelike ios / android thứ 6">
+                      <div class="play-header">
+                        <div class="play-app-icon" aria-hidden="true">S&amp;</div>
+                        <div class="play-head-info">
+                          <div class="play-meta-line">
+                            <span class="play-day-tag">Thứ 6</span>
+                            <span class="play-store-label">CH Play / App Store</span>
+                          </div>
+                          <h3 class="play-title">Slice &amp; Dice</h3>
+                          <div class="play-genre">Chiến thuật theo lượt roguelike</div>
+                        </div>
+                      </div>
+                      <p class="play-desc">Đội hình của bạn là những viên xúc xắc, mỗi mặt tương ứng một hành động khác nhau. Tung xúc xắc, phân bổ đòn đánh và phòng thủ để vượt chuỗi giao tranh; một lượt xử lý khéo có thể cứu cả đội.</p>
+                      <div class="play-footer">
+                        <span class="play-platform-text">iOS / Android</span>
+                        <a class="btn-play" href="https://play.google.com/store/apps/details?id=com.com.tann.dice" target="_blank" rel="noopener noreferrer">Tải trên Store</a>
+                      </div>
+                    </article>
               </div>
             </details>
     </section>
