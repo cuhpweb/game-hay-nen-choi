@@ -4,7 +4,7 @@
     {
       "week_number": 10,
       "week_theme": "Game chất cho những khoảng giờ dễ trôi: indie ám ảnh, nông trại gây nghiện và truyện mobile gọn mà sâu",
-      "updated_at": "16/11/2026",
+      "updated_at": "18/11/2026",
       "games": [
         {
           "title": "The Beginner's Guide",
@@ -89,55 +89,13 @@
           "playstore_url": "",
           "appstore_url": "",
           "icon_url": ""
-        },
-        {
-          "title": "The Silent Age",
-          "genre": "Phiêu lưu / Giải đố / Bí ẩn",
-          "platform": "iOS / Android",
-          "platform_group": "mobile",
-          "description": "Một người lao công bình thường phát hiện cách đi giữa hiện tại và tương lai hậu tận thế. Giải đố bằng cách đổi thời điểm, lần theo bí mật của thế giới; nhịp kể gọn và phong cách tối giản hợp để chơi liền mạch trên điện thoại.",
-          "day_label": "Thứ 6",
-          "topic": "Game Mobile Chiến Thuật / Indie Gọn Nhẹ",
-          "unlock_date": "2026-11-20",
-          "url": "https://play.google.com/store/search?q=The%20Silent%20Age&c=apps",
-          "playstore_url": "https://play.google.com/store/search?q=The%20Silent%20Age&c=apps",
-          "appstore_url": "https://apps.apple.com/us/search?term=The+Silent+Age",
-          "icon_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/352520/library_600x900.jpg"
-        },
-        {
-          "title": "Lifeline",
-          "genre": "Phiêu lưu tương tác / Sinh tồn",
-          "platform": "iOS / Android",
-          "platform_group": "mobile",
-          "description": "Một phi hành gia mắc kẹt liên lạc với bạn qua tin nhắn, và lựa chọn của bạn định hướng từng bước sinh tồn. Cách kể chuyện diễn ra theo thời gian tạo cảm giác gần gũi, trong khi các nhánh quyết định khiến mỗi lượt chơi có thể rẽ hướng.",
-          "day_label": "Thứ 6",
-          "topic": "Game Mobile Chiến Thuật / Indie Gọn Nhẹ",
-          "unlock_date": "2026-11-20",
-          "url": "https://play.google.com/store/search?q=Lifeline%20game&c=apps",
-          "playstore_url": "https://play.google.com/store/search?q=Lifeline%20game&c=apps",
-          "appstore_url": "https://apps.apple.com/us/app/lifeline/id982354972?uo=4",
-          "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple122/v4/34/8d/30/348d3069-ed2f-a9c5-0f8a-5f04aae8540e/AppIcon-0-0-1x_U007emarketing-0-0-0-10-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/512x512bb.jpg"
-        },
-        {
-          "title": "A Dark Room",
-          "genre": "Phiêu lưu chữ / Sinh tồn",
-          "platform": "iOS / Android",
-          "platform_group": "mobile",
-          "description": "Bạn tỉnh dậy trong bóng tối, nhóm lửa rồi dần dựng nên một khu định cư. Từ vài thao tác đơn giản, game mở ra lớp khám phá và quản lý tài nguyên bất ngờ; câu chữ tiết chế khiến người chơi tò mò muốn biết thế giới ngoài kia có gì.",
-          "day_label": "Thứ 6",
-          "topic": "Game Mobile Chiến Thuật / Indie Gọn Nhẹ",
-          "unlock_date": "2026-11-20",
-          "url": "https://play.google.com/store/search?q=A%20Dark%20Room%20game&c=apps",
-          "playstore_url": "https://play.google.com/store/search?q=A%20Dark%20Room%20game&c=apps",
-          "appstore_url": "https://apps.apple.com/us/app/a-dark-room/id736683061?uo=4",
-          "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/86/50/51/86505156-60f6-0893-2950-dbd7c78003fc/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg"
         }
       ]
     },
     {
       "week_number": 9,
       "week_theme": "Ba kiểu nghiện khác thường: bộ bài biến dị, kinh doanh cuốn tay và phòng thủ căn cứ sáng tạo",
-      "updated_at": "16/11/2026",
+      "updated_at": "18/11/2026",
       "games": [
         {
           "title": "Monster Train",
@@ -222,55 +180,13 @@
           "playstore_url": "",
           "appstore_url": "",
           "icon_url": ""
-        },
-        {
-          "title": "Infinitode 2",
-          "genre": "Tower defense",
-          "platform": "iOS / Android",
-          "platform_group": "mobile",
-          "description": "Xây nhiều loại tháp, nghiên cứu nâng cấp và thiết kế tuyến phòng thủ trước từng đợt quái. Hệ thống bản đồ cùng cây công nghệ sâu tạo nhiều hướng thử nghiệm, hợp với người thích mày mò cách tối ưu.",
-          "day_label": "Thứ 6",
-          "topic": "Game Mobile Chiến Thuật / Indie Gọn Nhẹ",
-          "unlock_date": "2026-11-20",
-          "url": "https://play.google.com/store/search?q=Infinitode%202&c=apps",
-          "playstore_url": "https://play.google.com/store/search?q=Infinitode%202&c=apps",
-          "appstore_url": "https://apps.apple.com/us/app/infinitode-2/id1480178308?uo=4",
-          "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/86/f3/df/86f3df9b-f194-91e1-f106-afceb5f6d03f/AppIcon-1x_U007emarketing-0-8-0-P3-85-220-0.png/512x512bb.jpg"
-        },
-        {
-          "title": "Isle of Arrows",
-          "genre": "Tower defense roguelike",
-          "platform": "iOS / Android",
-          "platform_group": "mobile",
-          "description": "Mỗi lượt, bạn đặt các mảnh địa hình và công trình để tạo nên hòn đảo phòng thủ của riêng mình. Đường đi của địch hình thành từ cách ghép ấy, biến việc sắp xếp không gian thành trọng tâm chiến thuật.",
-          "day_label": "Thứ 6",
-          "topic": "Game Mobile Chiến Thuật / Indie Gọn Nhẹ",
-          "unlock_date": "2026-11-20",
-          "url": "https://play.google.com/store/search?q=Isle%20of%20Arrows&c=apps",
-          "playstore_url": "https://play.google.com/store/search?q=Isle%20of%20Arrows&c=apps",
-          "appstore_url": "https://apps.apple.com/us/app/isle-of-arrows-tower-defense/id1607942817?uo=4",
-          "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/29/f8/f1/29f8f1e2-0a64-3aec-e4b3-aac44e3a00c5/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/512x512bb.jpg"
-        },
-        {
-          "title": "Dungeon Warfare 2",
-          "genre": "Tower defense / đặt bẫy",
-          "platform": "iOS / Android",
-          "platform_group": "mobile",
-          "description": "Thay vì chỉ đặt tháp bắn, bạn phối hợp bẫy, chướng ngại và địa hình để xử lý từng nhóm kẻ xâm nhập. Một bố cục khéo có thể khiến cả căn hầm chiến đấu thay bạn qua nhiều đợt.",
-          "day_label": "Thứ 6",
-          "topic": "Game Mobile Chiến Thuật / Indie Gọn Nhẹ",
-          "unlock_date": "2026-11-20",
-          "url": "https://play.google.com/store/search?q=Dungeon%20Warfare%202&c=apps",
-          "playstore_url": "https://play.google.com/store/search?q=Dungeon%20Warfare%202&c=apps",
-          "appstore_url": "https://apps.apple.com/us/app/dungeon-warfare-2/id1453661259?uo=4",
-          "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple113/v4/70/68/42/70684285-33ad-dad5-e571-cbd7eab38b61/AppIcon-0-1x_U007emarketing-0-85-220-0-7.png/512x512bb.jpg"
         }
       ]
     },
     {
       "week_number": 8,
       "week_theme": "Một manh mối có thể đổi cả cuộc chơi: phá án, sống sót và tung xúc xắc",
-      "updated_at": "16/11/2026",
+      "updated_at": "18/11/2026",
       "games": [
         {
           "title": "The Painscreek Killings",
@@ -355,55 +271,13 @@
           "playstore_url": "",
           "appstore_url": "",
           "icon_url": ""
-        },
-        {
-          "title": "Dicey Dungeons",
-          "genre": "Roguelike xúc xắc",
-          "platform": "iOS / Android",
-          "platform_group": "mobile",
-          "description": "Mỗi nhân vật là một kiểu chơi riêng, còn xúc xắc được lắp vào trang bị để tạo đòn đánh. Chọn cách dùng kết quả mỗi lượt, thích nghi với kẻ địch và thử vận may trong những chuyến đi ngắn.",
-          "day_label": "Thứ 6",
-          "topic": "Game Mobile Chiến Thuật / Indie Gọn Nhẹ",
-          "unlock_date": "2026-11-20",
-          "url": "https://play.google.com/store/search?q=Dicey%20Dungeons&c=apps",
-          "playstore_url": "https://play.google.com/store/search?q=Dicey%20Dungeons&c=apps",
-          "appstore_url": "https://apps.apple.com/us/app/dicey-dungeons/id1368013995?uo=4",
-          "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/43/e4/31/43e431bd-b0ec-b6db-b877-f8085c6276ec/AppIcon-0-0-1x_U007emarketing-0-11-0-0-85-220.png/512x512bb.jpg"
-        },
-        {
-          "title": "Pirates Outlaws",
-          "genre": "Roguelike thẻ bài",
-          "platform": "iOS / Android",
-          "platform_group": "mobile",
-          "description": "Chọn thuyền trưởng, xây bộ bài và đối đầu kẻ địch qua từng chặng hải trình. Quản lý đạn dược cùng nhịp đánh tạo nên những quyết định chiến thuật rõ ràng; chơi từng lượt, không cần phản xạ nhanh.",
-          "day_label": "Thứ 6",
-          "topic": "Game Mobile Chiến Thuật / Indie Gọn Nhẹ",
-          "unlock_date": "2026-11-20",
-          "url": "https://play.google.com/store/search?q=Pirates%20Outlaws&c=apps",
-          "playstore_url": "https://play.google.com/store/search?q=Pirates%20Outlaws&c=apps",
-          "appstore_url": "https://apps.apple.com/us/app/pirates-outlaws/id1442776789?uo=4",
-          "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/49/a4/af/49a4af5f-ed4e-c10c-4b7e-6a6d5f388b04/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/512x512bb.jpg"
-        },
-        {
-          "title": "Card Crawl",
-          "genre": "Roguelike thẻ bài",
-          "platform": "iOS / Android",
-          "platform_group": "mobile",
-          "description": "Biến bộ bài thường thành hầm ngục thu nhỏ: quái vật, vật phẩm và phép thuật cùng tranh chỗ trong tay bạn. Mỗi lượt cần tính đường sống thật gọn, hợp để chơi nhanh mà vẫn có quyết định chiến thuật.",
-          "day_label": "Thứ 6",
-          "topic": "Game Mobile Chiến Thuật / Indie Gọn Nhẹ",
-          "unlock_date": "2026-11-20",
-          "url": "https://play.google.com/store/search?q=Card%20Crawl&c=apps",
-          "playstore_url": "https://play.google.com/store/search?q=Card%20Crawl&c=apps",
-          "appstore_url": "https://apps.apple.com/us/app/card-crawl/id950955524?uo=4",
-          "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/9b/50/0b/9b500b43-740c-add9-4065-0bff20e2a0be/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg"
         }
       ]
     },
     {
       "week_number": 7,
       "week_theme": "Ba luật chơi, ba thế giới để bạn nghĩ khác: giải đố ngược đời, thành phố vận hành và chiến thuật gọn trên điện thoại.",
-      "updated_at": "16/11/2026",
+      "updated_at": "18/11/2026",
       "games": [
         {
           "title": "The Pedestrian",
@@ -488,55 +362,13 @@
           "playstore_url": "",
           "appstore_url": "",
           "icon_url": ""
-        },
-        {
-          "title": "Hoplite",
-          "genre": "Chiến thuật theo lượt",
-          "platform": "iOS / Android",
-          "platform_group": "mobile",
-          "description": "Điều khiển chiến binh trên bản đồ lục giác, né đòn và tận dụng địa hình để vượt qua từng tầng. Luật chơi gọn nhưng mỗi nước đi đều quan trọng, hợp với những phiên chơi ngắn cần tập trung.",
-          "day_label": "Thứ 6",
-          "topic": "Game Mobile Chiến Thuật / Indie Gọn Nhẹ",
-          "unlock_date": "2026-11-20",
-          "url": "https://play.google.com/store/search?q=Hoplite&c=apps",
-          "playstore_url": "https://play.google.com/store/search?q=Hoplite&c=apps",
-          "appstore_url": "https://apps.apple.com/us/app/hoplite/id782438457?uo=4",
-          "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/72/35/23/72352392-1d6b-3e29-a0d9-82121c924a37/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg"
-        },
-        {
-          "title": "Pawnbarian",
-          "genre": "Chiến thuật kiểu cờ vua",
-          "platform": "iOS / Android",
-          "platform_group": "mobile",
-          "description": "Di chuyển quân cờ để tấn công quái vật trong những căn phòng nhỏ, nơi mỗi ô trống đều có ý nghĩa. Bạn phải đọc thế trận, chọn nước đi hợp lý và sống sót qua các lượt đối thủ.",
-          "day_label": "Thứ 6",
-          "topic": "Game Mobile Chiến Thuật / Indie Gọn Nhẹ",
-          "unlock_date": "2026-11-20",
-          "url": "https://play.google.com/store/search?q=Pawnbarian&c=apps",
-          "playstore_url": "https://play.google.com/store/search?q=Pawnbarian&c=apps",
-          "appstore_url": "https://apps.apple.com/us/app/pawnbarian/id1510583444?uo=4",
-          "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/ae/a8/72/aea872b0-0b65-dd8c-8840-4154e6ba8406/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/512x512bb.jpg"
-        },
-        {
-          "title": "Antiyoy",
-          "genre": "Chiến thuật chiếm lãnh thổ",
-          "platform": "Android",
-          "platform_group": "mobile",
-          "description": "Mở rộng vùng kiểm soát trên bản đồ dạng ô, quản lý tiền và giữ thế cân bằng trước đối thủ. Antiyoy có nhịp chơi nhanh, luật dễ tiếp cận nhưng vẫn đòi hỏi tính toán đường biên và thời điểm tiến quân.",
-          "day_label": "Thứ 6",
-          "topic": "Game Mobile Chiến Thuật / Indie Gọn Nhẹ",
-          "unlock_date": "2026-11-20",
-          "url": "https://play.google.com/store/search?q=Antiyoy&c=apps",
-          "playstore_url": "https://play.google.com/store/search?q=Antiyoy&c=apps",
-          "appstore_url": "https://apps.apple.com/us/app/antiyoy/id1415296141?uo=4",
-          "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/cb/4a/25/cb4a25d8-6114-e81b-eace-62095adaf6a4/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg"
         }
       ]
     },
     {
       "week_number": 6,
       "week_theme": "Game khiến bạn nghĩ khác: từ trò chơi biết mình là game đến những nghề vận hành tỉ mỉ và câu đố mobile nhẹ tênh",
-      "updated_at": "16/11/2026",
+      "updated_at": "18/11/2026",
       "games": [
         {
           "title": "The Stanley Parable: Ultra Deluxe",
@@ -621,55 +453,13 @@
           "playstore_url": "",
           "appstore_url": "",
           "icon_url": ""
-        },
-        {
-          "title": "Mekorama",
-          "genre": "Giải đố / Mô hình 3D",
-          "platform": "iOS / Android",
-          "platform_group": "mobile",
-          "description": "Xoay những công trình nhỏ để tìm đường đưa robot về đích. Mỗi màn là một mô hình 3D gọn gàng, dễ hiểu nhưng vẫn có chỗ khiến bạn phải đổi góc nhìn; nhịp chơi chậm rãi, hợp giải vài màn lúc rảnh.",
-          "day_label": "Thứ 6",
-          "topic": "Game Mobile Chiến Thuật / Indie Gọn Nhẹ",
-          "unlock_date": "2026-11-20",
-          "url": "https://play.google.com/store/search?q=Mekorama&c=apps",
-          "playstore_url": "https://play.google.com/store/search?q=Mekorama&c=apps",
-          "appstore_url": "https://apps.apple.com/us/app/mekorama/id1079464948?uo=4",
-          "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/71/01/3b/71013b6e-4b68-6a22-0380-12e504bd713b/AppIcon-0-0-1x_U007emarketing-0-0-0-6-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/512x512bb.jpg"
-        },
-        {
-          "title": "HOOK",
-          "genre": "Giải đố tối giản",
-          "platform": "iOS / Android",
-          "platform_group": "mobile",
-          "description": "Màn hình chỉ có những đường nối và móc cần được tháo đúng thứ tự. HOOK không cần giải thích dài dòng: quan sát hướng các thanh, chạm để gỡ dần và tận hưởng cảm giác câu đố tự mở ra từng bước.",
-          "day_label": "Thứ 6",
-          "topic": "Game Mobile Chiến Thuật / Indie Gọn Nhẹ",
-          "unlock_date": "2026-11-20",
-          "url": "https://play.google.com/store/search?q=HOOK%20puzzle%20game&c=apps",
-          "playstore_url": "https://play.google.com/store/search?q=HOOK%20puzzle%20game&c=apps",
-          "appstore_url": "https://apps.apple.com/vn/app/hookdrama/id6761250525?uo=4",
-          "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/04/7e/35/047e359b-9057-398a-0e1b-ef53cdbcac78/AppIcon-0-0-1x_U007ephone-0-1-0-85-220.png/512x512bb.jpg"
-        },
-        {
-          "title": "klocki",
-          "genre": "Giải đố / Nối hình",
-          "platform": "iOS / Android",
-          "platform_group": "mobile",
-          "description": "Xoay các mảnh hình để nối đường nét thành một tổng thể hoàn chỉnh. Không áp lực thời gian hay màn hình rối mắt, klocki tạo thử thách vừa đủ bằng bố cục tối giản, thích hợp cho một khoảng nghỉ ngắn và yên tĩnh.",
-          "day_label": "Thứ 6",
-          "topic": "Game Mobile Chiến Thuật / Indie Gọn Nhẹ",
-          "unlock_date": "2026-11-20",
-          "url": "https://play.google.com/store/search?q=klocki&c=apps",
-          "playstore_url": "https://play.google.com/store/search?q=klocki&c=apps",
-          "appstore_url": "https://apps.apple.com/us/app/klocki/id1105390093?uo=4",
-          "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/08/9f/49/089f49b6-ecfb-94c6-3d50-ce6ada1dd04e/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg"
         }
       ]
     },
     {
       "week_number": 5,
       "week_theme": "Bẻ cong không gian, dựng nơi trú ẩn, sống sót bằng một ngón tay",
-      "updated_at": "16/11/2026",
+      "updated_at": "18/11/2026",
       "games": [
         {
           "title": "Superliminal",
@@ -754,55 +544,13 @@
           "playstore_url": "",
           "appstore_url": "",
           "icon_url": ""
-        },
-        {
-          "title": "Vampire Survivors",
-          "genre": "Sinh tồn hành động",
-          "platform": "iOS / Android",
-          "platform_group": "mobile",
-          "description": "Điều khiển đơn giản, nhân vật tự tấn công; việc của bạn là lách khỏi đám quái và chọn nâng cấp thật khôn. Màn hình dọc cùng nhịp chơi nhanh khiến Vampire Survivors hợp để mở một trận ngắn bằng một tay.",
-          "day_label": "Thứ 6",
-          "topic": "Game Mobile Chiến Thuật / Indie Gọn Nhẹ",
-          "unlock_date": "2026-11-20",
-          "url": "https://play.google.com/store/search?q=Vampire%20Survivors&c=apps",
-          "playstore_url": "https://play.google.com/store/search?q=Vampire%20Survivors&c=apps",
-          "appstore_url": "https://apps.apple.com/us/app/vampire-survivors/id6444525702?uo=4",
-          "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/f6/c2/37/f6c237b1-3008-9a70-8fea-1e62c27e7637/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg"
-        },
-        {
-          "title": "Brotato",
-          "genre": "Roguelite sinh tồn",
-          "platform": "iOS / Android",
-          "platform_group": "mobile",
-          "description": "Một củ khoai tây cầm được nhiều loại vũ khí phải chống các đợt quái dồn dập trong những màn ngắn. Brotato kết hợp né tránh, mua trang bị và chọn hướng nâng cấp, tạo cảm giác chiến thuật vừa đủ cho thao tác một tay.",
-          "day_label": "Thứ 6",
-          "topic": "Game Mobile Chiến Thuật / Indie Gọn Nhẹ",
-          "unlock_date": "2026-11-20",
-          "url": "https://play.google.com/store/search?q=Brotato&c=apps",
-          "playstore_url": "https://play.google.com/store/search?q=Brotato&c=apps",
-          "appstore_url": "https://apps.apple.com/us/app/brotato/id6445884925?uo=4",
-          "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/2f/55/5d/2f555da0-7dd0-6c7a-51d7-e6b1cd7f4700/AppIcon-1x_U007emarketing-0-8-0-85-220-0.png/512x512bb.jpg"
-        },
-        {
-          "title": "20 Minutes Till Dawn",
-          "genre": "Hành động sinh tồn",
-          "platform": "iOS / Android",
-          "platform_group": "mobile",
-          "description": "Chọn nhân vật, vũ khí và nâng cấp để cầm cự trước những đợt quái vật kéo đến trong bóng tối. 20 Minutes Till Dawn có nhịp chiến đấu gọn, phong cách pixel đậm nét và những lựa chọn xây dựng nhân vật khiến mỗi lượt chơi khác nhau.",
-          "day_label": "Thứ 6",
-          "topic": "Game Mobile Chiến Thuật / Indie Gọn Nhẹ",
-          "unlock_date": "2026-11-20",
-          "url": "https://play.google.com/store/search?q=20%20Minutes%20Till%20Dawn&c=apps",
-          "playstore_url": "https://play.google.com/store/search?q=20%20Minutes%20Till%20Dawn&c=apps",
-          "appstore_url": "https://apps.apple.com/us/app/20-minutes-till-dawn/id1635123906?uo=4",
-          "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/7e/48/98/7e4898c5-98e8-8e29-5c07-9a1541ea78d7/AppIcon-1x_U007emarketing-0-8-0-85-220-0.png/512x512bb.jpg"
         }
       ]
     },
     {
       "week_number": 4,
       "week_theme": "Những cơ chế lạ khiến bạn chậm lại: indie ám ảnh, nông trại chữa lành và chuyện kể gọn trong túi",
-      "updated_at": "16/11/2026",
+      "updated_at": "18/11/2026",
       "games": [
         {
           "title": "GRIS",
@@ -887,55 +635,13 @@
           "playstore_url": "",
           "appstore_url": "",
           "icon_url": ""
-        },
-        {
-          "title": "Florence",
-          "genre": "Tương tác / Tường thuật",
-          "platform": "iOS / Android",
-          "platform_group": "mobile",
-          "description": "Ghép mảnh trò chuyện, vượt qua những khoảnh khắc ngượng ngùng rồi cảm nhận một mối quan hệ đổi khác qua tương tác rất đời thường. Florence là trải nghiệm ngắn, giàu hình ảnh, phù hợp để chơi liền một mạch trong một buổi tối.",
-          "day_label": "Thứ 6",
-          "topic": "Game Mobile Indie Cốt Truyện Ngắn",
-          "unlock_date": "2026-11-20",
-          "url": "https://play.google.com/store/search?q=Florence%20game&c=apps",
-          "playstore_url": "https://play.google.com/store/search?q=Florence%20game&c=apps",
-          "appstore_url": "https://apps.apple.com/us/app/florence/id1297430468?uo=4",
-          "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple114/v4/b3/e6/8a/b3e68a4c-b7cf-85d5-c9ae-bc9b39500452/AppIcon-0-1x_U007emarketing-0-0-GLES2_U002c0-512MB-sRGB-0-0-0-85-220-0-0-0-9.png/512x512bb.jpg"
-        },
-        {
-          "title": "Assemble with Care",
-          "genre": "Giải đố / Tường thuật",
-          "platform": "iOS / Android",
-          "platform_group": "mobile",
-          "description": "Bạn nhận những món đồ cũ, tháo từng bộ phận rồi tìm cách sửa chúng bằng thao tác chạm trực quan. Mỗi món đồ hé lộ một mảnh đời, khiến công việc thủ công nhẹ nhàng dần nối thành câu chuyện ấm áp.",
-          "day_label": "Thứ 6",
-          "topic": "Game Mobile Indie Cốt Truyện Ngắn",
-          "unlock_date": "2026-11-20",
-          "url": "https://play.google.com/store/search?q=Assemble%20with%20Care&c=apps",
-          "playstore_url": "https://play.google.com/store/search?q=Assemble%20with%20Care&c=apps",
-          "appstore_url": "https://apps.apple.com/us/app/assemble-with-care/id6459060454?uo=4",
-          "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple112/v4/16/b2/28/16b2286a-6b2c-c8fd-0459-d2e3e94d1657/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/512x512bb.jpg"
-        },
-        {
-          "title": "Behind the Frame: The Finest Scenery",
-          "genre": "Phiêu lưu / Giải đố",
-          "platform": "iOS / Android",
-          "platform_group": "mobile",
-          "description": "Hoàn thiện những bức tranh bằng cách tìm màu sắc và chi tiết còn thiếu, rồi khám phá căn phòng quanh người họa sĩ. Các câu đố nhẹ nhàng dẫn dắt một câu chuyện về ký ức, nghệ thuật và điều đã bị bỏ quên.",
-          "day_label": "Thứ 6",
-          "topic": "Game Mobile Indie Cốt Truyện Ngắn",
-          "unlock_date": "2026-11-20",
-          "url": "https://play.google.com/store/search?q=Behind%20the%20Frame%20The%20Finest%20Scenery&c=apps",
-          "playstore_url": "https://play.google.com/store/search?q=Behind%20the%20Frame%20The%20Finest%20Scenery&c=apps",
-          "appstore_url": "https://apps.apple.com/us/app/crunchyroll-behind-the-frame/id6451390439?uo=4",
-          "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/c6/0d/fe/c60dfe4e-1be9-d78e-42eb-db82718faa41/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg"
         }
       ]
     },
     {
       "week_number": 3,
       "week_theme": "Game chạy nhẹ, ý tưởng nặng đô: deckbuilder dị biệt, kinh doanh cuốn tay và thủ thành sáng tạo",
-      "updated_at": "16/11/2026",
+      "updated_at": "18/11/2026",
       "games": [
         {
           "title": "Inscryption",
@@ -1002,55 +708,13 @@
           "topic": "PC mô phỏng / quản lý / kinh doanh",
           "unlock_date": "2026-11-18",
           "url": "https://store.steampowered.com/app/949290/"
-        },
-        {
-          "title": "Kingdom Rush",
-          "genre": "Tower Defense",
-          "platform": "iOS / Android",
-          "platform_group": "mobile",
-          "description": "Bố trí tháp trên những điểm chiến lược, gọi anh hùng ra tuyến đầu và ngăn từng đợt quái tràn qua. Màn chơi gọn, dễ nắm bắt nhưng chọn sai vị trí nâng cấp có thể khiến cả phòng tuyến sụp đổ.",
-          "day_label": "Thứ 6",
-          "topic": "Mobile chiến thuật / indie gọn nhẹ",
-          "unlock_date": "2026-11-20",
-          "url": "https://play.google.com/store/search?q=Kingdom%20Rush&c=apps",
-          "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/0b/78/3b/0b783ba9-8e00-db00-baef-4a6c004549ca/AppIcon-0-0-1x_U007emarketing-0-6-0-85-220.png/512x512bb.jpg",
-          "playstore_url": "https://play.google.com/store/search?q=Kingdom%20Rush&c=apps",
-          "appstore_url": "https://apps.apple.com/us/app/kingdom-rush-tower-defense-td/id516378985?uo=4"
-        },
-        {
-          "title": "Bloons TD 6",
-          "genre": "Tower Defense chiến thuật",
-          "platform": "iOS / Android",
-          "platform_group": "mobile",
-          "description": "Dùng các loại tháp khỉ với vai trò và nhánh nâng cấp riêng để đối phó những đợt bóng bay ngày càng khó. Thử nghiệm đội hình, chọn thời điểm nâng cấp và tìm cách giữ tuyến phòng thủ đứng vững.",
-          "day_label": "Thứ 6",
-          "topic": "Mobile chiến thuật / indie gọn nhẹ",
-          "unlock_date": "2026-11-20",
-          "url": "https://play.google.com/store/search?q=Bloons%20TD%206&c=apps",
-          "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/ec/ea/72/ecea728c-c718-b232-3078-98cbfd464349/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
-          "playstore_url": "https://play.google.com/store/search?q=Bloons%20TD%206&c=apps",
-          "appstore_url": "https://apps.apple.com/us/app/bloons-td-6/id1118115766?uo=4"
-        },
-        {
-          "title": "Mindustry",
-          "genre": "Thủ thành / xây dựng căn cứ",
-          "platform": "iOS / Android",
-          "platform_group": "mobile",
-          "description": "Không chỉ đặt tháp chặn kẻ địch: bạn còn khai thác tài nguyên, nối băng chuyền và xây nhà máy để tiếp tế cho căn cứ. Mạng lưới vận hành càng hiệu quả, bạn càng có cơ hội chống đỡ những đợt tấn công dồn dập.",
-          "day_label": "Thứ 6",
-          "topic": "Mobile chiến thuật / indie gọn nhẹ",
-          "unlock_date": "2026-11-20",
-          "url": "https://play.google.com/store/search?q=Mindustry&c=apps",
-          "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/71/cb/63/71cb6379-df2b-04ee-0b48-35240e5bd8a6/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
-          "playstore_url": "https://play.google.com/store/search?q=Mindustry&c=apps",
-          "appstore_url": "https://apps.apple.com/us/app/mindustry/id1385258906?uo=4"
         }
       ]
     },
     {
       "week_number": 2,
       "week_theme": "Tuần của những bí mật, thiên nhiên khắc nghiệt và ván bài không muốn dừng",
-      "updated_at": "16/11/2026",
+      "updated_at": "18/11/2026",
       "games": [
         {
           "title": "Return of the Obra Dinn",
@@ -1117,55 +781,13 @@
           "topic": "Game PC Mô Phỏng / Quản Lý / Sinh Tồn",
           "unlock_date": "2026-11-18",
           "url": "https://store.steampowered.com/app/242760/"
-        },
-        {
-          "title": "Balatro",
-          "genre": "Poker roguelike",
-          "platform": "iOS / Android",
-          "platform_group": "mobile",
-          "description": "Dùng những tay bài poker quen thuộc để vượt màn, rồi kết hợp Joker tạo hiệu ứng cộng dồn bất ngờ. Mỗi lượt chạy mở ra hướng build khác nhau, luật dễ nắm nhưng tối ưu điểm số thì khó dứt.",
-          "day_label": "Thứ 6",
-          "topic": "Game Mobile Chiến Thuật / Indie Gọn Nhẹ",
-          "unlock_date": "2026-11-20",
-          "url": "https://play.google.com/store/search?q=Balatro&c=apps",
-          "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/2e/13/c3/2e13c321-e1b0-e958-3def-f5c3d38be1c8/iOS_AppIcon_Premium-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
-          "playstore_url": "https://play.google.com/store/search?q=Balatro&c=apps",
-          "appstore_url": "https://apps.apple.com/us/app/balatro/id6502453075?uo=4"
-        },
-        {
-          "title": "Dawncaster: Deckbuilding RPG",
-          "genre": "Roguelike xây bộ bài",
-          "platform": "iOS / Android",
-          "platform_group": "mobile",
-          "description": "Chọn nhân vật, nhặt kỹ năng và xây bộ bài riêng trên hành trình fantasy nhiều ngã rẽ. Các trận đánh theo lượt khuyến khích thử chiến thuật mới; game hỗ trợ chơi offline, hợp để mở nhanh một chuyến phiêu lưu.",
-          "day_label": "Thứ 6",
-          "topic": "Game Mobile Chiến Thuật / Indie Gọn Nhẹ",
-          "unlock_date": "2026-11-20",
-          "url": "https://play.google.com/store/search?q=Dawncaster%3A%20Deckbuilding%20RPG&c=apps",
-          "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/fa/2b/c0/fa2bc01f-786f-df7d-e377-738fabb0d10c/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
-          "playstore_url": "https://play.google.com/store/search?q=Dawncaster%3A%20Deckbuilding%20RPG&c=apps",
-          "appstore_url": "https://apps.apple.com/us/app/dawncaster-deckbuilding-rpg/id1555459868?uo=4"
-        },
-        {
-          "title": "Night of the Full Moon",
-          "genre": "Thẻ bài roguelike",
-          "platform": "iOS / Android",
-          "platform_group": "mobile",
-          "description": "Theo chân cô bé Mũ Đỏ trong những chương truyện cổ tích u tối, chọn lớp nhân vật rồi đấu bài với từng đối thủ. Bộ bài và hướng đi thay đổi trải nghiệm; có thể chơi offline, không cần kết nối liên tục.",
-          "day_label": "Thứ 6",
-          "topic": "Game Mobile Chiến Thuật / Indie Gọn Nhẹ",
-          "unlock_date": "2026-11-20",
-          "url": "https://play.google.com/store/search?q=Night%20of%20the%20Full%20Moon&c=apps",
-          "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/4d/61/d9/4d61d955-f220-d329-7326-6481677563d6/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
-          "playstore_url": "https://play.google.com/store/search?q=Night%20of%20the%20Full%20Moon&c=apps",
-          "appstore_url": "https://apps.apple.com/us/app/night-of-the-full-moon/id1278845241?uo=4"
         }
       ]
     },
     {
       "week_number": 1,
       "week_theme": "Ba cách chơi khác thường: bẻ luật, vận hành thành phố và đấu trí trên bàn cờ bỏ túi",
-      "updated_at": "16/11/2026",
+      "updated_at": "18/11/2026",
       "games": [
         {
           "title": "Baba Is You",
@@ -1232,48 +854,6 @@
           "topic": "Game PC Mô Phỏng / Quản Lý / Sinh Tồn",
           "unlock_date": "2026-11-18",
           "url": "https://store.steampowered.com/app/1594320/"
-        },
-        {
-          "title": "Into the Breach",
-          "genre": "Chiến thuật theo lượt",
-          "platform": "iOS / Android",
-          "platform_group": "mobile",
-          "description": "Trên bản đồ ô vuông gọn gàng, bạn thấy trước kẻ địch sắp đánh đâu rồi chọn cách đẩy, chặn hoặc hạ chúng. Mỗi lượt là một bài toán bảo vệ dân thường bằng đội mech ít ỏi.",
-          "day_label": "Thứ 6",
-          "topic": "Game Mobile Chiến Thuật / Indie Gọn Nhẹ",
-          "unlock_date": "2026-11-20",
-          "url": "https://play.google.com/store/search?q=Into%20the%20Breach&c=apps",
-          "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/9c/8b/da/9c8bda47-ddc0-6e85-0efd-cb754b19ab71/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg",
-          "playstore_url": "https://play.google.com/store/search?q=Into%20the%20Breach&c=apps",
-          "appstore_url": "https://apps.apple.com/us/app/into-the-breach/id1616542180?uo=4"
-        },
-        {
-          "title": "The Battle of Polytopia",
-          "genre": "Chiến thuật 4X theo lượt",
-          "platform": "iOS / Android",
-          "platform_group": "mobile",
-          "description": "Chọn một bộ tộc, khám phá bản đồ, nghiên cứu công nghệ và tranh quyền kiểm soát theo lượt. Trận đấu gọn, luật dễ tiếp cận nhưng mỗi quyết định mở rộng hay phòng thủ đều ảnh hưởng đến đường phát triển.",
-          "day_label": "Thứ 6",
-          "topic": "Game Mobile Chiến Thuật / Indie Gọn Nhẹ",
-          "unlock_date": "2026-11-20",
-          "url": "https://play.google.com/store/apps/details?id=air.com.midjiwan.polytopia",
-          "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/92/aa/26/92aa26c4-fb9a-4010-3392-c49e55a70896/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
-          "playstore_url": "https://play.google.com/store/apps/details?id=air.com.midjiwan.polytopia",
-          "appstore_url": "https://apps.apple.com/us/app/the-battle-of-polytopia/id1006393168?uo=4"
-        },
-        {
-          "title": "Slice & Dice",
-          "genre": "Chiến thuật theo lượt roguelike",
-          "platform": "iOS / Android",
-          "platform_group": "mobile",
-          "description": "Đội hình của bạn là những viên xúc xắc, mỗi mặt tương ứng một hành động khác nhau. Tung xúc xắc, phân bổ đòn đánh và phòng thủ để vượt chuỗi giao tranh; một lượt xử lý khéo có thể cứu cả đội.",
-          "day_label": "Thứ 6",
-          "topic": "Game Mobile Chiến Thuật / Indie Gọn Nhẹ",
-          "unlock_date": "2026-11-20",
-          "url": "https://play.google.com/store/apps/details?id=com.com.tann.dice",
-          "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/97/b3/91/97b39190-ed1d-6b2b-e3e3-8d8a31f2350b/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
-          "playstore_url": "https://play.google.com/store/apps/details?id=com.com.tann.dice",
-          "appstore_url": "https://apps.apple.com/us/app/slice-dice/id6449848963?uo=4"
         }
       ]
     }
