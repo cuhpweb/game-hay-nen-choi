@@ -2,464 +2,9 @@
   "channel": "Game Hay Nên Chơi",
   "weeks": [
     {
-      "week_number": 10,
-      "week_theme": "Game chất cho những khoảng giờ dễ trôi: indie ám ảnh, nông trại gây nghiện và truyện mobile gọn mà sâu",
-      "updated_at": "18/11/2026",
-      "games": [
-        {
-          "title": "The Beginner's Guide",
-          "genre": "Indie kể chuyện / Tâm lý",
-          "platform": "PC (Steam)",
-          "platform_group": "pc",
-          "description": "Khám phá những màn chơi dang dở của một nhà sáng tạo, trong khi người dẫn chuyện kể về tình bạn và sự cô độc. Game gần như không thử thách phản xạ; thứ đọng lại là câu hỏi về quyền riêng tư và cách ta diễn giải người khác.",
-          "day_label": "Thứ 2",
-          "topic": "Game PC Ngách Độc Lạ / Indie Tâm Lý",
-          "unlock_date": "2026-11-16",
-          "url": "https://store.steampowered.com/app/303210/",
-          "playstore_url": "",
-          "appstore_url": "",
-          "icon_url": ""
-        },
-        {
-          "title": "To the Moon",
-          "genre": "Phiêu lưu / Kể chuyện",
-          "platform": "PC (Steam)",
-          "platform_group": "pc",
-          "description": "Hai bác sĩ đi sâu vào ký ức của một người đàn ông để thực hiện ước nguyện cuối đời. Lối chơi đơn giản, nhạc piano giàu cảm xúc và câu chuyện được mở dần khiến chuyến đi ngắn này có sức nặng hơn vẻ ngoài pixel.",
-          "day_label": "Thứ 2",
-          "topic": "Game PC Ngách Độc Lạ / Indie Tâm Lý",
-          "unlock_date": "2026-11-16",
-          "url": "https://store.steampowered.com/app/206440/",
-          "playstore_url": "",
-          "appstore_url": "",
-          "icon_url": ""
-        },
-        {
-          "title": "OneShot",
-          "genre": "Phiêu lưu / Giải đố",
-          "platform": "PC (Steam)",
-          "platform_group": "pc",
-          "description": "Dẫn Niko qua một thế giới đang tắt dần, giải đố bằng cả những gì nằm ngoài khung game. OneShot phá vỡ ranh giới giữa người chơi và nhân vật một cách tinh tế, tạo cảm giác thân thuộc rồi bất ngờ để lại khoảng trống.",
-          "day_label": "Thứ 2",
-          "topic": "Game PC Ngách Độc Lạ / Indie Tâm Lý",
-          "unlock_date": "2026-11-16",
-          "url": "https://store.steampowered.com/app/420530/",
-          "playstore_url": "",
-          "appstore_url": "",
-          "icon_url": ""
-        },
-        {
-          "title": "Dinkum",
-          "genre": "Mô phỏng / Sinh tồn / Nông trại",
-          "platform": "PC (Steam)",
-          "platform_group": "pc",
-          "description": "Bắt đầu trên hòn đảo hoang, rồi câu cá, trồng trọt, xây nhà và mời cư dân đến lập nghiệp. Dinkum phối hợp nhịp chill với khám phá và chế tạo, nên lúc nào cũng có việc mới mà không ép bạn chạy theo một cốt truyện cố định.",
-          "day_label": "Thứ 4",
-          "topic": "Game PC Mô Phỏng / Nông Trại / Thủ Công",
-          "unlock_date": "2026-11-18",
-          "url": "https://store.steampowered.com/app/1062520/",
-          "playstore_url": "",
-          "appstore_url": "",
-          "icon_url": ""
-        },
-        {
-          "title": "Sun Haven",
-          "genre": "RPG / Nông trại / Fantasy",
-          "platform": "PC (Steam)",
-          "platform_group": "pc",
-          "description": "Trồng trọt, câu cá và chế tạo trong một thế giới fantasy có nhiệm vụ, phép thuật cùng nhiều thị trấn để khám phá. Sun Haven hợp với người thích nhịp làm nông quen thuộc nhưng muốn thêm chiến đấu, kỹ năng và thật nhiều mục tiêu để tự chọn.",
-          "day_label": "Thứ 4",
-          "topic": "Game PC Mô Phỏng / Nông Trại / Thủ Công",
-          "unlock_date": "2026-11-18",
-          "url": "https://store.steampowered.com/app/1432860/",
-          "playstore_url": "",
-          "appstore_url": "",
-          "icon_url": ""
-        },
-        {
-          "title": "Garden Paws",
-          "genre": "Mô phỏng / Nông trại / Quản lý",
-          "platform": "PC (Steam)",
-          "platform_group": "pc",
-          "description": "Chăm khu vườn, thu thập nguyên liệu, chế tạo đồ rồi tự tay vận hành cửa tiệm của mình. Garden Paws có nhịp chơi hiền hòa và nhiều hoạt động nối tiếp nhau; cảm giác cuốn đến từ việc luôn có thêm thứ để chăm chút.",
-          "day_label": "Thứ 4",
-          "topic": "Game PC Mô Phỏng / Nông Trại / Thủ Công",
-          "unlock_date": "2026-11-18",
-          "url": "https://store.steampowered.com/app/840010/",
-          "playstore_url": "",
-          "appstore_url": "",
-          "icon_url": ""
-        }
-      ]
-    },
-    {
-      "week_number": 9,
-      "week_theme": "Ba kiểu nghiện khác thường: bộ bài biến dị, kinh doanh cuốn tay và phòng thủ căn cứ sáng tạo",
-      "updated_at": "18/11/2026",
-      "games": [
-        {
-          "title": "Monster Train",
-          "genre": "Roguelike deckbuilder",
-          "platform": "PC (Steam)",
-          "platform_group": "pc",
-          "description": "Bạn không chỉ chọn bài mà còn xếp quân lên ba tầng toa tàu để chặn quái trước khi chúng chạm lõi. Mỗi tộc có cơ chế riêng, mở ra vô số cách phối hợp.",
-          "day_label": "Thứ 2",
-          "topic": "Game PC Ngách Độc Lạ / Hack Não",
-          "unlock_date": "2026-11-16",
-          "url": "https://store.steampowered.com/app/1102190/",
-          "playstore_url": "",
-          "appstore_url": "",
-          "icon_url": ""
-        },
-        {
-          "title": "Ring of Pain",
-          "genre": "Roguelike thẻ bài",
-          "platform": "PC (Steam)",
-          "platform_group": "pc",
-          "description": "Cả hầm ngục hiện thành một vòng bài xoay quanh bạn. Chọn tiến, lùi hay nhặt vật phẩm đều có thể mở đường sống hoặc gọi tai họa; đọc tình thế quan trọng hơn bấm thật nhanh.",
-          "day_label": "Thứ 2",
-          "topic": "Game PC Ngách Độc Lạ / Hack Não",
-          "unlock_date": "2026-11-16",
-          "url": "https://store.steampowered.com/app/998740/",
-          "playstore_url": "",
-          "appstore_url": "",
-          "icon_url": ""
-        },
-        {
-          "title": "One Step From Eden",
-          "genre": "Deckbuilder hành động",
-          "platform": "PC (Steam)",
-          "platform_group": "pc",
-          "description": "Bộ bài ở đây là kho phép dùng ngay trên chiến trường dạng lưới. Vừa né đòn, vừa chọn ô tấn công và ghép hiệu ứng, bạn sẽ phải nghĩ nhanh mà vẫn giữ được kế hoạch dài hơi.",
-          "day_label": "Thứ 2",
-          "topic": "Game PC Ngách Độc Lạ / Hack Não",
-          "unlock_date": "2026-11-16",
-          "url": "https://store.steampowered.com/app/960690/",
-          "playstore_url": "",
-          "appstore_url": "",
-          "icon_url": ""
-        },
-        {
-          "title": "Potion Craft: Alchemist Simulator",
-          "genre": "Mô phỏng cửa hàng",
-          "platform": "PC (Steam)",
-          "platform_group": "pc",
-          "description": "Nghiền nguyên liệu, điều khiển nồi và khám phá công thức trên bản đồ giả kim. Khách hàng đem theo nhu cầu khác nhau, còn cách bạn định giá, sáng tạo thuốc và xây danh tiếng sẽ quyết định tiệm phát triển ra sao.",
-          "day_label": "Thứ 4",
-          "topic": "Game PC Mô Phỏng / Quản Lý / Sinh Tồn",
-          "unlock_date": "2026-11-18",
-          "url": "https://store.steampowered.com/app/1210320/",
-          "playstore_url": "",
-          "appstore_url": "",
-          "icon_url": ""
-        },
-        {
-          "title": "Tavern Master",
-          "genre": "Quản lý quán rượu",
-          "platform": "PC (Steam)",
-          "platform_group": "pc",
-          "description": "Bắt đầu từ căn phòng nhỏ, bạn bố trí bàn ghế, thuê nhân viên và phục vụ khách để mở rộng quán rượu. Tăng sức chứa cũng kéo theo nhiều việc phải điều phối, nên mỗi nâng cấp đều có cái giá vận hành.",
-          "day_label": "Thứ 4",
-          "topic": "Game PC Mô Phỏng / Quản Lý / Sinh Tồn",
-          "unlock_date": "2026-11-18",
-          "url": "https://store.steampowered.com/app/1525700/",
-          "playstore_url": "",
-          "appstore_url": "",
-          "icon_url": ""
-        },
-        {
-          "title": "Big Ambitions",
-          "genre": "Mô phỏng kinh doanh",
-          "platform": "PC (Steam)",
-          "platform_group": "pc",
-          "description": "Khởi đầu với một doanh nghiệp nhỏ, rồi tự tìm mặt bằng, tuyển người và quản lý dòng tiền giữa lòng New York. Mục tiêu không chỉ là bán được hàng: bạn đang xây một mạng lưới kinh doanh ngày càng lớn.",
-          "day_label": "Thứ 4",
-          "topic": "Game PC Mô Phỏng / Quản Lý / Sinh Tồn",
-          "unlock_date": "2026-11-18",
-          "url": "https://store.steampowered.com/app/1331550/",
-          "playstore_url": "",
-          "appstore_url": "",
-          "icon_url": ""
-        }
-      ]
-    },
-    {
-      "week_number": 8,
-      "week_theme": "Một manh mối có thể đổi cả cuộc chơi: phá án, sống sót và tung xúc xắc",
-      "updated_at": "18/11/2026",
-      "games": [
-        {
-          "title": "The Painscreek Killings",
-          "genre": "Trinh thám góc nhìn thứ nhất",
-          "platform": "PC (Steam)",
-          "platform_group": "pc",
-          "description": "Bạn được thả vào thị trấn gần như không người, không có mũi tên dẫn đường. Ghi chép, chìa khóa và lời kể rời rạc tự ghép thành vụ án; cảm giác tự phát hiện sự thật là phần thưởng lớn nhất.",
-          "day_label": "Thứ 2",
-          "topic": "Game PC Ngách Độc Lạ / Hack Não",
-          "unlock_date": "2026-11-16",
-          "url": "https://store.steampowered.com/app/624270/",
-          "playstore_url": "",
-          "appstore_url": "",
-          "icon_url": ""
-        },
-        {
-          "title": "Tangle Tower",
-          "genre": "Trinh thám point-and-click",
-          "platform": "PC (Steam)",
-          "platform_group": "pc",
-          "description": "Một họa sĩ bị sát hại trong căn phòng khóa kín, còn dàn nghi phạm thì ai cũng đáng ngờ. Khám phá hiện trường, đối thoại sắc sảo và những câu đố gọn gàng khiến cuộc điều tra vừa cuốn vừa duyên.",
-          "day_label": "Thứ 2",
-          "topic": "Game PC Ngách Độc Lạ / Hack Não",
-          "unlock_date": "2026-11-16",
-          "url": "https://store.steampowered.com/app/359510/",
-          "playstore_url": "",
-          "appstore_url": "",
-          "icon_url": ""
-        },
-        {
-          "title": "Unheard",
-          "genre": "Trinh thám suy luận âm thanh",
-          "platform": "PC (Steam)",
-          "platform_group": "pc",
-          "description": "Thay vì đi tìm chứng cứ bằng mắt, bạn nghe lại những cuộc trò chuyện tại hiện trường rồi lần theo giọng nói giữa các phòng. Một câu nói tưởng vô thưởng vô phạt có thể đổi hẳn cách hiểu vụ án.",
-          "day_label": "Thứ 2",
-          "topic": "Game PC Ngách Độc Lạ / Hack Não",
-          "unlock_date": "2026-11-16",
-          "url": "https://store.steampowered.com/app/942970/",
-          "playstore_url": "",
-          "appstore_url": "",
-          "icon_url": ""
-        },
-        {
-          "title": "The Planet Crafter",
-          "genre": "Sinh tồn / Mô phỏng terraforming",
-          "platform": "PC (Steam)",
-          "platform_group": "pc",
-          "description": "Bắt đầu trên một hành tinh khô cằn với bộ đồ bảo hộ và nguồn lực ít ỏi. Thu thập vật liệu, dựng căn cứ rồi thay đổi khí quyển từng bước; nhìn sự sống xuất hiện chính là động lực khám phá.",
-          "day_label": "Thứ 4",
-          "topic": "Game PC Mô Phỏng / Quản Lý / Sinh Tồn",
-          "unlock_date": "2026-11-18",
-          "url": "https://store.steampowered.com/app/1284190/",
-          "playstore_url": "",
-          "appstore_url": "",
-          "icon_url": ""
-        },
-        {
-          "title": "Green Hell",
-          "genre": "Sinh tồn rừng rậm",
-          "platform": "PC (Steam)",
-          "platform_group": "pc",
-          "description": "Trong rừng Amazon, đói khát chỉ là một phần rắc rối: vết thương, ký sinh trùng và tinh thần đều cần được để mắt. Học cách tìm thức ăn, chế đồ và đọc môi trường để sống sót qua từng ngày.",
-          "day_label": "Thứ 4",
-          "topic": "Game PC Mô Phỏng / Quản Lý / Sinh Tồn",
-          "unlock_date": "2026-11-18",
-          "url": "https://store.steampowered.com/app/815370/",
-          "playstore_url": "",
-          "appstore_url": "",
-          "icon_url": ""
-        },
-        {
-          "title": "Barotrauma",
-          "genre": "Sinh tồn / Mô phỏng tàu ngầm",
-          "platform": "PC (Steam)",
-          "platform_group": "pc",
-          "description": "Lái tàu ngầm qua đại dương lạnh lẽo trên mặt trăng Europa, nơi rò rỉ và sinh vật lạ có thể biến ca trực thành thảm họa. Phân công thủy thủ, sửa hệ thống và khám phá trong không gian chật hẹp.",
-          "day_label": "Thứ 4",
-          "topic": "Game PC Mô Phỏng / Quản Lý / Sinh Tồn",
-          "unlock_date": "2026-11-18",
-          "url": "https://store.steampowered.com/app/602960/",
-          "playstore_url": "",
-          "appstore_url": "",
-          "icon_url": ""
-        }
-      ]
-    },
-    {
-      "week_number": 7,
-      "week_theme": "Ba luật chơi, ba thế giới để bạn nghĩ khác: giải đố ngược đời, thành phố vận hành và chiến thuật gọn trên điện thoại.",
-      "updated_at": "18/11/2026",
-      "games": [
-        {
-          "title": "The Pedestrian",
-          "genre": "Giải đố không gian",
-          "platform": "PC (Steam)",
-          "platform_group": "pc",
-          "description": "Bạn điều khiển một hình người nhỏ giữa những tấm biển báo, rồi nối và sắp xếp chúng để mở đường. Câu đố biến chính bố cục màn hình thành cơ chế, buộc bạn nhìn không gian theo cách khác.",
-          "day_label": "Thứ 2",
-          "topic": "Game PC Ngách Độc Lạ / Hack Não",
-          "unlock_date": "2026-11-16",
-          "url": "https://store.steampowered.com/app/466630/",
-          "playstore_url": "",
-          "appstore_url": "",
-          "icon_url": ""
-        },
-        {
-          "title": "Stephen's Sausage Roll",
-          "genre": "Giải đố đẩy khối",
-          "platform": "PC (Steam)",
-          "platform_group": "pc",
-          "description": "Đừng để vẻ ngoài đơn giản đánh lừa: bạn phải lăn xúc xích qua lửa đúng mặt, đúng vị trí. Mỗi bước đều có thể khóa đường đi, tạo nên chuỗi câu đố đòi hỏi tính toán chính xác.",
-          "day_label": "Thứ 2",
-          "topic": "Game PC Ngách Độc Lạ / Hack Não",
-          "unlock_date": "2026-11-16",
-          "url": "https://store.steampowered.com/app/353540/",
-          "playstore_url": "",
-          "appstore_url": "",
-          "icon_url": ""
-        },
-        {
-          "title": "Heaven's Vault",
-          "genre": "Phiêu lưu giải mã",
-          "platform": "PC (Steam)",
-          "platform_group": "pc",
-          "description": "Du hành giữa các hành tinh để tìm cổ vật, rồi tự suy luận ý nghĩa của những dòng chữ cổ. Bản dịch dần mở ra khi bạn đối chiếu manh mối, khiến việc học ngôn ngữ trở thành cốt lõi cuộc phiêu lưu.",
-          "day_label": "Thứ 2",
-          "topic": "Game PC Ngách Độc Lạ / Hack Não",
-          "unlock_date": "2026-11-16",
-          "url": "https://store.steampowered.com/app/774201/",
-          "playstore_url": "",
-          "appstore_url": "",
-          "icon_url": ""
-        },
-        {
-          "title": "Timberborn",
-          "genre": "Xây thành phố sinh tồn",
-          "platform": "PC (Steam)",
-          "platform_group": "pc",
-          "description": "Dẫn dắt đàn hải ly xây khu định cư trên vùng đất khô hạn, điều tiết nước bằng đập và kênh dẫn. Mỗi mùa hạn là bài kiểm tra quy hoạch: tích trữ đủ, hay nhìn cả thành phố cạn kiệt?",
-          "day_label": "Thứ 4",
-          "topic": "Game PC Mô Phỏng / Quản Lý / Sinh Tồn",
-          "unlock_date": "2026-11-18",
-          "url": "https://store.steampowered.com/app/1062090/",
-          "playstore_url": "",
-          "appstore_url": "",
-          "icon_url": ""
-        },
-        {
-          "title": "Foundation",
-          "genre": "Xây dựng thị trấn",
-          "platform": "PC (Steam)",
-          "platform_group": "pc",
-          "description": "Thay vì kẻ ô cứng nhắc, bạn đặt công trình và để khu dân cư phát triển theo địa hình. Kết nối nhà ở, nghề nghiệp và chuỗi sản xuất để biến một vùng đất trống thành thị trấn trung cổ có sức sống.",
-          "day_label": "Thứ 4",
-          "topic": "Game PC Mô Phỏng / Quản Lý / Sinh Tồn",
-          "unlock_date": "2026-11-18",
-          "url": "https://store.steampowered.com/app/690830/",
-          "playstore_url": "",
-          "appstore_url": "",
-          "icon_url": ""
-        },
-        {
-          "title": "Frostpunk",
-          "genre": "Quản lý sinh tồn",
-          "platform": "PC (Steam)",
-          "platform_group": "pc",
-          "description": "Xây thành phố quanh lò sưởi khổng lồ, phân việc và cân đối than, thức ăn cùng nhu yếu phẩm. Mỗi quyết định còn đặt ra câu hỏi khó: cứu cộng đồng bằng luật lệ đến mức nào khi cái lạnh không khoan nhượng?",
-          "day_label": "Thứ 4",
-          "topic": "Game PC Mô Phỏng / Quản Lý / Sinh Tồn",
-          "unlock_date": "2026-11-18",
-          "url": "https://store.steampowered.com/app/323190/",
-          "playstore_url": "",
-          "appstore_url": "",
-          "icon_url": ""
-        }
-      ]
-    },
-    {
-      "week_number": 6,
-      "week_theme": "Game khiến bạn nghĩ khác: từ trò chơi biết mình là game đến những nghề vận hành tỉ mỉ và câu đố mobile nhẹ tênh",
-      "updated_at": "18/11/2026",
-      "games": [
-        {
-          "title": "The Stanley Parable: Ultra Deluxe",
-          "genre": "Meta-game / Phiêu lưu",
-          "platform": "PC (Steam)",
-          "platform_group": "pc",
-          "description": "Người kể chuyện muốn dẫn bạn đi một đường, còn bạn có thể ngoặt sang hướng khác. Mỗi lựa chọn mở ra nhánh mới, biến việc khám phá hành lang văn phòng thành màn đối thoại hài hước về tự do và quyền kiểm soát.",
-          "day_label": "Thứ 2",
-          "topic": "Game PC Ngách Độc Lạ / Hack Não",
-          "unlock_date": "2026-11-16",
-          "url": "https://store.steampowered.com/app/1703340/",
-          "playstore_url": "",
-          "appstore_url": "",
-          "icon_url": ""
-        },
-        {
-          "title": "There Is No Game: Wrong Dimension",
-          "genre": "Giải đố / Hài meta",
-          "platform": "PC (Steam)",
-          "platform_group": "pc",
-          "description": "Trò chơi khăng khăng rằng chẳng có trò chơi nào, nhưng màn hình lại liên tục bày ra thứ để bạn tương tác. Dùng chuột kéo, bấm và phá bố cục để giải đố trong chuyến phiêu lưu liên tục chọc ghẹo người chơi.",
-          "day_label": "Thứ 2",
-          "topic": "Game PC Ngách Độc Lạ / Hack Não",
-          "unlock_date": "2026-11-16",
-          "url": "https://store.steampowered.com/app/1240210/",
-          "playstore_url": "",
-          "appstore_url": "",
-          "icon_url": ""
-        },
-        {
-          "title": "The Hex",
-          "genre": "Phiêu lưu / Bí ẩn meta",
-          "platform": "PC (Steam)",
-          "platform_group": "pc",
-          "description": "Một quán trọ, sáu nhân vật game và một bí mật đang chờ được bóc tách. The Hex đổi thể loại liên tục, đưa bạn qua những màn chơi khác nhau để lần theo câu chuyện về các nhân vật bị mắc kẹt trong chính thế giới của họ.",
-          "day_label": "Thứ 2",
-          "topic": "Game PC Ngách Độc Lạ / Hack Não",
-          "unlock_date": "2026-11-16",
-          "url": "https://store.steampowered.com/app/510420/",
-          "playstore_url": "",
-          "appstore_url": "",
-          "icon_url": ""
-        },
-        {
-          "title": "PC Building Simulator",
-          "genre": "Mô phỏng / Lắp ráp PC",
-          "platform": "PC (Steam)",
-          "platform_group": "pc",
-          "description": "Nhận máy khách, chẩn đoán lỗi rồi tự chọn linh kiện để nâng cấp hoặc ráp mới. Game biến quy trình lắp PC thành công việc có đầu có cuối, đủ chi tiết để người mới học phần cứng và người rành máy đều thấy cuốn.",
-          "day_label": "Thứ 4",
-          "topic": "Game PC Mô Phỏng / Quản Lý / Sinh Tồn",
-          "unlock_date": "2026-11-18",
-          "url": "https://store.steampowered.com/app/621060/",
-          "playstore_url": "",
-          "appstore_url": "",
-          "icon_url": ""
-        },
-        {
-          "title": "Wrench",
-          "genre": "Mô phỏng / Sửa xe",
-          "platform": "PC (Steam)",
-          "platform_group": "pc",
-          "description": "Tháo, kiểm tra và lắp lại xe đua bằng các thao tác cơ khí mô phỏng tỉ mỉ. Wrench ưu tiên sự chính xác hơn nhịp độ nhanh, hợp với ai muốn hiểu cấu tạo xe và thấy đã mắt khi mọi chi tiết trở về đúng chỗ.",
-          "day_label": "Thứ 4",
-          "topic": "Game PC Mô Phỏng / Quản Lý / Sinh Tồn",
-          "unlock_date": "2026-11-18",
-          "url": "https://store.steampowered.com/app/936720/",
-          "playstore_url": "",
-          "appstore_url": "",
-          "icon_url": ""
-        },
-        {
-          "title": "Car Mechanic Simulator 2021",
-          "genre": "Mô phỏng / Quản lý gara",
-          "platform": "PC (Steam)",
-          "platform_group": "pc",
-          "description": "Tiếp nhận xe, dò lỗi, thay linh kiện rồi kiểm tra thành quả trên đường thử. Bạn còn có thể mở rộng gara và săn xe cũ để phục hồi, tạo vòng lặp nghề nghiệp thư thả nhưng luôn có việc mới để xử lý.",
-          "day_label": "Thứ 4",
-          "topic": "Game PC Mô Phỏng / Quản Lý / Sinh Tồn",
-          "unlock_date": "2026-11-18",
-          "url": "https://store.steampowered.com/app/1190000/",
-          "playstore_url": "",
-          "appstore_url": "",
-          "icon_url": ""
-        }
-      ]
-    },
-    {
       "week_number": 5,
       "week_theme": "Bẻ cong không gian, dựng nơi trú ẩn, sống sót bằng một ngón tay",
-      "updated_at": "18/11/2026",
+      "updated_at": "20/11/2026",
       "games": [
         {
           "title": "Superliminal",
@@ -544,13 +89,55 @@
           "playstore_url": "",
           "appstore_url": "",
           "icon_url": ""
+        },
+        {
+          "title": "Vampire Survivors",
+          "genre": "Sinh tồn hành động",
+          "platform": "iOS / Android",
+          "platform_group": "mobile",
+          "description": "Điều khiển đơn giản, nhân vật tự tấn công; việc của bạn là lách khỏi đám quái và chọn nâng cấp thật khôn. Màn hình dọc cùng nhịp chơi nhanh khiến Vampire Survivors hợp để mở một trận ngắn bằng một tay.",
+          "day_label": "Thứ 6",
+          "topic": "Game Mobile Chiến Thuật / Indie Gọn Nhẹ",
+          "unlock_date": "2026-11-20",
+          "url": "https://play.google.com/store/search?q=Vampire%20Survivors&c=apps",
+          "playstore_url": "https://play.google.com/store/search?q=Vampire%20Survivors&c=apps",
+          "appstore_url": "https://apps.apple.com/us/app/vampire-survivors/id6444525702?uo=4",
+          "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/f6/c2/37/f6c237b1-3008-9a70-8fea-1e62c27e7637/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg"
+        },
+        {
+          "title": "Brotato",
+          "genre": "Roguelite sinh tồn",
+          "platform": "iOS / Android",
+          "platform_group": "mobile",
+          "description": "Một củ khoai tây cầm được nhiều loại vũ khí phải chống các đợt quái dồn dập trong những màn ngắn. Brotato kết hợp né tránh, mua trang bị và chọn hướng nâng cấp, tạo cảm giác chiến thuật vừa đủ cho thao tác một tay.",
+          "day_label": "Thứ 6",
+          "topic": "Game Mobile Chiến Thuật / Indie Gọn Nhẹ",
+          "unlock_date": "2026-11-20",
+          "url": "https://play.google.com/store/search?q=Brotato&c=apps",
+          "playstore_url": "https://play.google.com/store/search?q=Brotato&c=apps",
+          "appstore_url": "https://apps.apple.com/us/app/brotato/id6445884925?uo=4",
+          "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/2f/55/5d/2f555da0-7dd0-6c7a-51d7-e6b1cd7f4700/AppIcon-1x_U007emarketing-0-8-0-85-220-0.png/512x512bb.jpg"
+        },
+        {
+          "title": "20 Minutes Till Dawn",
+          "genre": "Hành động sinh tồn",
+          "platform": "iOS / Android",
+          "platform_group": "mobile",
+          "description": "Chọn nhân vật, vũ khí và nâng cấp để cầm cự trước những đợt quái vật kéo đến trong bóng tối. 20 Minutes Till Dawn có nhịp chiến đấu gọn, phong cách pixel đậm nét và những lựa chọn xây dựng nhân vật khiến mỗi lượt chơi khác nhau.",
+          "day_label": "Thứ 6",
+          "topic": "Game Mobile Chiến Thuật / Indie Gọn Nhẹ",
+          "unlock_date": "2026-11-20",
+          "url": "https://play.google.com/store/search?q=20%20Minutes%20Till%20Dawn&c=apps",
+          "playstore_url": "https://play.google.com/store/search?q=20%20Minutes%20Till%20Dawn&c=apps",
+          "appstore_url": "https://apps.apple.com/us/app/20-minutes-till-dawn/id1635123906?uo=4",
+          "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/7e/48/98/7e4898c5-98e8-8e29-5c07-9a1541ea78d7/AppIcon-1x_U007emarketing-0-8-0-85-220-0.png/512x512bb.jpg"
         }
       ]
     },
     {
       "week_number": 4,
       "week_theme": "Những cơ chế lạ khiến bạn chậm lại: indie ám ảnh, nông trại chữa lành và chuyện kể gọn trong túi",
-      "updated_at": "18/11/2026",
+      "updated_at": "20/11/2026",
       "games": [
         {
           "title": "GRIS",
@@ -635,13 +222,55 @@
           "playstore_url": "",
           "appstore_url": "",
           "icon_url": ""
+        },
+        {
+          "title": "Florence",
+          "genre": "Tương tác / Tường thuật",
+          "platform": "iOS / Android",
+          "platform_group": "mobile",
+          "description": "Ghép mảnh trò chuyện, vượt qua những khoảnh khắc ngượng ngùng rồi cảm nhận một mối quan hệ đổi khác qua tương tác rất đời thường. Florence là trải nghiệm ngắn, giàu hình ảnh, phù hợp để chơi liền một mạch trong một buổi tối.",
+          "day_label": "Thứ 6",
+          "topic": "Game Mobile Indie Cốt Truyện Ngắn",
+          "unlock_date": "2026-11-20",
+          "url": "https://play.google.com/store/search?q=Florence%20game&c=apps",
+          "playstore_url": "https://play.google.com/store/search?q=Florence%20game&c=apps",
+          "appstore_url": "https://apps.apple.com/us/app/florence/id1297430468?uo=4",
+          "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple114/v4/b3/e6/8a/b3e68a4c-b7cf-85d5-c9ae-bc9b39500452/AppIcon-0-1x_U007emarketing-0-0-GLES2_U002c0-512MB-sRGB-0-0-0-85-220-0-0-0-9.png/512x512bb.jpg"
+        },
+        {
+          "title": "Assemble with Care",
+          "genre": "Giải đố / Tường thuật",
+          "platform": "iOS / Android",
+          "platform_group": "mobile",
+          "description": "Bạn nhận những món đồ cũ, tháo từng bộ phận rồi tìm cách sửa chúng bằng thao tác chạm trực quan. Mỗi món đồ hé lộ một mảnh đời, khiến công việc thủ công nhẹ nhàng dần nối thành câu chuyện ấm áp.",
+          "day_label": "Thứ 6",
+          "topic": "Game Mobile Indie Cốt Truyện Ngắn",
+          "unlock_date": "2026-11-20",
+          "url": "https://play.google.com/store/search?q=Assemble%20with%20Care&c=apps",
+          "playstore_url": "https://play.google.com/store/search?q=Assemble%20with%20Care&c=apps",
+          "appstore_url": "https://apps.apple.com/us/app/assemble-with-care/id6459060454?uo=4",
+          "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple112/v4/16/b2/28/16b2286a-6b2c-c8fd-0459-d2e3e94d1657/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/512x512bb.jpg"
+        },
+        {
+          "title": "Behind the Frame: The Finest Scenery",
+          "genre": "Phiêu lưu / Giải đố",
+          "platform": "iOS / Android",
+          "platform_group": "mobile",
+          "description": "Hoàn thiện những bức tranh bằng cách tìm màu sắc và chi tiết còn thiếu, rồi khám phá căn phòng quanh người họa sĩ. Các câu đố nhẹ nhàng dẫn dắt một câu chuyện về ký ức, nghệ thuật và điều đã bị bỏ quên.",
+          "day_label": "Thứ 6",
+          "topic": "Game Mobile Indie Cốt Truyện Ngắn",
+          "unlock_date": "2026-11-20",
+          "url": "https://play.google.com/store/search?q=Behind%20the%20Frame%20The%20Finest%20Scenery&c=apps",
+          "playstore_url": "https://play.google.com/store/search?q=Behind%20the%20Frame%20The%20Finest%20Scenery&c=apps",
+          "appstore_url": "https://apps.apple.com/us/app/crunchyroll-behind-the-frame/id6451390439?uo=4",
+          "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/c6/0d/fe/c60dfe4e-1be9-d78e-42eb-db82718faa41/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg"
         }
       ]
     },
     {
       "week_number": 3,
       "week_theme": "Game chạy nhẹ, ý tưởng nặng đô: deckbuilder dị biệt, kinh doanh cuốn tay và thủ thành sáng tạo",
-      "updated_at": "18/11/2026",
+      "updated_at": "20/11/2026",
       "games": [
         {
           "title": "Inscryption",
@@ -708,13 +337,55 @@
           "topic": "PC mô phỏng / quản lý / kinh doanh",
           "unlock_date": "2026-11-18",
           "url": "https://store.steampowered.com/app/949290/"
+        },
+        {
+          "title": "Kingdom Rush",
+          "genre": "Tower Defense",
+          "platform": "iOS / Android",
+          "platform_group": "mobile",
+          "description": "Bố trí tháp trên những điểm chiến lược, gọi anh hùng ra tuyến đầu và ngăn từng đợt quái tràn qua. Màn chơi gọn, dễ nắm bắt nhưng chọn sai vị trí nâng cấp có thể khiến cả phòng tuyến sụp đổ.",
+          "day_label": "Thứ 6",
+          "topic": "Mobile chiến thuật / indie gọn nhẹ",
+          "unlock_date": "2026-11-20",
+          "url": "https://play.google.com/store/search?q=Kingdom%20Rush&c=apps",
+          "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/0b/78/3b/0b783ba9-8e00-db00-baef-4a6c004549ca/AppIcon-0-0-1x_U007emarketing-0-6-0-85-220.png/512x512bb.jpg",
+          "playstore_url": "https://play.google.com/store/search?q=Kingdom%20Rush&c=apps",
+          "appstore_url": "https://apps.apple.com/us/app/kingdom-rush-tower-defense-td/id516378985?uo=4"
+        },
+        {
+          "title": "Bloons TD 6",
+          "genre": "Tower Defense chiến thuật",
+          "platform": "iOS / Android",
+          "platform_group": "mobile",
+          "description": "Dùng các loại tháp khỉ với vai trò và nhánh nâng cấp riêng để đối phó những đợt bóng bay ngày càng khó. Thử nghiệm đội hình, chọn thời điểm nâng cấp và tìm cách giữ tuyến phòng thủ đứng vững.",
+          "day_label": "Thứ 6",
+          "topic": "Mobile chiến thuật / indie gọn nhẹ",
+          "unlock_date": "2026-11-20",
+          "url": "https://play.google.com/store/search?q=Bloons%20TD%206&c=apps",
+          "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/ec/ea/72/ecea728c-c718-b232-3078-98cbfd464349/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+          "playstore_url": "https://play.google.com/store/search?q=Bloons%20TD%206&c=apps",
+          "appstore_url": "https://apps.apple.com/us/app/bloons-td-6/id1118115766?uo=4"
+        },
+        {
+          "title": "Mindustry",
+          "genre": "Thủ thành / xây dựng căn cứ",
+          "platform": "iOS / Android",
+          "platform_group": "mobile",
+          "description": "Không chỉ đặt tháp chặn kẻ địch: bạn còn khai thác tài nguyên, nối băng chuyền và xây nhà máy để tiếp tế cho căn cứ. Mạng lưới vận hành càng hiệu quả, bạn càng có cơ hội chống đỡ những đợt tấn công dồn dập.",
+          "day_label": "Thứ 6",
+          "topic": "Mobile chiến thuật / indie gọn nhẹ",
+          "unlock_date": "2026-11-20",
+          "url": "https://play.google.com/store/search?q=Mindustry&c=apps",
+          "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/71/cb/63/71cb6379-df2b-04ee-0b48-35240e5bd8a6/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+          "playstore_url": "https://play.google.com/store/search?q=Mindustry&c=apps",
+          "appstore_url": "https://apps.apple.com/us/app/mindustry/id1385258906?uo=4"
         }
       ]
     },
     {
       "week_number": 2,
       "week_theme": "Tuần của những bí mật, thiên nhiên khắc nghiệt và ván bài không muốn dừng",
-      "updated_at": "18/11/2026",
+      "updated_at": "20/11/2026",
       "games": [
         {
           "title": "Return of the Obra Dinn",
@@ -781,13 +452,55 @@
           "topic": "Game PC Mô Phỏng / Quản Lý / Sinh Tồn",
           "unlock_date": "2026-11-18",
           "url": "https://store.steampowered.com/app/242760/"
+        },
+        {
+          "title": "Balatro",
+          "genre": "Poker roguelike",
+          "platform": "iOS / Android",
+          "platform_group": "mobile",
+          "description": "Dùng những tay bài poker quen thuộc để vượt màn, rồi kết hợp Joker tạo hiệu ứng cộng dồn bất ngờ. Mỗi lượt chạy mở ra hướng build khác nhau, luật dễ nắm nhưng tối ưu điểm số thì khó dứt.",
+          "day_label": "Thứ 6",
+          "topic": "Game Mobile Chiến Thuật / Indie Gọn Nhẹ",
+          "unlock_date": "2026-11-20",
+          "url": "https://play.google.com/store/search?q=Balatro&c=apps",
+          "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/2e/13/c3/2e13c321-e1b0-e958-3def-f5c3d38be1c8/iOS_AppIcon_Premium-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+          "playstore_url": "https://play.google.com/store/search?q=Balatro&c=apps",
+          "appstore_url": "https://apps.apple.com/us/app/balatro/id6502453075?uo=4"
+        },
+        {
+          "title": "Dawncaster: Deckbuilding RPG",
+          "genre": "Roguelike xây bộ bài",
+          "platform": "iOS / Android",
+          "platform_group": "mobile",
+          "description": "Chọn nhân vật, nhặt kỹ năng và xây bộ bài riêng trên hành trình fantasy nhiều ngã rẽ. Các trận đánh theo lượt khuyến khích thử chiến thuật mới; game hỗ trợ chơi offline, hợp để mở nhanh một chuyến phiêu lưu.",
+          "day_label": "Thứ 6",
+          "topic": "Game Mobile Chiến Thuật / Indie Gọn Nhẹ",
+          "unlock_date": "2026-11-20",
+          "url": "https://play.google.com/store/search?q=Dawncaster%3A%20Deckbuilding%20RPG&c=apps",
+          "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/fa/2b/c0/fa2bc01f-786f-df7d-e377-738fabb0d10c/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+          "playstore_url": "https://play.google.com/store/search?q=Dawncaster%3A%20Deckbuilding%20RPG&c=apps",
+          "appstore_url": "https://apps.apple.com/us/app/dawncaster-deckbuilding-rpg/id1555459868?uo=4"
+        },
+        {
+          "title": "Night of the Full Moon",
+          "genre": "Thẻ bài roguelike",
+          "platform": "iOS / Android",
+          "platform_group": "mobile",
+          "description": "Theo chân cô bé Mũ Đỏ trong những chương truyện cổ tích u tối, chọn lớp nhân vật rồi đấu bài với từng đối thủ. Bộ bài và hướng đi thay đổi trải nghiệm; có thể chơi offline, không cần kết nối liên tục.",
+          "day_label": "Thứ 6",
+          "topic": "Game Mobile Chiến Thuật / Indie Gọn Nhẹ",
+          "unlock_date": "2026-11-20",
+          "url": "https://play.google.com/store/search?q=Night%20of%20the%20Full%20Moon&c=apps",
+          "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/4d/61/d9/4d61d955-f220-d329-7326-6481677563d6/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+          "playstore_url": "https://play.google.com/store/search?q=Night%20of%20the%20Full%20Moon&c=apps",
+          "appstore_url": "https://apps.apple.com/us/app/night-of-the-full-moon/id1278845241?uo=4"
         }
       ]
     },
     {
       "week_number": 1,
       "week_theme": "Ba cách chơi khác thường: bẻ luật, vận hành thành phố và đấu trí trên bàn cờ bỏ túi",
-      "updated_at": "18/11/2026",
+      "updated_at": "20/11/2026",
       "games": [
         {
           "title": "Baba Is You",
@@ -854,6 +567,48 @@
           "topic": "Game PC Mô Phỏng / Quản Lý / Sinh Tồn",
           "unlock_date": "2026-11-18",
           "url": "https://store.steampowered.com/app/1594320/"
+        },
+        {
+          "title": "Into the Breach",
+          "genre": "Chiến thuật theo lượt",
+          "platform": "iOS / Android",
+          "platform_group": "mobile",
+          "description": "Trên bản đồ ô vuông gọn gàng, bạn thấy trước kẻ địch sắp đánh đâu rồi chọn cách đẩy, chặn hoặc hạ chúng. Mỗi lượt là một bài toán bảo vệ dân thường bằng đội mech ít ỏi.",
+          "day_label": "Thứ 6",
+          "topic": "Game Mobile Chiến Thuật / Indie Gọn Nhẹ",
+          "unlock_date": "2026-11-20",
+          "url": "https://play.google.com/store/search?q=Into%20the%20Breach&c=apps",
+          "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/9c/8b/da/9c8bda47-ddc0-6e85-0efd-cb754b19ab71/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg",
+          "playstore_url": "https://play.google.com/store/search?q=Into%20the%20Breach&c=apps",
+          "appstore_url": "https://apps.apple.com/us/app/into-the-breach/id1616542180?uo=4"
+        },
+        {
+          "title": "The Battle of Polytopia",
+          "genre": "Chiến thuật 4X theo lượt",
+          "platform": "iOS / Android",
+          "platform_group": "mobile",
+          "description": "Chọn một bộ tộc, khám phá bản đồ, nghiên cứu công nghệ và tranh quyền kiểm soát theo lượt. Trận đấu gọn, luật dễ tiếp cận nhưng mỗi quyết định mở rộng hay phòng thủ đều ảnh hưởng đến đường phát triển.",
+          "day_label": "Thứ 6",
+          "topic": "Game Mobile Chiến Thuật / Indie Gọn Nhẹ",
+          "unlock_date": "2026-11-20",
+          "url": "https://play.google.com/store/apps/details?id=air.com.midjiwan.polytopia",
+          "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/92/aa/26/92aa26c4-fb9a-4010-3392-c49e55a70896/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+          "playstore_url": "https://play.google.com/store/apps/details?id=air.com.midjiwan.polytopia",
+          "appstore_url": "https://apps.apple.com/us/app/the-battle-of-polytopia/id1006393168?uo=4"
+        },
+        {
+          "title": "Slice & Dice",
+          "genre": "Chiến thuật theo lượt roguelike",
+          "platform": "iOS / Android",
+          "platform_group": "mobile",
+          "description": "Đội hình của bạn là những viên xúc xắc, mỗi mặt tương ứng một hành động khác nhau. Tung xúc xắc, phân bổ đòn đánh và phòng thủ để vượt chuỗi giao tranh; một lượt xử lý khéo có thể cứu cả đội.",
+          "day_label": "Thứ 6",
+          "topic": "Game Mobile Chiến Thuật / Indie Gọn Nhẹ",
+          "unlock_date": "2026-11-20",
+          "url": "https://play.google.com/store/apps/details?id=com.com.tann.dice",
+          "icon_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/97/b3/91/97b39190-ed1d-6b2b-e3e3-8d8a31f2350b/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+          "playstore_url": "https://play.google.com/store/apps/details?id=com.com.tann.dice",
+          "appstore_url": "https://apps.apple.com/us/app/slice-dice/id6449848963?uo=4"
         }
       ]
     }
