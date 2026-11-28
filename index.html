@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://gc.zgo.at; connect-src https://gamehaynenchoi.goatcounter.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://shared.akamai.steamstatic.com https://*.mzstatic.com https://gamehaynenchoi.goatcounter.com; object-src 'none'; base-uri 'self'; form-action 'none';" />
+  <meta name="referrer" content="no-referrer" />
+  <title>Game Hay Nên Chơi — Link tải game chọn lọc</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f8f9fa;
+      --surface: #ffffff;
+      --surface-subtle: #f1f3f4;
+      --border: #dadce0;
+      --text: #202124;
+      --text-secondary: #5f6368;
+      --play-green: #01875f;
+      --play-green-hover: #016e4d;
+      --play-tint: #e6f4ea;
+      --steam-bg: #1b2838;
+      --steam-surface: #16202d;
+      --steam-border: #2a475e;
+      --steam-blue: #66c0f4;
+      --steam-green: #6fa720;
+      --steam-green-hover: #83c228;
+      --focus-ring: #01875f;
+      --shadow-card: 0 1px 3px rgba(60, 64, 67, 0.12);
+    }
+    html[data-theme="dark"] {
+      --bg: #12151a;
+      --surface: #1b1f26;
+      --surface-subtle: #252a34;
+      --border: #303642;
+      --text: #e8eaed;
+      --text-secondary: #9aa0a6;
+      --play-green: #00a173;
+      --play-green-hover: #00b884;
+      --play-tint: rgba(0, 161, 115, 0.16);
+      --focus-ring: #66c0f4;
+      --shadow-card: 0 2px 6px rgba(0, 0, 0, 0.35);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Be Vietnam Pro', system-ui, -apple-system, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      padding: 18px 14px 56px;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+    .container {
+      max-width: 660px;
+      margin: 0 auto;
+    }
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .brand-mark {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: var(--steam-bg);
+      color: var(--steam-blue);
+      border: 1px solid var(--steam-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .brand-text h1 {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+    .brand-text p {
+      font-size: 13px;
+      color: var(--text-secondary);
+      margin-top: 2px;
+    }
+    .theme-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+    .theme-btn:hover {
+      background: var(--surface-subtle);
+    }
+    .theme-btn:focus-visible,
+    .filter-btn:focus-visible,
+    .btn-steam:focus-visible,
+    .btn-play:focus-visible,
+    .search-input:focus-visible,
+    .reset-btn:focus-visible,
+    .week-header:focus-visible {
+      outline: 2px solid var(--focus-ring);
+      outline-offset: 2px;
+    }
+    .summary-strip {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 13px;
+      color: var(--text-secondary);
+      padding-bottom: 12px;
+      margin-bottom: 14px;
+      border-bottom: 1px solid var(--border);
+    }
+    .controls {
+      position: sticky;
+      top: 8px;
+      z-index: 20;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 12px;
+      margin-bottom: 18px;
+      box-shadow: var(--shadow-card);
+    }
+    .search-wrap {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+    .search-icon {
+      position: absolute;
+      left: 12px;
+      color: var(--text-secondary);
+      pointer-events: none;
+    }
+    .search-input {
+      width: 100%;
+      padding: 10px 12px 10px 38px;
+      border-radius: 24px;
+      border: 1px solid var(--border);
+      background: var(--surface-subtle);
+      color: var(--text);
+      font-size: 14px;
+      font-family: inherit;
+    }
+    .search-input::placeholder {
+      color: var(--text-secondary);
+    }
+    .filters {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-top: 10px;
+    }
+    .filter-btn {
+      padding: 8px 10px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text-secondary);
+      font-size: 13px;
+      font-weight: 600;
+      font-family: inherit;
+      cursor: pointer;
+    }
+    .filter-btn.active {
+      background: var(--play-tint);
+      border-color: var(--play-green);
+      color: var(--play-green);
+    }
+    .week-section {
+      margin-bottom: 18px;
+      border-radius: 14px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-card);
+      overflow: hidden;
+      content-visibility: auto;
+      contain-intrinsic-size: auto 120px;
+    }
+    .week-header {
+      list-style: none;
+      cursor: pointer;
+      padding: 15px 16px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      user-select: none;
+    }
+    .week-header::-webkit-details-marker { display: none; }
+    .week-header:hover {
+      background: var(--surface-subtle);
+    }
+    .week-title-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .week-label {
+      font-size: 17px;
+      font-weight: 800;
+    }
+    .week-tag {
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 6px;
+      background: var(--play-green);
+      color: #ffffff;
+    }
+    .week-count {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-secondary);
+    }
+    .week-theme {
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      margin-top: 4px;
+    }
+    .week-date {
+      font-size: 12px;
+      color: var(--text-secondary);
+      margin-top: 3px;
+    }
+    .chevron {
+      color: var(--text-secondary);
+      flex-shrink: 0;
+      margin-top: 2px;
+      transition: transform 0.18s ease;
+    }
+    details[open] .chevron {
+      transform: rotate(180deg);
+    }
+    .cards-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      padding: 14px 16px 16px;
+      border-top: 1px solid var(--border);
+    }
+    .game-card.hidden {
+      display: none;
+    }
+
+    /* === STEAM STORE CARD (PC) === */
+    .card-steam {
+      background: var(--steam-bg);
+      border: 1px solid var(--steam-border);
+      border-radius: 8px;
+      overflow: hidden;
+      color: #c7d5e0;
+    }
+    .steam-banner {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 460 / 215;
+      background: var(--steam-surface);
+      overflow: hidden;
+    }
+    .steam-banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .steam-day-tag {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      padding: 3px 9px;
+      border-radius: 4px;
+      background: rgba(23, 26, 33, 0.88);
+      color: var(--steam-blue);
+      font-size: 11px;
+      font-weight: 700;
+      border: 1px solid rgba(102, 192, 244, 0.35);
+    }
+    .steam-top-row {
+      padding: 12px 14px 0;
+    }
+    .steam-day-tag-inline {
+      display: inline-block;
+      padding: 3px 9px;
+      border-radius: 4px;
+      background: var(--steam-surface);
+      color: var(--steam-blue);
+      font-size: 11px;
+      font-weight: 700;
+    }
+    .steam-body {
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .steam-title-row {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .steam-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.25;
+    }
+    .steam-win-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 3px 8px;
+      border-radius: 4px;
+      background: var(--steam-surface);
+      color: #c7d5e0;
+      font-size: 11px;
+      font-weight: 600;
+      flex-shrink: 0;
+    }
+    .steam-genre {
+      display: inline-block;
+      align-self: flex-start;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--steam-blue);
+      background: rgba(102, 192, 244, 0.14);
+      padding: 2px 8px;
+      border-radius: 3px;
+    }
+    .steam-desc {
+      font-size: 13.5px;
+      line-height: 1.5;
+      color: #acb2b8;
+      margin: 4px 0 6px;
+    }
+    .steam-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .steam-platform-text {
+      font-size: 12px;
+      color: #8f98a0;
+      font-weight: 600;
+    }
+    .btn-steam {
+      text-decoration: none;
+      padding: 9px 18px;
+      border-radius: 3px;
+      background: linear-gradient(90deg, #75b022 0%, #588a1b 100%);
+      color: #d2efa9;
+      font-size: 13.5px;
+      font-weight: 700;
+      transition: filter 0.15s ease;
+    }
+    .btn-steam:hover {
+      filter: brightness(1.12);
+      color: #ffffff;
+    }
+
+    /* === GOOGLE PLAY / CH PLAY CARD (MOBILE) === */
+    .card-play {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .play-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+    .play-app-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      background: var(--play-tint);
+      color: var(--play-green);
+      border: 1px solid rgba(1, 135, 95, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: 800;
+      flex-shrink: 0;
+      letter-spacing: -0.02em;
+      overflow: hidden;
+    }
+    .play-app-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .play-head-info {
+      flex: 1;
+      min-width: 0;
+    }
+    .play-meta-line {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11.5px;
+      margin-bottom: 2px;
+    }
+    .play-day-tag {
+      font-weight: 700;
+      color: var(--play-green);
+    }
+    .play-store-label {
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+    .play-title {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.25;
+    }
+    .play-genre {
+      font-size: 13px;
+      color: var(--text-secondary);
+      margin-top: 2px;
+    }
+    .play-desc {
+      font-size: 13.5px;
+      line-height: 1.5;
+      color: var(--text-secondary);
+    }
+    .play-footer {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      padding-top: 4px;
+    }
+    .btn-play, .btn-appstore {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      text-decoration: none;
+      text-align: center;
+      padding: 10px 14px;
+      border-radius: 8px;
+      color: #ffffff;
+      font-size: 13.5px;
+      font-weight: 700;
+      transition: background-color 0.15s ease;
+    }
+    .btn-play {
+      background: var(--play-green);
+    }
+    .btn-play:hover {
+      background: var(--play-green-hover);
+    }
+    .btn-appstore {
+      background: #0071e3;
+    }
+    .btn-appstore:hover {
+      background: #005bb5;
+    }
+
+    .empty-state, .no-results {
+      text-align: center;
+      padding: 36px 20px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      color: var(--text-secondary);
+      font-size: 14px;
+    }
+    .empty-sub {
+      margin-top: 6px;
+      font-size: 13px;
+    }
+    .no-results.hidden {
+      display: none;
+    }
+    .reset-btn {
+      margin-top: 12px;
+      padding: 8px 16px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      background: var(--surface-subtle);
+      color: var(--text);
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .load-more-wrap {
+      margin-top: 6px;
+      text-align: center;
+    }
+    .load-more-wrap.hidden {
+      display: none;
+    }
+    .load-more-btn {
+      width: 100%;
+      padding: 12px 18px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: var(--shadow-card);
+    }
+    .load-more-btn:hover {
+      background: var(--surface-subtle);
+    }
+    .back-top-btn {
+      position: fixed;
+      right: 16px;
+      bottom: 20px;
+      z-index: 30;
+      padding: 10px 14px;
+      border-radius: 24px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .back-top-btn.hidden {
+      display: none;
+    }
+  </style>
+  <script>
+    (function () {
+      var saved = null;
+      try { saved = localStorage.getItem('ghnc_theme'); } catch (e) {}
+      var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = saved || (prefersDark ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+</head>
+<body>
+  <main class="container">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="6" y1="11" x2="10" y2="11"></line>
+            <line x1="8" y1="9" x2="8" y2="13"></line>
+            <line x1="15" y1="12" x2="15.01" y2="12"></line>
+            <line x1="18" y1="10" x2="18.01" y2="10"></line>
+            <path d="M17.32 5H6.68a4 4 0 0 0-3.978 3.59c-.006.052-.01.101-.017.152C2.604 9.416 2 14.456 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.414-1.414A2 2 0 0 1 9.828 16h4.344a2 2 0 0 1 1.414.586L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.545-.604-6.584-.685-7.258-.007-.05-.011-.1-.017-.151A4 4 0 0 0 17.32 5z"></path>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <h1>Game Hay Nên Chơi</h1>
+          <p>Kho link tải chính thức PC &amp; Mobile chọn lọc mỗi tuần</p>
+        </div>
+      </div>
+      <button id="themeToggle" class="theme-btn" type="button" aria-label="Đổi giao diện Sáng/Tối" title="Đổi giao diện Sáng/Tối">
+        <svg id="iconSun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg id="iconMoon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+    </header>
+
+    <div class="summary-strip">
+      <span id="resultCount">Đang hiển thị 72 tựa game</span>
+      <span>Cập nhật: 28/11/2026</span>
+    </div>
+
+    <section class="controls" aria-label="Tìm kiếm và lọc game">
+      <div class="search-wrap">
+        <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input id="searchInput" class="search-input" type="search" placeholder="Tìm tên game, thể loại hoặc thứ..." />
+      </div>
+      <div class="filters" role="group" aria-label="Lọc nền tảng">
+        <button class="filter-btn active" type="button" data-filter="all">Tất cả</button>
+        <button class="filter-btn" type="button" data-filter="pc">PC (Steam)</button>
+        <button class="filter-btn" type="button" data-filter="mobile">Mobile</button>
+      </div>
+    </section>
+
+    <section id="weeksContainer">
+      
+    </section>
+
+    <div id="loadMoreWrap" class="load-more-wrap hidden">
+      <button id="loadMoreBtn" class="load-more-btn" type="button">Xem thêm tuần cũ</button>
+    </div>
+
+    <div id="noResults" class="no-results hidden">
+      <p>Không tìm thấy tựa game nào khớp với bộ lọc hiện tại.</p>
+      <button id="resetFilterBtn" class="reset-btn" type="button">Xóa bộ lọc</button>
+    </div>
+  </main>
+
+  <button id="backToTop" class="back-top-btn hidden" type="button" aria-label="Lên đầu trang">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"></polyline></svg>
+    <span>Lên đầu</span>
+  </button>
+
+  <script id="bioData" type="application/json">[{"w":7,"th":"Game Hay Rủ Bạn Chơi Chung & Đấu Trí Sâu Sắc Mọi Nền Tảng","dt":"28/11/2026","gm":[{"t":"Horizon Chase","g":"Đua xe Arcade / Retro","p":"iOS / Android","pg":"mobile","d":"Tựa game đua xe phong cách arcade cổ điển với đồ họa 16-bit hiện đại cực kỳ rực rỡ. Âm nhạc cuốn hút, thao tác đơn giản cùng tốc độ cao giúp bạn giải trí tức thì mà không cần mạng.","day":"Thứ 7","u":"https://play.google.com/store/apps/details?id=com.aquiris.horizonchase","ico":"https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/97/4c/35/974c3560-7798-4e4b-9e7c-69a6981495d6/AppIcon-1x_U007emarketing-0-7-0-85-220-0.png/512x512bb.jpg","gp":"https://play.google.com/store/apps/details?id=com.aquiris.horizonchase","ap":"https://apps.apple.com/us/app/horizon-chase-2/id1534920947?uo=4"},{"t":"Grand Mountain Adventure","g":"Thể thao Arcade / Thư giãn","p":"iOS / Android","pg":"mobile","d":"Khám phá các ngọn núi tuyết hùng vĩ trên tấm trượt tuyết với góc nhìn từ trên xuống độc đáo. Game cho phép tự do biểu diễn kỹ thuật, vượt thử thách tốc độ và thư giãn không cần kết nối mạng.","day":"Thứ 7","u":"https://play.google.com/store/apps/details?id=com.Toppluva.GrandMountain","ico":"https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/18/16/43/18164396-b932-ff10-71db-d7985de7af3f/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg","gp":"https://play.google.com/store/apps/details?id=com.Toppluva.GrandMountain","ap":"https://apps.apple.com/us/app/grand-mountain-adventure/id1468010739?uo=4"},{"t":"DATA WING","g":"Arcade / Đua xe vi mạch","p":"iOS / Android","pg":"mobile","d":"Vào vai vi mạch vận chuyển dữ liệu với cơ chế vật lý lướt tường cực kỳ nghiện. Cốt truyện sâu sắc, âm nhạc synthwave bắt tai cùng 40 màn chơi arcade hoàn toàn miễn phí và không cần mạng.","day":"Thứ 7","u":"https://play.google.com/store/apps/details?id=com.DanVogel.DataWing","ico":"https://is1-ssl.mzstatic.com/image/thumb/Purple118/v4/bb/cd/ff/bbcdff79-7348-63be-2926-b92788c81852/AppIcon-0-1x_U007emarketing-0-85-220-9.png/512x512bb.jpg","gp":"https://play.google.com/store/apps/details?id=com.DanVogel.DataWing","ap":"https://apps.apple.com/us/app/data-wing/id1206723870?uo=4"},{"t":"Phasmophobia","g":"Kinh dị Co-op / Săn ma","p":"PC (Steam)","pg":"pc","d":"Vào vai nhóm thợ săn ma đi điều tra các ngôi nhà ma ám bằng thiết bị chuyên dụng. Game bắt giọng nói thật qua micro, ma sẽ phản hồi và săn lùng từng người nếu bạn lỡ lời gọi tên nó.","day":"Thứ 6","u":"https://store.steampowered.com/app/739630/","aid":"739630"},{"t":"Escape the Backrooms","g":"Sinh tồn / Kinh dị tâm lý","p":"PC (Steam)","pg":"pc","d":"Cùng bạn bè lạc vào không gian vô tận của các tầng mê cung mênh mông đầy ám ảnh. Gameplay tập trung vào giải đố sinh tồn, trốn chạy quái vật và tìm đường thoát trước khi kiệt sức.","day":"Thứ 6","u":"https://store.steampowered.com/app/1943950/","aid":"1943950"},{"t":"Labyrinthine","g":"Kinh dị / Co-op giải đố","p":"PC (Steam)","pg":"pc","d":"Tựa game hợp tác kinh dị đưa bạn cùng đồng đội lạc vào mê cung hàng rào u tối. Cả nhóm phải tìm chìa khóa, giải câu đố rải rác và lẩn tránh những sinh vật tàn bạo ẩn nấp.","day":"Thứ 6","u":"https://store.steampowered.com/app/1302240/","aid":"1302240"},{"t":"Terraria","g":"Sinh Tồn Thế Giới Mở / Chế Đồ","p":"iOS / Android","pg":"mobile","d":"Tựa game sinh tồn huyền thoại với thế giới mở 2D rộng lớn, cho phép bạn đào khoáng sản, chế tạo hàng ngàn vũ khí và khiêu chiến trùm khủng. Dung lượng nhẹ nhàng nhưng nội dung chơi hoài không hết.","day":"Thứ 5","u":"https://play.google.com/store/apps/details?id=com.and.games505.TerrariaPaid","ico":"https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/02/eb/57/02eb5740-ae95-86fd-0000-f0a64ab1a392/AppIcon-1x_U007emarketing-0-8-0-85-220-0.png/512x512bb.jpg","gp":"https://play.google.com/store/apps/details?id=com.and.games505.TerrariaPaid","ap":"https://apps.apple.com/us/app/terraria/id640364616?uo=4"},{"t":"Crashlands","g":"Hành Động Phiêu Lưu / Sinh Tồn","p":"iOS / Android","pg":"mobile","d":"Mắc kẹt trên hành tinh xa lạ, bạn phải thu thập nguyên liệu, chế tạo trang bị và chiến đấu với sinh vật bản địa. Cốt truyện hài hước kết hợp lối chơi mượt mà trên điện thoại khiến bạn nghiện ngay.","day":"Thứ 5","u":"https://play.google.com/store/apps/details?id=com.bscotch.crashlands","ico":"https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/9a/c2/0f/9ac20f38-d2b0-a6ec-7aea-b7ddd800ba5f/AppIcon-1x_U007emarketing-0-7-0-85-220-0.png/512x512bb.jpg","gp":"https://play.google.com/store/apps/details?id=com.bscotch.crashlands","ap":"https://apps.apple.com/us/app/crashlands/id808296431?uo=4"},{"t":"Forager","g":"Khai Phá Thế Giới / Chế Đồ","p":"iOS / Android","pg":"mobile","d":"Bắt đầu trên một hòn đảo nhỏ, bạn cuốc đất, tích lũy tiền để mở rộng lãnh thổ, xây dựng căn cứ và giải đố. Nhịp game dồn dập cùng lối chơi chế đồ cuốn hút khiến bạn khó lòng buông máy.","day":"Thứ 5","u":"https://apps.apple.com/app/forager/id1525624394","ico":"https://is1-ssl.mzstatic.com/image/thumb/Purple114/v4/7c/63/09/7c6309c6-5636-a0d9-5b78-848118a65dc6/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/512x512bb.jpg","gp":"https://play.google.com/store/search?q=Forager&c=apps","ap":"https://apps.apple.com/us/app/forager/id1525624394?uo=4"},{"t":"Cities: Skylines","g":"Xây Dựng Thành Phố / Quản Lý","p":"PC (Steam)","pg":"pc","d":"Tự tay quy hoạch từ hệ thống giao thông, điện nước đến chính sách thuế cho một đại đô thị. Đồ họa hiện đại tuyệt đẹp cùng khả năng tùy biến cao khiến bạn dán mắt vào màn hình hàng giờ liền.","day":"Thứ 4","u":"https://store.steampowered.com/app/255710/","aid":"255710"},{"t":"Factorio","g":"Quản Lý Dây Chuyền / Tự Động Hóa","p":"PC (Steam)","pg":"pc","d":"Bắt đầu từ hai bàn tay trắng trên hành tinh lạ, bạn sẽ khai thác tài nguyên và thiết kế hệ thống băng chuyền tự động hóa khổng lồ. Cảm giác nhìn dây chuyền vận hành mượt mà cực kỳ gây nghiện.","day":"Thứ 4","u":"https://store.steampowered.com/app/427520/","aid":"427520"},{"t":"Timberborn","g":"Sinh Tồn Quản Lý / Xây Thành Phố","p":"PC (Steam)","pg":"pc","d":"Lãnh đạo loài hải ly tiến hóa xây dựng thành phố gỗ và điều tiết dòng nước để chống lại các mùa hạn hán khốc liệt. Cơ chế thủy lợi độc đáo mang lại trải nghiệm chiến thuật vô cùng mới lạ.","day":"Thứ 4","u":"https://store.steampowered.com/app/1062090/","aid":"1062090"},{"t":"Kingdom Two Crowns","g":"Chiến Thuật / Quản Lý Pixel","p":"iOS / Android","pg":"mobile","d":"Nhập vai vị vua cưỡi ngựa đi chiêu mộ dân lành, xây dựng vương quốc và chống lại quái vật mỗi đêm. Đồ họa pixel nghệ thuật kết hợp lối chơi mượt mà trên điện thoại làm bạn khó rời mắt.","day":"Thứ 3","u":"https://play.google.com/store/apps/details?id=com.rawfury.kingdomtwocrowns","ico":"https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/8c/01/d3/8c01d38a-6552-a81e-d8b5-1e61db3fd1fa/AppIcon-1x_U007emarketing-0-8-0-85-220-0.png/512x512bb.jpg","gp":"https://play.google.com/store/apps/details?id=com.rawfury.kingdomtwocrowns","ap":"https://apps.apple.com/us/app/kingdom-two-crowns/id1477991646?uo=4"},{"t":"Pirates Outlaws","g":"Thẻ Bài Chiến Thuật / Roguelike","p":"iOS / Android","pg":"mobile","d":"Xây dựng bộ bài hải tặc độc đáo, quản lý đạn dược và chiến đấu theo lượt trên hải trình nguy hiểm. Game hoạt động hoàn toàn offline, cực kỳ thích hợp để rèn luyện tư duy mọi lúc mọi nơi.","day":"Thứ 3","u":"https://play.google.com/store/apps/details?id=com.fabledgame.piratesoutlaws","ico":"https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/49/a4/af/49a4af5f-ed4e-c10c-4b7e-6a6d5f388b04/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/512x512bb.jpg","gp":"https://play.google.com/store/apps/details?id=com.fabledgame.piratesoutlaws","ap":"https://apps.apple.com/us/app/pirates-outlaws/id1442776789?uo=4"},{"t":"Card Thief","g":"Đấu Trí Thẻ Bài / Stealth","p":"iOS / Android","pg":"mobile","d":"Biến mỗi màn chơi thành một bàn cờ stealth độc đáo, nơi bạn tính toán từng bước di chuyển để lẻn qua lính gác và cuỗm kho báu. Lối chơi đấu trí theo lượt nhẹ máy nhưng vô cùng sâu sắc.","day":"Thứ 3","u":"https://play.google.com/store/apps/details?id=com.tinytouchtales.cardthief","ico":"https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/ea/f0/10/eaf010ee-c061-5629-06c0-93a6d46e936d/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg","gp":"https://play.google.com/store/apps/details?id=com.tinytouchtales.cardthief","ap":"https://apps.apple.com/us/app/card-thief/id1186226470?uo=4"},{"t":"Moving Out","g":"Co-op Vật Lý / Giải Đố","p":"PC (Steam)","pg":"pc","d":"Vào vai nhân viên dọn nhà, bạn cùng cạ cứng phải hợp sức bê vác đồ đạc vượt qua hàng loạt chướng ngại vật quái chiêu. Game sở hữu đồ họa tươi sáng và lối chơi vật lý đầy tiếng cười.","day":"Thứ 2","u":"https://store.steampowered.com/app/996770/","aid":"996770"},{"t":"Operation: Tango","g":"Co-op Tình Báo / Giải Đố","p":"PC (Steam)","pg":"pc","d":"Một người làm điệp viên đột nhập, người kia làm hacker hỗ trợ từ xa. Hai bạn không thấy màn hình của nhau, chỉ có thể giao tiếp qua giọng nói để giải chuỗi mật mã hóc hại.","day":"Thứ 2","u":"https://store.steampowered.com/app/1335790/","aid":"1335790"},{"t":"7 Days to End with You","g":"Giải Đố / Giải Mã Ngôn Ngữ","p":"PC (Steam)","pg":"pc","d":"Bạn tỉnh dậy bên một cô gái nói ngôn ngữ hoàn toàn xa lạ. Bằng cách quan sát cử chỉ và hoàn cảnh, bạn phải tự suy luận ý nghĩa từng từ ngữ để khám phá bí ẩn đen tối.","day":"Thứ 2","u":"https://store.steampowered.com/app/1859280/","aid":"1859280"}]},{"w":6,"th":"Tối Ưu Cấu Hình • Game Co-op Cực Vui & Chiến Thuật Mobile Đỉnh Cao","dt":"28/11/2026","gm":[{"t":"Bad North: Jotunn Edition","g":"Chiến thuật Tối giản / Roguelike","p":"iOS / Android","pg":"mobile","d":"Game chiến thuật thủ đảo phong cách tối giản tuyệt đẹp. Bạn sẽ dàn quân bảo vệ hòn đảo nhỏ trước các đợt tấn công của giặc Viking, tư duy vị trí sâu sắc và hoàn toàn sạch bóng quảng cáo.","day":"Thứ 6","u":"https://apps.apple.com/us/app/bad-north-jotunn-edition/id1358284697","ico":"https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/80/af/89/80af8989-ae76-d925-42f0-11ccf7f0a671/AppIcon-1x_U007emarketing-0-8-0-85-220-0.png/512x512bb.jpg","gp":"https://play.google.com/store/search?q=Bad+North%3A+Jotunn+Edition&c=apps","ap":"https://apps.apple.com/us/app/bad-north-jotunn-edition/id1367121168?uo=4"},{"t":"Rusted Warfare - RTS","g":"Chiến thuật Thời gian thực (RTS)","p":"iOS / Android","pg":"mobile","d":"Tựa game chiến thuật thời gian thực chuẩn cổ điển cho mobile. Dung lượng siêu nhẹ, hỗ trợ hàng trăm đơn vị quân cùng lúc trên bản đồ lớn, chơi offline thoải mái mà không hề có Pay-to-Win.","day":"Thứ 6","u":"https://play.google.com/store/apps/details?id=com.corrodinggames.rustedwarfare","ico":"https://is1-ssl.mzstatic.com/image/thumb/Purple112/v4/58/9a/12/589a129d-5b5c-a960-8dcb-914741607722/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/512x512bb.jpg","gp":"https://play.google.com/store/apps/details?id=com.corrodinggames.rustedwarfare","ap":"https://apps.apple.com/us/app/rusted-warfare-rts/id1514329124?uo=4"},{"t":"Iron Marines","g":"Chiến thuật Viễn tưởng / RTS","p":"iOS / Android","pg":"mobile","d":"Tuyệt phẩm chiến thuật khoa học viễn tưởng từ nhà phát triển Kingdom Rush. Bạn sẽ chỉ huy biệt đội không hành chiến đấu với quái vật ngoài hành tinh, đồ họa nét căng, gameplay cực kỳ có chiều sâu.","day":"Thứ 6","u":"https://apps.apple.com/us/app/iron-marines-rts-offline-game/id1181747805","ico":"https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/bb/0b/f6/bb0bf601-2be0-16a5-9d6f-f8b95e714a25/AppIcon-1x_U007emarketing-0-8-0-85-220-0.png/512x512bb.jpg","gp":"https://play.google.com/store/search?q=Iron+Marines&c=apps","ap":"https://apps.apple.com/us/app/iron-marines-rts-strategy-game/id1056920931?uo=4"},{"t":"Overcooked! 2","g":"Quản lý Co-op / Nấu ăn","p":"PC (Steam)","pg":"pc","d":"Tựa game quản lý nhà bếp co-op huyền thoại. Bạn cùng đồng đội phải phối hợp chặt nấu ăn, rửa bát và giao món trong những căn bếp di động hỗn loạn, vừa xả stress vừa thử thách tình bạn.","day":"Thứ 4","u":"https://store.steampowered.com/app/448510/","aid":"448510"},{"t":"TCG Card Shop Simulator","g":"Giả lập / Quản lý cửa hàng","p":"PC (Steam)","pg":"pc","d":"Trải nghiệm mở cửa hàng bán bài ma thuật siêu gây nghiện. Từ bóc pack, định giá, sắp xếp kệ đến thu tiền, gameplay chi tiết tỉ mỉ khiến bạn ngồi vào máy là chơi quên cả giờ giấc.","day":"Thứ 4","u":"https://store.steampowered.com/app/3070070/","aid":"3070070"},{"t":"Kebab Chefs! Restaurant Simulator","g":"Quản lý nhà hàng / Co-op","p":"PC (Steam)","pg":"pc","d":"Cùng bạn bè hợp sức mở nhà bếp Kebab từ bàn tay trắng. Bạn sẽ tự tay đi chợ, chế biến công thức món ăn và phục vụ thực khách, cấu hình nhẹ nhàng nhưng cuốn không lối thoát.","day":"Thứ 4","u":"https://store.steampowered.com/app/1001270/","aid":"1001270"},{"t":"Lethal Company","g":"Co-op Kinh dị / Hài hước","p":"PC (Steam)","pg":"pc","d":"Tựa game co-op kinh dị hài hước bùng nổ trên Steam. Bạn cùng nhóm bạn đi nhặt phế liệu ở các hành tinh hoang phế, đối mặt quái vật dị ngợm và tạo nên những pha tấu hài cười ra nước mắt.","day":"Thứ 2","u":"https://store.steampowered.com/app/1966720/","aid":"1966720"},{"t":"Content Warning","g":"Co-op Nhập vai / Hài hước","p":"PC (Steam)","pg":"pc","d":"Vào vai nhóm sáng tạo nội dung đi xuống lòng đất quay clip quái vật để lấy view. Gameplay hỗn loạn, thoại đốp chát qua mic chân thực khiến cả hội cười sặc sụa mỗi lần gặp nạn.","day":"Thứ 2","u":"https://store.steampowered.com/app/2881650/","aid":"2881650"},{"t":"Heave Ho","g":"Vật lý Co-op / Giải đố","p":"PC (Steam)","pg":"pc","d":"Game co-op vật lý siêu bựa nơi 4 người phải nắm tay nhau đu bám qua các chướng ngại vật. Chỉ cần một người trượt tay là cả hội rơi tự do, cực kỳ xả stress cùng bạn thân.","day":"Thứ 2","u":"https://store.steampowered.com/app/905340/","aid":"905340"}]},{"w":5,"th":"Bẻ cong không gian, dựng nơi trú ẩn, sống sót bằng một ngón tay","dt":"28/11/2026","gm":[{"t":"Vampire Survivors","g":"Sinh tồn hành động","p":"iOS / Android","pg":"mobile","d":"Điều khiển đơn giản, nhân vật tự tấn công; việc của bạn là lách khỏi đám quái và chọn nâng cấp thật khôn. Màn hình dọc cùng nhịp chơi nhanh khiến Vampire Survivors hợp để mở một trận ngắn bằng một tay.","day":"Thứ 6","u":"https://play.google.com/store/search?q=Vampire%20Survivors&c=apps","ico":"https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/f6/c2/37/f6c237b1-3008-9a70-8fea-1e62c27e7637/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg","gp":"https://play.google.com/store/search?q=Vampire%20Survivors&c=apps","ap":"https://apps.apple.com/us/app/vampire-survivors/id6444525702?uo=4"},{"t":"Brotato","g":"Roguelite sinh tồn","p":"iOS / Android","pg":"mobile","d":"Một củ khoai tây cầm được nhiều loại vũ khí phải chống các đợt quái dồn dập trong những màn ngắn. Brotato kết hợp né tránh, mua trang bị và chọn hướng nâng cấp, tạo cảm giác chiến thuật vừa đủ cho thao tác một tay.","day":"Thứ 6","u":"https://play.google.com/store/search?q=Brotato&c=apps","ico":"https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/2f/55/5d/2f555da0-7dd0-6c7a-51d7-e6b1cd7f4700/AppIcon-1x_U007emarketing-0-8-0-85-220-0.png/512x512bb.jpg","gp":"https://play.google.com/store/search?q=Brotato&c=apps","ap":"https://apps.apple.com/us/app/brotato/id6445884925?uo=4"},{"t":"20 Minutes Till Dawn","g":"Hành động sinh tồn","p":"iOS / Android","pg":"mobile","d":"Chọn nhân vật, vũ khí và nâng cấp để cầm cự trước những đợt quái vật kéo đến trong bóng tối. 20 Minutes Till Dawn có nhịp chiến đấu gọn, phong cách pixel đậm nét và những lựa chọn xây dựng nhân vật khiến mỗi lượt chơi khác nhau.","day":"Thứ 6","u":"https://play.google.com/store/search?q=20%20Minutes%20Till%20Dawn&c=apps","ico":"https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/7e/48/98/7e4898c5-98e8-8e29-5c07-9a1541ea78d7/AppIcon-1x_U007emarketing-0-8-0-85-220-0.png/512x512bb.jpg","gp":"https://play.google.com/store/search?q=20%20Minutes%20Till%20Dawn&c=apps","ap":"https://apps.apple.com/us/app/20-minutes-till-dawn/id1635123906?uo=4"},{"t":"RimWorld","g":"Mô phỏng thuộc địa","p":"PC (Steam)","pg":"pc","d":"Dẫn dắt nhóm người sống sót dựng thuộc địa, phân công việc và chống chọi với những biến cố liên tiếp. RimWorld nổi bật vì mỗi cư dân có tính cách, nhu cầu riêng, khiến câu chuyện sinh tồn thường rẽ sang hướng bạn không thể tính trước.","day":"Thứ 4","u":"https://store.steampowered.com/app/294100/","aid":"294100"},{"t":"Oxygen Not Included","g":"Mô phỏng sinh tồn","p":"PC (Steam)","pg":"pc","d":"Xây căn cứ sâu trong tiểu hành tinh, quản lý oxy, nhiệt độ, nước và chất thải trước khi mọi thứ vượt ngưỡng. Oxygen Not Included thưởng cho người thích tối ưu hệ thống: một đường ống đặt sai có thể biến cả thuộc địa thành bài học đắt giá.","day":"Thứ 4","u":"https://store.steampowered.com/app/457140/","aid":"457140"},{"t":"IXION","g":"Quản lý tàu vũ trụ","p":"PC (Steam)","pg":"pc","d":"Điều hành DOLOS, con tàu khổng lồ vừa là căn cứ vừa là hy vọng cuối cùng của nhân loại. Bạn phải phân khu sinh sống, giữ ổn định hệ thống và đưa ra lựa chọn khó khi tài nguyên cạn dần trên hành trình xuyên không gian.","day":"Thứ 4","u":"https://store.steampowered.com/app/1113120/","aid":"1113120"},{"t":"Superliminal","g":"Giải đố phối cảnh","p":"PC (Steam)","pg":"pc","d":"Trong giấc mơ sáng suốt, vật thể nhỏ khi cầm lên có thể thành khổng lồ nếu đặt ở góc nhìn phù hợp. Superliminal biến phối cảnh thành cơ chế giải đố, khiến mỗi căn phòng đều có cách thoát bất ngờ.","day":"Thứ 2","u":"https://store.steampowered.com/app/1049410/","aid":"1049410"},{"t":"Viewfinder","g":"Giải đố không gian","p":"PC (Steam)","pg":"pc","d":"Chụp một bức ảnh, đặt nó vào thế giới rồi bước thẳng vào khung hình: Viewfinder liên tục biến hình ảnh thành địa hình thật. Trò chơi hợp với người thích khám phá, thử nghiệm và những cú xoay chuyển không gian đầy bất ngờ.","day":"Thứ 2","u":"https://store.steampowered.com/app/1382070/","aid":"1382070"},{"t":"The Swapper","g":"Giải đố khoa học viễn tưởng","p":"PC (Steam)","pg":"pc","d":"Trên một trạm không gian hoang vắng, bạn tạo bản sao và chuyển ý thức giữa chúng để vượt chướng ngại. The Swapper dùng cơ chế nhân bản đơn giản mà gợi nhiều câu hỏi về danh tính, đồng thời tạo ra các câu đố không gian rất đã.","day":"Thứ 2","u":"https://store.steampowered.com/app/231160/","aid":"231160"}]},{"w":4,"th":"Những cơ chế lạ khiến bạn chậm lại: indie ám ảnh, nông trại chữa lành và chuyện kể gọn trong túi","dt":"28/11/2026","gm":[{"t":"Florence","g":"Tương tác / Tường thuật","p":"iOS / Android","pg":"mobile","d":"Ghép mảnh trò chuyện, vượt qua những khoảnh khắc ngượng ngùng rồi cảm nhận một mối quan hệ đổi khác qua tương tác rất đời thường. Florence là trải nghiệm ngắn, giàu hình ảnh, phù hợp để chơi liền một mạch trong một buổi tối.","day":"Thứ 6","u":"https://play.google.com/store/search?q=Florence%20game&c=apps","ico":"https://is1-ssl.mzstatic.com/image/thumb/Purple114/v4/b3/e6/8a/b3e68a4c-b7cf-85d5-c9ae-bc9b39500452/AppIcon-0-1x_U007emarketing-0-0-GLES2_U002c0-512MB-sRGB-0-0-0-85-220-0-0-0-9.png/512x512bb.jpg","gp":"https://play.google.com/store/search?q=Florence%20game&c=apps","ap":"https://apps.apple.com/us/app/florence/id1297430468?uo=4"},{"t":"Assemble with Care","g":"Giải đố / Tường thuật","p":"iOS / Android","pg":"mobile","d":"Bạn nhận những món đồ cũ, tháo từng bộ phận rồi tìm cách sửa chúng bằng thao tác chạm trực quan. Mỗi món đồ hé lộ một mảnh đời, khiến công việc thủ công nhẹ nhàng dần nối thành câu chuyện ấm áp.","day":"Thứ 6","u":"https://play.google.com/store/search?q=Assemble%20with%20Care&c=apps","ico":"https://is1-ssl.mzstatic.com/image/thumb/Purple112/v4/16/b2/28/16b2286a-6b2c-c8fd-0459-d2e3e94d1657/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/512x512bb.jpg","gp":"https://play.google.com/store/search?q=Assemble%20with%20Care&c=apps","ap":"https://apps.apple.com/us/app/assemble-with-care/id6459060454?uo=4"},{"t":"Behind the Frame: The Finest Scenery","g":"Phiêu lưu / Giải đố","p":"iOS / Android","pg":"mobile","d":"Hoàn thiện những bức tranh bằng cách tìm màu sắc và chi tiết còn thiếu, rồi khám phá căn phòng quanh người họa sĩ. Các câu đố nhẹ nhàng dẫn dắt một câu chuyện về ký ức, nghệ thuật và điều đã bị bỏ quên.","day":"Thứ 6","u":"https://play.google.com/store/search?q=Behind%20the%20Frame%20The%20Finest%20Scenery&c=apps","ico":"https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/c6/0d/fe/c60dfe4e-1be9-d78e-42eb-db82718faa41/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg","gp":"https://play.google.com/store/search?q=Behind%20the%20Frame%20The%20Finest%20Scenery&c=apps","ap":"https://apps.apple.com/us/app/crunchyroll-behind-the-frame/id6451390439?uo=4"},{"t":"Stardew Valley","g":"Nông trại / Nhập vai","p":"PC (Steam)","pg":"pc","d":"Từ tưới cây, câu cá đến chế tạo máy móc, mỗi việc nhỏ đều mở thêm cách phát triển trang trại. Bạn tự chọn nhịp sống, kết bạn với dân làng rồi chợt nhận ra mình đã lên kế hoạch cho ngày mai.","day":"Thứ 4","u":"https://store.steampowered.com/app/413150/","aid":"413150"},{"t":"Littlewood","g":"Xây dựng / Mô phỏng","p":"PC (Steam)","pg":"pc","d":"Cuộc phiêu lưu lớn đã kết thúc; giờ đến lượt bạn đặt nhà, trồng cây và giúp thị trấn hồi sinh. Cư dân có sở thích riêng, còn địa hình thay đổi theo ý bạn, nên việc trang trí cứ kéo dài thêm một chút.","day":"Thứ 4","u":"https://store.steampowered.com/app/894940/","aid":"894940"},{"t":"Roots of Pacha","g":"Nông trại / Cộng đồng","p":"PC (Steam)","pg":"pc","d":"Cùng bộ lạc khám phá ý tưởng, thuần hóa động vật và biến những phát hiện mới thành công cụ hữu ích. Thay vì chỉ làm giàu cho riêng mình, bạn góp sức xây một cộng đồng thời tiền sử, với nông trại và quan hệ cùng phát triển.","day":"Thứ 4","u":"https://store.steampowered.com/app/1245560/","aid":"1245560"},{"t":"GRIS","g":"Phiêu lưu nghệ thuật","p":"PC (Steam)","pg":"pc","d":"Mỗi vùng đất mở ra một gam màu và một cách di chuyển mới, biến hành trình thành bức tranh đang sống. Không lời thoại, GRIS vẫn kể câu chuyện về nỗi đau và việc học cách bước tiếp.","day":"Thứ 2","u":"https://store.steampowered.com/app/683320/","aid":"683320"},{"t":"FAR: Lone Sails","g":"Phiêu lưu / Khám phá","p":"PC (Steam)","pg":"pc","d":"Bạn điều khiển một cỗ xe kiêm con tàu khổng lồ, tự tay vận hành máy móc để vượt vùng đất khô cạn. Nhịp chơi lặng lẽ, nhưng mỗi lần động cơ trục trặc đều khiến hành trình căng lên.","day":"Thứ 2","u":"https://store.steampowered.com/app/609320/","aid":"609320"},{"t":"The Stillness of the Wind","g":"Mô phỏng / Tường thuật","p":"PC (Steam)","pg":"pc","d":"Một ngày của Talma xoay quanh chăm dê, làm phô mai và nhận thư từ người thân nơi xa. Những việc lặp lại tưởng bình yên dần hé lộ khoảng trống, khiến cuộc sống nông trại trở thành câu chuyện tâm lý lặng mà day dứt.","day":"Thứ 2","u":"https://store.steampowered.com/app/828900/","aid":"828900"}]},{"w":3,"th":"Game chạy nhẹ, ý tưởng nặng đô: deckbuilder dị biệt, kinh doanh cuốn tay và thủ thành sáng tạo","dt":"28/11/2026","gm":[{"t":"Kingdom Rush","g":"Tower Defense","p":"iOS / Android","pg":"mobile","d":"Bố trí tháp trên những điểm chiến lược, gọi anh hùng ra tuyến đầu và ngăn từng đợt quái tràn qua. Màn chơi gọn, dễ nắm bắt nhưng chọn sai vị trí nâng cấp có thể khiến cả phòng tuyến sụp đổ.","day":"Thứ 6","u":"https://play.google.com/store/search?q=Kingdom%20Rush&c=apps","ico":"https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/0b/78/3b/0b783ba9-8e00-db00-baef-4a6c004549ca/AppIcon-0-0-1x_U007emarketing-0-6-0-85-220.png/512x512bb.jpg","gp":"https://play.google.com/store/search?q=Kingdom%20Rush&c=apps","ap":"https://apps.apple.com/us/app/kingdom-rush-tower-defense-td/id516378985?uo=4"},{"t":"Bloons TD 6","g":"Tower Defense chiến thuật","p":"iOS / Android","pg":"mobile","d":"Dùng các loại tháp khỉ với vai trò và nhánh nâng cấp riêng để đối phó những đợt bóng bay ngày càng khó. Thử nghiệm đội hình, chọn thời điểm nâng cấp và tìm cách giữ tuyến phòng thủ đứng vững.","day":"Thứ 6","u":"https://play.google.com/store/search?q=Bloons%20TD%206&c=apps","ico":"https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/ec/ea/72/ecea728c-c718-b232-3078-98cbfd464349/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg","gp":"https://play.google.com/store/search?q=Bloons%20TD%206&c=apps","ap":"https://apps.apple.com/us/app/bloons-td-6/id1118115766?uo=4"},{"t":"Mindustry","g":"Thủ thành / xây dựng căn cứ","p":"iOS / Android","pg":"mobile","d":"Không chỉ đặt tháp chặn kẻ địch: bạn còn khai thác tài nguyên, nối băng chuyền và xây nhà máy để tiếp tế cho căn cứ. Mạng lưới vận hành càng hiệu quả, bạn càng có cơ hội chống đỡ những đợt tấn công dồn dập.","day":"Thứ 6","u":"https://play.google.com/store/search?q=Mindustry&c=apps","ico":"https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/71/cb/63/71cb6379-df2b-04ee-0b48-35240e5bd8a6/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg","gp":"https://play.google.com/store/search?q=Mindustry&c=apps","ap":"https://apps.apple.com/us/app/mindustry/id1385258906?uo=4"},{"t":"Supermarket Simulator","g":"Mô phỏng quản lý siêu thị","p":"PC (Steam)","pg":"pc","d":"Nhập hàng, xếp kệ, đặt giá rồi đứng quầy tính tiền trong siêu thị của riêng bạn. Khi khách ngày càng đông, mỗi quyết định về hàng hóa và cách bố trí đều ảnh hưởng nhịp kinh doanh.","day":"Thứ 4","u":"https://store.steampowered.com/app/2670630/","aid":"2670630"},{"t":"PlateUp!","g":"Quản lý nhà hàng roguelite","p":"PC (Steam)","pg":"pc","d":"Tự thiết kế nhà hàng, chia khu bếp và phối hợp phục vụ giữa giờ cao điểm. Mỗi ngày kinh doanh là một bài toán tốc độ; nâng cấp đúng chỗ giúp quán chạy mượt hơn, nhưng thực đơn cũng khiến áp lực tăng.","day":"Thứ 4","u":"https://store.steampowered.com/app/1599600/","aid":"1599600"},{"t":"Winkeltje: The Little Shop","g":"Mô phỏng quản lý cửa hàng","p":"PC (Steam)","pg":"pc","d":"Từ nhập nguyên liệu, chế tác món hàng đến trưng bày và định giá, mọi việc đều nằm trong tay bạn. Phát triển cửa tiệm qua từng mùa, cân đối kho hàng và biến góc phố nhỏ thành nơi khách muốn ghé.","day":"Thứ 4","u":"https://store.steampowered.com/app/949290/","aid":"949290"},{"t":"Inscryption","g":"Roguelike deckbuilder kinh dị","p":"PC (Steam)","pg":"pc","d":"Bắt đầu bằng những ván bài căng thẳng trong căn phòng bí ẩn, rồi khám phá một trò chơi liên tục bẻ cong chính luật của nó. Mỗi lá bài mới đều có thể mở ra hướng đi khác.","day":"Thứ 2","u":"https://store.steampowered.com/app/1092790/","aid":"1092790"},{"t":"Griftlands","g":"Roguelike deckbuilder nhập vai","p":"PC (Steam)","pg":"pc","d":"Ở đây, bộ bài không chỉ dùng để đánh nhau: bạn còn đấu trí qua những cuộc mặc cả và tranh luận. Mỗi lựa chọn tác động đến quan hệ, nhiệm vụ và cơ hội sống sót trong chuyến phiêu lưu.","day":"Thứ 2","u":"https://store.steampowered.com/app/601840/","aid":"601840"},{"t":"Nowhere Prophet","g":"Deckbuilder roguelike sinh tồn","p":"PC (Steam)","pg":"pc","d":"Bạn là người dẫn đường cho một đoàn người băng qua vùng đất khắc nghiệt. Xây bộ bài từ những người đồng hành, giữ họ sống sót và cân nhắc kỹ mỗi trận vì tổn thất có thể theo bạn rất lâu.","day":"Thứ 2","u":"https://store.steampowered.com/app/681730/","aid":"681730"}]},{"w":2,"th":"Tuần của những bí mật, thiên nhiên khắc nghiệt và ván bài không muốn dừng","dt":"28/11/2026","gm":[{"t":"Balatro","g":"Poker roguelike","p":"iOS / Android","pg":"mobile","d":"Dùng những tay bài poker quen thuộc để vượt màn, rồi kết hợp Joker tạo hiệu ứng cộng dồn bất ngờ. Mỗi lượt chạy mở ra hướng build khác nhau, luật dễ nắm nhưng tối ưu điểm số thì khó dứt.","day":"Thứ 6","u":"https://play.google.com/store/search?q=Balatro&c=apps","ico":"https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/2e/13/c3/2e13c321-e1b0-e958-3def-f5c3d38be1c8/iOS_AppIcon_Premium-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg","gp":"https://play.google.com/store/search?q=Balatro&c=apps","ap":"https://apps.apple.com/us/app/balatro/id6502453075?uo=4"},{"t":"Dawncaster: Deckbuilding RPG","g":"Roguelike xây bộ bài","p":"iOS / Android","pg":"mobile","d":"Chọn nhân vật, nhặt kỹ năng và xây bộ bài riêng trên hành trình fantasy nhiều ngã rẽ. Các trận đánh theo lượt khuyến khích thử chiến thuật mới; game hỗ trợ chơi offline, hợp để mở nhanh một chuyến phiêu lưu.","day":"Thứ 6","u":"https://play.google.com/store/search?q=Dawncaster%3A%20Deckbuilding%20RPG&c=apps","ico":"https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/fa/2b/c0/fa2bc01f-786f-df7d-e377-738fabb0d10c/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg","gp":"https://play.google.com/store/search?q=Dawncaster%3A%20Deckbuilding%20RPG&c=apps","ap":"https://apps.apple.com/us/app/dawncaster-deckbuilding-rpg/id1555459868?uo=4"},{"t":"Night of the Full Moon","g":"Thẻ bài roguelike","p":"iOS / Android","pg":"mobile","d":"Theo chân cô bé Mũ Đỏ trong những chương truyện cổ tích u tối, chọn lớp nhân vật rồi đấu bài với từng đối thủ. Bộ bài và hướng đi thay đổi trải nghiệm; có thể chơi offline, không cần kết nối liên tục.","day":"Thứ 6","u":"https://play.google.com/store/search?q=Night%20of%20the%20Full%20Moon&c=apps","ico":"https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/4d/61/d9/4d61d955-f220-d329-7326-6481677563d6/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg","gp":"https://play.google.com/store/search?q=Night%20of%20the%20Full%20Moon&c=apps","ap":"https://apps.apple.com/us/app/night-of-the-full-moon/id1278845241?uo=4"},{"t":"The Long Dark","g":"Sinh tồn thế giới mở","p":"PC (Steam)","pg":"pc","d":"Sau thảm họa địa từ, bạn mắc kẹt giữa vùng hoang dã Canada lạnh buốt. Tìm thức ăn, giữ ấm và cân nhắc từng chuyến đi; ở đây, thời tiết và sự thiếu thốn mới là đối thủ đáng sợ nhất.","day":"Thứ 4","u":"https://store.steampowered.com/app/305620/","aid":"305620"},{"t":"Subnautica","g":"Sinh tồn khám phá biển sâu","p":"PC (Steam)","pg":"pc","d":"Rơi xuống một hành tinh phủ đại dương, bạn phải lặn tìm vật liệu, chế tạo thiết bị và mở rộng căn cứ dưới nước. Những rạn san hô tuyệt đẹp dẫn lối xuống vùng sâu vừa bí ẩn vừa đầy hiểm nguy.","day":"Thứ 4","u":"https://store.steampowered.com/app/264710/","aid":"264710"},{"t":"The Forest","g":"Sinh tồn kinh dị","p":"PC (Steam)","pg":"pc","d":"Sau tai nạn máy bay, bạn tìm con trai mất tích trên một bán đảo rừng rậm. Chặt cây dựng nơi trú, kiếm thức ăn và khám phá hang động; nhưng càng tìm hiểu cư dân nơi đây, chuyến đi càng bất an.","day":"Thứ 4","u":"https://store.steampowered.com/app/242760/","aid":"242760"},{"t":"Return of the Obra Dinn","g":"Trinh thám suy luận","p":"PC (Steam)","pg":"pc","d":"Bạn là điều tra viên lên con tàu mất tích, dùng chiếc đồng hồ đặc biệt để chứng kiến khoảnh khắc cuối của thủy thủ đoàn. Từng danh tính và nguyên nhân tử vong đều phải được suy luận từ chi tiết nhỏ.","day":"Thứ 2","u":"https://store.steampowered.com/app/653530/","aid":"653530"},{"t":"The Case of the Golden Idol","g":"Trinh thám giải đố","p":"PC (Steam)","pg":"pc","d":"Qua những cảnh án mạng tĩnh như tranh, bạn tự điền tên người, hành động và động cơ để dựng lại sự thật. Càng ghép đúng, câu chuyện về một món cổ vật nguyền rủa càng mở ra nhiều cú lật khó ngờ.","day":"Thứ 2","u":"https://store.steampowered.com/app/1677770/","aid":"1677770"},{"t":"Her Story","g":"Trinh thám tương tác","p":"PC (Steam)","pg":"pc","d":"Một kho dữ liệu phỏng vấn, một vụ mất tích và chẳng ai đưa sẵn đáp án. Tìm từ khóa để xem từng đoạn video, nối lời khai theo cách của bạn rồi tự quyết định điều gì đã thật sự xảy ra.","day":"Thứ 2","u":"https://store.steampowered.com/app/368370/","aid":"368370"}]},{"w":1,"th":"Ba cách chơi khác thường: bẻ luật, vận hành thành phố và đấu trí trên bàn cờ bỏ túi","dt":"28/11/2026","gm":[{"t":"Into the Breach","g":"Chiến thuật theo lượt","p":"iOS / Android","pg":"mobile","d":"Trên bản đồ ô vuông gọn gàng, bạn thấy trước kẻ địch sắp đánh đâu rồi chọn cách đẩy, chặn hoặc hạ chúng. Mỗi lượt là một bài toán bảo vệ dân thường bằng đội mech ít ỏi.","day":"Thứ 6","u":"https://play.google.com/store/search?q=Into%20the%20Breach&c=apps","ico":"https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/9c/8b/da/9c8bda47-ddc0-6e85-0efd-cb754b19ab71/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg","gp":"https://play.google.com/store/search?q=Into%20the%20Breach&c=apps","ap":"https://apps.apple.com/us/app/into-the-breach/id1616542180?uo=4"},{"t":"The Battle of Polytopia","g":"Chiến thuật 4X theo lượt","p":"iOS / Android","pg":"mobile","d":"Chọn một bộ tộc, khám phá bản đồ, nghiên cứu công nghệ và tranh quyền kiểm soát theo lượt. Trận đấu gọn, luật dễ tiếp cận nhưng mỗi quyết định mở rộng hay phòng thủ đều ảnh hưởng đến đường phát triển.","day":"Thứ 6","u":"https://play.google.com/store/apps/details?id=air.com.midjiwan.polytopia","ico":"https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/92/aa/26/92aa26c4-fb9a-4010-3392-c49e55a70896/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg","gp":"https://play.google.com/store/apps/details?id=air.com.midjiwan.polytopia","ap":"https://apps.apple.com/us/app/the-battle-of-polytopia/id1006393168?uo=4"},{"t":"Slice & Dice","g":"Chiến thuật theo lượt roguelike","p":"iOS / Android","pg":"mobile","d":"Đội hình của bạn là những viên xúc xắc, mỗi mặt tương ứng một hành động khác nhau. Tung xúc xắc, phân bổ đòn đánh và phòng thủ để vượt chuỗi giao tranh; một lượt xử lý khéo có thể cứu cả đội.","day":"Thứ 6","u":"https://play.google.com/store/apps/details?id=com.com.tann.dice","ico":"https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/97/b3/91/97b39190-ed1d-6b2b-e3e3-8d8a31f2350b/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg","gp":"https://play.google.com/store/apps/details?id=com.com.tann.dice","ap":"https://apps.apple.com/us/app/slice-dice/id6449848963?uo=4"},{"t":"Against the Storm","g":"Xây dựng thành phố sinh tồn","p":"PC (Steam)","pg":"pc","d":"Dựng những khu định cư giữa vùng hoang dã, nơi thời tiết và nhu cầu cư dân liên tục đổi thay. Quản lý nguyên liệu, phân công chủng tộc và hoàn thành mục tiêu trước khi cơn bão buộc bạn rời đi.","day":"Thứ 4","u":"https://store.steampowered.com/app/1336490/","aid":"1336490"},{"t":"Workers & Resources: Soviet Republic","g":"Mô phỏng xây dựng và quản lý","p":"PC (Steam)","pg":"pc","d":"Không chỉ đặt nhà máy: bạn còn phải nối đường sắt, xe buýt, điện, sưởi và nguồn hàng để cả nền kinh tế vận hành. Một mắt xích tắc nghẽn có thể khiến toàn bộ thành phố thiếu thốn.","day":"Thứ 4","u":"https://store.steampowered.com/app/784150/","aid":"784150"},{"t":"Captain of Industry","g":"Xây dựng nhà máy và quản lý tài nguyên","p":"PC (Steam)","pg":"pc","d":"Khởi đầu trên một hòn đảo hoang, bạn khai thác, nông nghiệp, nghiên cứu rồi nối các dây chuyền để tạo ra sản phẩm phức tạp. Tính cả logistics, chất thải và nhu cầu cư dân để công nghiệp phát triển bền vững.","day":"Thứ 4","u":"https://store.steampowered.com/app/1594320/","aid":"1594320"},{"t":"Baba Is You","g":"Giải đố thao tác luật","p":"PC (Steam)","pg":"pc","d":"Mỗi màn là một câu đố bằng những khối từ có thể đẩy và sắp xếp lại. Đổi “WALL IS STOP” thành luật khác, bạn biến chính vật cản thành lối đi và viết lại cách màn chơi vận hành.","day":"Thứ 2","u":"https://store.steampowered.com/app/736260/","aid":"736260"},{"t":"Patrick's Parabox","g":"Giải đố đệ quy","p":"PC (Steam)","pg":"pc","d":"Đẩy một chiếc hộp vào bên trong chính nó nghe vô lý, nhưng lại là chìa khóa của trò chơi. Các mê cung đệ quy liên tục đổi góc nhìn, khiến mỗi bước đi vừa mở đường vừa tạo thêm câu hỏi.","day":"Thứ 2","u":"https://store.steampowered.com/app/1260520/","aid":"1260520"},{"t":"Chants of Sennaar","g":"Phiêu lưu giải mã ngôn ngữ","p":"PC (Steam)","pg":"pc","d":"Bạn bước vào một thế giới nơi các cộng đồng không hiểu tiếng nói của nhau. Quan sát biểu tượng, hành vi và bối cảnh để tự giải mã từng ngôn ngữ, rồi dùng hiểu biết ấy mở lối giao tiếp.","day":"Thứ 2","u":"https://store.steampowered.com/app/1931770/","aid":"1931770"}]}]</script>
+  <script>
+    const WEEKS_DATA = JSON.parse(document.getElementById('bioData').textContent || '[]');
+    const INITIAL_WEEKS = 3;
+    const PAGE_SIZE = 4;
+
+    const weeksContainer = document.getElementById('weeksContainer');
+    const searchInput = document.getElementById('searchInput');
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const resultCount = document.getElementById('resultCount');
+    const noResults = document.getElementById('noResults');
+    const resetBtn = document.getElementById('resetFilterBtn');
+    const loadMoreWrap = document.getElementById('loadMoreWrap');
+    const loadMoreBtn = document.getElementById('loadMoreBtn');
+    const backToTop = document.getElementById('backToTop');
+    const themeToggle = document.getElementById('themeToggle');
+    const iconSun = document.getElementById('iconSun');
+    const iconMoon = document.getElementById('iconMoon');
+
+    let currentFilter = 'all';
+    let visibleWeeksCount = INITIAL_WEEKS;
+
+    function esc(s) {
+      return String(s || '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
+
+    function safeUrl(u) {
+      const s = String(u || '').trim();
+      return /^https?:\/\//i.test(s) ? s : '#';
+    }
+
+    function syncThemeIcons() {
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      iconSun.style.display = isDark ? 'block' : 'none';
+      iconMoon.style.display = isDark ? 'none' : 'block';
+    }
+    syncThemeIcons();
+
+    themeToggle.addEventListener('click', () => {
+      const cur = document.documentElement.getAttribute('data-theme');
+      const next = cur === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      try { localStorage.setItem('ghnc_theme', next); } catch (e) {}
+      syncThemeIcons();
+    });
+
+    function renderGameCard(g) {
+      if (g.pg === 'pc') {
+        const banner = g.aid
+          ? `<div class="steam-banner"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/${esc(g.aid)}/header.jpg" alt="${esc(g.t)}" loading="lazy" referrerpolicy="no-referrer" /><span class="steam-day-tag">${esc(g.day)}</span></div>`
+          : `<div class="steam-top-row"><span class="steam-day-tag-inline">${esc(g.day)}</span></div>`;
+        return `
+          <article class="game-card card-steam">
+            ${banner}
+            <div class="steam-body">
+              <div class="steam-title-row">
+                <h3 class="steam-title">${esc(g.t)}</h3>
+                <span class="steam-win-badge" title="PC / Steam" aria-label="PC Steam">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>
+                  <span>Steam</span>
+                </span>
+              </div>
+              <div class="steam-genre">${esc(g.g)}</div>
+              <p class="steam-desc">${esc(g.d)}</p>
+              <div class="steam-footer">
+                <span class="steam-platform-text">${esc(g.p)}</span>
+                <a class="btn-steam" href="${esc(safeUrl(g.u))}" target="_blank" rel="noopener noreferrer">Mở trên Steam</a>
+              </div>
+            </div>
+          </article>`;
+      }
+      const initials = (g.t || 'GM').split(/\s+/).slice(0, 2).map(w => w[0] || '').join('').toUpperCase() || 'GM';
+      const iconHtml = g.ico && safeUrl(g.ico) !== '#'
+        ? `<img src="${esc(safeUrl(g.ico))}" alt="${esc(g.t)}" loading="lazy" referrerpolicy="no-referrer" />`
+        : esc(initials);
+      return `
+        <article class="game-card card-play">
+          <div class="play-header">
+            <div class="play-app-icon">${iconHtml}</div>
+            <div class="play-head-info">
+              <div class="play-meta-line">
+                <span class="play-day-tag">${esc(g.day)}</span>
+                <span class="play-store-label">CH Play &amp; App Store</span>
+              </div>
+              <h3 class="play-title">${esc(g.t)}</h3>
+              <div class="play-genre">${esc(g.g)}</div>
+            </div>
+          </div>
+          <p class="play-desc">${esc(g.d)}</p>
+          <div class="play-footer">
+            <a class="btn-play" href="${esc(safeUrl(g.gp))}" target="_blank" rel="noopener noreferrer">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/></svg>
+              <span>CH Play</span>
+            </a>
+            <a class="btn-appstore" href="${esc(safeUrl(g.ap))}" target="_blank" rel="noopener noreferrer">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.96 6.33c.67-.81 1.12-1.94 1-3.08-.96.04-2.13.64-2.82 1.45-.61.7-.115 1.85-1 2.97 1.07.08 2.16-.54 2.82-1.34z"/></svg>
+              <span>App Store</span>
+            </a>
+          </div>
+        </article>`;
+    }
+
+    function renderView() {
+      if (!WEEKS_DATA.length) return;
+      const q = (searchInput.value || '').trim().toLowerCase();
+      const isFiltering = Boolean(q) || currentFilter !== 'all';
+
+      let matchedTotal = 0;
+      const matchedWeeks = [];
+
+      for (let i = 0; i < WEEKS_DATA.length; i++) {
+        const wk = WEEKS_DATA[i];
+        const filteredGames = wk.gm.filter(g => {
+          const okPlatform = currentFilter === 'all' || g.pg === currentFilter;
+          const hay = `${g.t} ${g.g} ${g.p} ${g.day}`.toLowerCase();
+          return okPlatform && (!q || hay.includes(q));
+        });
+        if (filteredGames.length > 0) {
+          matchedTotal += filteredGames.length;
+          matchedWeeks.push({ wk, games: filteredGames, isLatest: i === 0 });
+        }
+      }
+
+      const slice = isFiltering ? matchedWeeks : matchedWeeks.slice(0, visibleWeeksCount);
+      weeksContainer.innerHTML = slice.map((item, idx) => {
+        const openAttr = (isFiltering || item.isLatest || idx === 0) ? ' open' : '';
+        const tag = item.isLatest ? '<span class="week-tag">Mới nhất</span>' : '';
+        return `
+          <details class="week-section"${openAttr}>
+            <summary class="week-header">
+              <div class="week-header-main">
+                <div class="week-title-row">
+                  <span class="week-label">Tuần ${esc(item.wk.w)}</span>
+                  ${tag}
+                  <span class="week-count">${item.games.length} game</span>
+                </div>
+                <div class="week-theme">${esc(item.wk.th)}</div>
+                <div class="week-date">Cập nhật ${esc(item.wk.dt)}</div>
+              </div>
+              <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </summary>
+            <div class="cards-grid">
+              ${item.games.map(renderGameCard).join('')}
+            </div>
+          </details>`;
+      }).join('');
+
+      resultCount.textContent = 'Đang hiển thị ' + matchedTotal + ' tựa game';
+      noResults.classList.toggle('hidden', matchedTotal > 0);
+
+      const remaining = isFiltering ? 0 : Math.max(0, matchedWeeks.length - slice.length);
+      loadMoreWrap.classList.toggle('hidden', remaining === 0);
+      if (remaining > 0) {
+        loadMoreBtn.textContent = 'Xem thêm tuần cũ (còn ' + remaining + ' tuần)';
+      }
+    }
+
+    renderView();
+
+    searchInput.addEventListener('input', renderView);
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentFilter = btn.dataset.filter;
+        renderView();
+      });
+    });
+    resetBtn.addEventListener('click', () => {
+      searchInput.value = '';
+      currentFilter = 'all';
+      visibleWeeksCount = INITIAL_WEEKS;
+      filterBtns.forEach(b => b.classList.toggle('active', b.dataset.filter === 'all'));
+      renderView();
+    });
+    loadMoreBtn.addEventListener('click', () => {
+      visibleWeeksCount += PAGE_SIZE;
+      renderView();
+    });
+    window.addEventListener('scroll', () => {
+      backToTop.classList.toggle('hidden', window.scrollY < 360);
+    }, { passive: true });
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    weeksContainer.addEventListener('click', (e) => {
+      const btn = e.target.closest('a.btn-steam, a.btn-play, a.btn-appstore');
+      if (!btn || !window.goatcounter || typeof window.goatcounter.count !== 'function') return;
+      const card = btn.closest('.game-card');
+      const titleEl = card ? card.querySelector('.steam-title, .play-title') : null;
+      const gameName = (titleEl ? titleEl.textContent : 'unknown').trim().slice(0, 60);
+      const store = btn.classList.contains('btn-steam') ? 'steam' : (btn.classList.contains('btn-play') ? 'chplay' : 'appstore');
+      window.goatcounter.count({
+        path: 'click/' + store + '/' + gameName,
+        title: 'Click ' + store + ' - ' + gameName,
+        event: true,
+      });
+    });
+  </script>
+  <script data-goatcounter="https://gamehaynenchoi.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</body>
+</html>
